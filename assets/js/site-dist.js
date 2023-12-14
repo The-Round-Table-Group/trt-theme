@@ -1,0 +1,1 @@
+!function(e){e(document).ready((function(){e(".hamburger").on("click",(function(){e(this).toggleClass("is-active"),e(".megamenu").toggleClass("open-menu")}))}))}(jQuery);

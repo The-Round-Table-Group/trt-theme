@@ -1,0 +1,39 @@
+.nav-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 1.25rem;
+    margin: 0 auto;
+
+    &--container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 75rem;
+        margin: 0 auto;
+
+        .logo {
+            margin: 0;
+            padding: 0;
+
+            img {
+                max-width: 22rem;
+            }
+        }
+    }
+}
+
+// .megamenu {
+//     position: absolute;
+//     background-color: $white;
+//     visibility: hidden;
+//     padding: 1.25rem;
+
+//     &__inner {
+
+//     }
+
+//     &.open-menu {
+//         visibility: visible;
+
+//     }
+// }

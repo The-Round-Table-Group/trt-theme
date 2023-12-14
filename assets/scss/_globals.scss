@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+	text-rendering: geometricPrecision; // works better than optimizeLegibility for our fluid-text() function
+	line-height: 1.65;
+	overflow-x: hidden;
+	font-variant-numeric: lining-nums;
+	font-feature-settings: "lnum" 1;
+    background-color: $primary-background;
+}
+
+::placeholder {
+    font-family: $poppins;
+    font-size: 1.25rem;
+    font-weight: $semibold;
+    color: rgba($dark-grey, 0.85);
+}
+
+img {
+	display: block; // preserve aspect ratio
+	max-width: 100%;
+	height: auto;
+}
+
+.main-post-wrapper {
+    max-width: 77rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.content-block {
+    position: relative;
+}

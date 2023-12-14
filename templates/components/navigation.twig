@@ -1,0 +1,24 @@
+<section class="nav-wrapper" data-aos="fade-down">
+    <div class="nav-wrapper--container">
+
+        {% if not is_front_page %}
+            <a class="logo" href="/">
+                <img class="logo-img" src="{{ options.site_logo.url }}" alt="{{ options.site_logo.alt }}" />
+            </a>
+        {% else %}
+            <p class="logo">
+                <img class="logo-img" src="{{ options.site_logo.url }}" alt="{{ options.site_logo.alt }}" />
+            </p>
+        {% endif %}
+
+        <button class="hamburger hamburger--emphatic">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+    <nav class="megamenu" aria-label="Main site navigation">
+        <div class="megamenu__inner"></div>
+    </nav>
+</section>
