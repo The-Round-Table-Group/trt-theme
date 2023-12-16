@@ -16,8 +16,10 @@
 	</head>
 
 	<body data-template="base.twig" class="{{ body_class }}">
-        {% include 'components/navigation.twig' %}
-        {% include 'components/header.twig' %}
+        <div class="clipped-header-background">
+            {% include 'components/navigation.twig' %}
+            {% include 'components/header.twig' %}
+        </div>
 
         <section class="main-post-wrapper" role="main" aria-label="Main page content">
             {% block content %}{% endblock %}

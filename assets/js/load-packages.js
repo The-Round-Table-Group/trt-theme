@@ -13,27 +13,21 @@ window.onload = function() {
         var app = document.getElementById('hero-text');
 
         var typewriter = new Typewriter(app, {
-            deleteSpeed: 35,
+            deleteSpeed: 20,
             delay: 75,
             loop: false
         });
 
         typewriter
-            .pauseFor(1200)
-            .typeString('Disruptive Branding')
-            .pauseFor(1200)
-            .deleteChars(19)
-            .typeString('Passionate Communities')
-            .pauseFor(1200)
-            .deleteChars(22)
+            .pauseFor(1750)
+            .typeString('Resonant Branding')
+            .pauseFor(1400)
+            .deleteChars(17)
             .typeString('Unforgettable Experiences')
-            .pauseFor(1200)
+            .pauseFor(1400)
             .deleteChars(25)
             .typeString('Compelling Aesthetics')
-            .pauseFor(1200)
-            .deleteChars(22)
-            .typeString('Remarkable Narratives')
-            .pauseFor(1200)
+            .pauseFor(1400)
         .start();
     }
 };

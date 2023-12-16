@@ -19,4 +19,12 @@
         margin: 3rem auto 0;
         font-size: 1.25rem;
     }
+
+    &--button-wrap {
+        margin-top: 3.75rem;
+
+        a:first-of-type {
+            margin-right: 2rem;
+        }
+    }
 }
