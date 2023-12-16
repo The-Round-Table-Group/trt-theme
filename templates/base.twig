@@ -16,7 +16,7 @@
 	</head>
 
 	<body data-template="base.twig" class="{{ body_class }}">
-        <div class="clipped-header-background">
+        <div class="clipped-header-background {% if is_front_page %} home-clip {% endif %}">
             {% include 'components/navigation.twig' %}
             {% include 'components/header.twig' %}
         </div>

@@ -1,15 +1,16 @@
 .trt-button {
     padding: 0.65rem 1.25rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     border-radius: $radius-small;
+    border: 2px solid;
 
     &--blue {
-        background-color: $dark-blue;
-        &:hover { background-color: $blue; }
+        border-color: $dark-blue;
+        &:hover { background-color: $dark-blue; }
     }
 
     &--light-blue {
-        background-color: $blue;
-        &:hover { background-color: $dark-blue; }
+        border-color: $blue;
+        &:hover { background-color: $blue; }
     }
 }

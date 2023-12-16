@@ -1,14 +1,16 @@
 window.onload = function() {
     AOS.init({
         duration: 750,
-        offset: 100,
+        offset: 50,
         once: true,
         mirror: false,
-        easing: 'ease-in-out'
+        easing: 'ease-out'
     });
 
+    // get url path and split into array
     var path = location.pathname.split('/');
 
+    // url pattern - https://site.com/[1]/[2]/[3]
     if ( path[1] === '' ) {
         var app = document.getElementById('hero-text');
 

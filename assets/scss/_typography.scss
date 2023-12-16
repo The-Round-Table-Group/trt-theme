@@ -4,7 +4,7 @@ small, time, ol, ul, li, button {
 	font-family: $poppins;
 	font-size: 1rem;
 	font-weight: $regular;
-	color: $white;
+	color: $dark-grey;
 }
 
 small { font-size: 0.875rem; }
@@ -41,7 +41,7 @@ h4, h5, h6 {
 	font-family: $poppins;
 	font-weight: 900;
 	line-height: 1.2;
-	color: $white;
+	color: $dark-grey;
 }
 
 h1, #h1 { font-size: fluid-text(414px, 40px, 860px, 58px); }

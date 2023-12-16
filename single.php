@@ -14,6 +14,8 @@ if( is_singular() ) :
 	}
 endif;
 
+set_post_views();
+
 // attempt to render a corresponding view (.twig) file that matches any of the below patterns
 Timber::render([
 	'single-' . $post->ID . '.twig',

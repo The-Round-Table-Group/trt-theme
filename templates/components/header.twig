@@ -1,14 +1,15 @@
 <header class="site-header">
     {% if is_front_page %}
         <h1 class="site-header--hero-text" data-aos="fade-down" data-aos-delay="350">
-            We Create <span id="hero-text"></span>
+            We Create<br/>
+            <span id="hero-text"></span>
         </h1>
 
         <p data-aos="fade-down" data-aos-delay="800">{{ post.header_intro_text }}</p>
 
         <div class="site-header--button-wrap" data-aos="fade-down" data-aos-delay="900">
             <a class="trt-button trt-button--blue" href="#">Learn More</a>
-            <a class="trt-button trt-button--light-blue" href="#">View Articles</a>
+            <a class="trt-button trt-button--blue" href="#">View Articles</a>
         </div>
     {% endif %}
 </header>

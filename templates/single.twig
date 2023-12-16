@@ -2,6 +2,7 @@
 
 {% block content %}
 <section class="content-block">
+    Viewed {{ fn('get_post_views') }} times.
 	{{ post.content }}
 </section>
 {% endblock %}

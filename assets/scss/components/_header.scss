@@ -7,10 +7,12 @@
     &--hero-text {
         width: 100%;
         margin: 0 auto;
+        color: $white;
 
         span {
             font-size: fluid-text(414px, 40px, 860px, 58px);
             font-weight: $semibold;
+            color: $white;
         }
     }
 
@@ -18,13 +20,17 @@
         max-width: 45rem;
         margin: 3rem auto 0;
         font-size: 1.25rem;
+        color: $white;
     }
 
     &--button-wrap {
         margin-top: 3.75rem;
 
         a:first-of-type {
-            margin-right: 2rem;
+            margin-right: 0;
+            @include mq(sm) { margin-right: 2rem; }
         }
+
+        a { color: $white; }
     }
 }

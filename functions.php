@@ -95,7 +95,7 @@ class TRTSite extends Timber\Site {
 		add_theme_support( 'disable-custom-colors' );
 
         // sitewide options
-		if( function_exists( 'acf_add_options_page' ) ) {
+		if ( function_exists( 'acf_add_options_page' ) ) {
 			$parent = acf_add_options_page([
 				'page_title'  => __('Theme Options'),
 				'menu_title'  => __('Theme Options'),
@@ -109,13 +109,14 @@ class TRTSite extends Timber\Site {
 				'menu_title'  => __('Company Info'),
 				'parent_slug' => $parent['menu_slug'],
 			]);
-		} 
+		}
 	}
 
 	// add custom post types
 	function register_post_types() {
 		include_once( 'custom-post-types/post-type-article.php' );
         include_once( 'custom-post-types/post-type-partner.php' );
+        include_once( 'custom-post-types/post-type-employee.php' );
 	}
 
 	// remove unused items from admin menu
@@ -136,7 +137,7 @@ new TRTSite();
 
 // put ACF Options Page below the Dashboard tab
 function custom_menu_order( $menu_ord ) {
-	if( ! $menu_ord ) {
+	if ( ! $menu_ord ) {
 		return true;
 	}
 
@@ -152,3 +153,37 @@ function custom_menu_order( $menu_ord ) {
 }
 add_filter( 'custom_menu_order', 'custom_menu_order' );
 add_filter( 'menu_order', 'custom_menu_order' );
+
+/**
+ * Get post views count
+ * Add the view count to the admin columns
+*/
+
+function get_post_views() {
+    $count = get_post_views( get_the_ID(), 'post_views_count', true );
+    return "$count views";
+}
+
+function set_post_views() {
+    $key = 'post_views_count';
+    $post_id = get_the_ID();
+    $count = (int) get_post_meta( $post_id, $key, true );
+    $count++;
+    update_post_meta( $post_id, $key, $count );
+}
+
+// [1]
+function admin_views_column( $columns ) {
+    $columns['post_views'] = 'Views';
+    return $columns;
+}
+
+// [2]
+function admin_view_count_column( $column ) {
+    if ( $column === 'post_views' ) {
+        echo get_post_views();
+    }
+}
+
+add_filter( 'manage_posts_columns', 'admin_views_column' ); // [1]
+add_filter( 'manage_posts_custom_column', 'admin_view_count_column'); // [2]
