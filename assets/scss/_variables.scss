@@ -1,0 +1,27 @@
+// Theme colors
+$white: #FFF;
+$black: #000;
+$background: #131316;
+$accent: #060609;
+$light-black: #363A3F;
+$grey: #9CA0AB;
+$purple: #4348BC;
+
+$gradient: linear-gradient(to right bottom, #2b4c7e, #2d5d97);
+
+// Fonts
+$lexend: 'Lexend Deca', sans-serif;
+
+// Weights
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$max-bold: 900;
+
+// Consistency utilities
+$radius-small: 8px;
+$radius-medium: 16px;
+$radius-large: 20px;
+$circle: 50%;
+$transition: 0.2s ease-out;

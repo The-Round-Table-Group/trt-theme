@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+
+body {
+	text-rendering: geometricPrecision; // for the fluid-text() function
+	line-height: 1.6;
+	overflow-x: hidden;
+	font-variant-numeric: lining-nums;
+	font-feature-settings: "lnum" 1;
+    background-color: $background;
+}
+
+::placeholder {
+    font-family: $lexend;
+    font-size: 1.4rem;
+    font-weight: $semibold;
+    color: $grey;
+    opacity: 1;
+}
+
+img {
+	display: block; // preserve aspect ratio
+	max-width: 100%;
+	height: auto;
+}
+
+// global full width wrapper for main content
+.main-post-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+// standard width content block - page-specific blocks will override this
+.content-block {
+    max-width: 77rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
