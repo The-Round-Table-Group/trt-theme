@@ -207,7 +207,7 @@ small, time, ol, ul, li, button, input {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #FFF;
+  color: #E9E9EC;
 }
 
 small {
@@ -252,7 +252,7 @@ h6, .h6 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 700;
   line-height: 1.4;
-  color: #FFF;
+  color: #E9E9EC;
 }
 
 h1, .h1 {

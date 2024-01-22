@@ -4,7 +4,7 @@ small, time, ol, ul, li, button, input {
 	font-family: $lexend;
 	font-size: 1rem;
 	font-weight: $regular;
-	color: $white;
+	color: $primary-text-color;
 }
 
 small { font-size: 0.875rem; }
@@ -45,7 +45,7 @@ h6, .h6 {
 	font-family: $lexend;
 	font-weight: $bold;
 	line-height: 1.4;
-	color: $white;
+	color: $primary-text-color;
 }
 
 h1, .h1 { font-size: fluid-text(414px, 42px, 860px, 56px); }

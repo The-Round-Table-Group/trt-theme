@@ -1,13 +1,16 @@
-// Theme colors
+// Base colors
 $white: #FFF;
 $black: #000;
 $background: #131316;
 $accent: #060609;
+$primary-text-color: #E9E9EC;
+
+// Theme Colors
 $light-black: #363A3F;
 $grey: #9CA0AB;
 $purple: #4348BC;
 
-$gradient: linear-gradient(to right bottom, #2b4c7e, #2d5d97);
+$gradient: linear-gradient(to bottom, $white, $light-black);
 
 // Fonts
 $lexend: 'Lexend Deca', sans-serif;
@@ -17,7 +20,7 @@ $light: 300;
 $regular: 400;
 $semibold: 600;
 $bold: 700;
-$max-bold: 900;
+$xbold: 900;
 
 // Consistency utilities
 $radius-small: 8px;
