@@ -1,0 +1,35 @@
+.notice-wrap {
+    position: relative;
+    max-width: 87.5rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+
+    @include mq(lg) {
+        padding: 0 3rem;
+    }
+}
+
+.notice-banner {
+    position: relative;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: 1px solid $grey;
+    border-radius: $radius-small;
+
+    // notice text
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    // close button
+    #close {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        font-size: 1.65rem;
+        font-weight: $bold;
+        line-height: 1;
+    }
+}

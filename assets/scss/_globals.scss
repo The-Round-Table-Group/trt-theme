@@ -7,7 +7,7 @@ body {
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
 	font-feature-settings: "lnum" 1;
-    background-color: $background;
+    background-color: #1D2125;
 }
 
 ::placeholder {
@@ -33,7 +33,11 @@ img {
 
 // standard width content block - page-specific blocks will override this
 .content-block {
-    max-width: 77rem;
+    max-width: 87.5rem; // 1400px
     padding: 0 1rem;
     margin: 0 auto;
+
+    @include mq(lg) {
+        padding: 0 3rem;
+    }
 }

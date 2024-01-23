@@ -1,0 +1,48 @@
+.site-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 87.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @include mq(lg) {
+        padding: 1rem 3rem;
+    }
+
+    &--logo {
+        max-width: 15rem;
+    }
+
+    &--menu {
+        position: absolute;
+        top: 6.25rem;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin: 0 -50vw;
+        padding: 2rem;
+        background-color: $white;
+    }
+
+    &--cta {
+        max-width: 15rem;
+
+        #toggle-menu {
+            margin-right: 2rem;
+
+            span {
+                display: inline-block;
+                margin-left: 4px;
+                font-size: 14px;
+                transition: $transition;
+            }
+        }
+
+        .rotate-chevron {
+            transform: rotate(180deg);
+            transition: $transition;
+        }
+    }
+}

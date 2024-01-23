@@ -4,7 +4,7 @@
     Author URI: https://trt.group
     Description: Custom theme for TRT.
     Text Domain: trt
-    Version: 1.0.0
+    Version: 1.0.2
 */
 html {
   line-height: 1.15;
@@ -165,7 +165,7 @@ body {
   overflow-x: hidden;
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum" 1;
-  background-color: #131316;
+  background-color: #1D2125;
 }
 
 ::-moz-placeholder {
@@ -197,9 +197,14 @@ img {
 }
 
 .content-block {
-  max-width: 77rem;
+  max-width: 87.5rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .content-block {
+    padding: 0 3rem;
+  }
 }
 
 a, p, span, address, table, td, th, tr,
@@ -358,4 +363,98 @@ h6, .h6 {
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.site-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .site-nav {
+    padding: 1rem 3rem;
+  }
+}
+.site-nav--logo {
+  max-width: 15rem;
+}
+.site-nav--menu {
+  position: absolute;
+  top: 6.25rem;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin: 0 -50vw;
+  padding: 2rem;
+  background-color: #FFF;
+}
+.site-nav--cta {
+  max-width: 15rem;
+}
+.site-nav--cta #toggle-menu {
+  margin-right: 2rem;
+}
+.site-nav--cta #toggle-menu span {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 14px;
+  transition: 0.2s ease-out;
+}
+.site-nav--cta .rotate-chevron {
+  transform: rotate(180deg);
+  transition: 0.2s ease-out;
+}
+
+.notice-wrap {
+  position: relative;
+  max-width: 87.5rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  .notice-wrap {
+    padding: 0 3rem;
+  }
+}
+
+.notice-banner {
+  position: relative;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: 1px solid #9CA0AB;
+  border-radius: 6px;
+}
+.notice-banner p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.notice-banner #close {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.primary-button, .primary-button--cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #212327;
+  border-radius: 6px;
+}
+.primary-button:hover, .primary-button--cta:hover {
+  background-color: #363A3F;
+}
+.primary-button--cta {
+  background-color: #0052CC;
+  color: #FFF;
+}
+.primary-button--cta:hover {
+  background-color: #388BFF;
 }

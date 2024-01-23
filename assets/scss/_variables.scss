@@ -1,15 +1,18 @@
 // Base Colors
 $white: #FFF;
 $black: #000;
-$background: #131316;
-$accent: #060609;
-$primary-text-color: #E9E9EC;
+$background: #060609;
+$background-accent: #131316;
 
 // Theme Colors
-$light-black: #363A3F;
+$primary-text-color: #E9E9EC;
 $grey: #9CA0AB;
-$purple: #4348BC;
-$gradient: linear-gradient(to bottom, $white, $light-black);
+$dark-grey: #212327;
+$light-black: #363A3F;
+
+$blue: #0052CC;
+$light-blue: #388BFF;
+$text-gradient: linear-gradient(to bottom, $white, $light-black);
 
 // Fonts
 $lexend: 'Lexend Deca', sans-serif;
@@ -22,7 +25,7 @@ $bold: 700;
 $xbold: 900;
 
 // Consistency Utilities
-$radius-small: 8px;
+$radius-small: 6px;
 $radius-medium: 16px;
 $radius-large: 20px;
 $circle: 50%;

@@ -1,2 +1,2 @@
-jQuery(document).ready((function(){}));
+!function(t){t(document).ready((function(){t((function(){var e="trt_notice_closed";window.localStorage.getItem(e)?t(".notice-wrap").hide():t("#close").on("click",(function(){window.localStorage.setItem(e,!0),t(this).parent().hide()}))})),t((function(){var e=t("#toggle-menu");e.on("click",(function(){t(this).removeClass("aos-animate"),t("#toggle-menu span").toggleClass("rotate-chevron"),setTimeout((function(){t(e).addClass("aos-animate")}),400)}));var n=location.pathname.split("/");""!==n[1]&&t('.link[href^="/'+n[1]+'"]').addClass("active")}))}))}(jQuery);
 //# sourceMappingURL=site-dist.js.map

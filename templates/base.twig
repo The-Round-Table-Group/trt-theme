@@ -9,12 +9,25 @@
 
 		{{ fn('wp_head') }}
 
+        {% if fn('is_singular', 'news') %}
+			<link rel="canonical" href="{{ post.link }}">
+		{% endif %}
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700;900&display=swap" />
 	</head>
 
 	<body data-template="base.twig" class="{{ body_class }}">
+        {% if options.enable_banner %}
+            <section class="notice-wrap ">
+                <div class="notice-banner" role="dialogue" aria-label="Notice">
+                    <p>{{ options.banner_text }}</p>
+                    <button id="close" class="close-notice" aria-label="Close">&times;</button>
+                </div>
+            </section>
+		{% endif %}
+
         {% include 'partials/navigation.twig' %}
         {% include 'partials/header.twig' %}
 

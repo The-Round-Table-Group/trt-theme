@@ -1,1 +1,20 @@
-.primary-button {}
+.primary-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: $dark-grey;
+    border-radius: $radius-small;
+
+    &:hover {
+        background-color: $light-black;
+    }
+
+    &--cta {
+        @extend .primary-button;
+        background-color: $blue;
+        color: $white;
+
+        &:hover {
+            background-color: $light-blue;
+        }
+    }
+}

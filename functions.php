@@ -48,7 +48,7 @@ class TRTSite extends Timber\Site {
 	function enqueue_scripts() {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'trt-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
-        wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/assets/js/packages/slider.js', [], '1.8.1' );
+        wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
         wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'slider-js'], $version );
 
         // remove inline wp styles from frontend
