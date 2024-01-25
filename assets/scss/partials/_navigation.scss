@@ -12,10 +12,13 @@
     }
 
     &--logo {
-        max-width: 15rem;
+        max-width: 18rem;
     }
 
+    // this neds to be within the flex row
+    // undesirable overlapping if moved outside of .site-nav container
     &--menu {
+        display: none;
         position: absolute;
         top: 6.25rem;
         width: 100vw;

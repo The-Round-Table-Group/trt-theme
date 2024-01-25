@@ -1,27 +1,28 @@
 (function($) {
-    $(document).ready(function() {
+    // get/set Cookies here - prevents banner flash on page load
+    window.addEventListener('load', function() {
+        var close_button = $('#close');
 
-        // AOS.init({
-        //     once: true,
-        //     easing: 'ease-in-out'
-        // });
+        // Check if the user already closed the banner
+        Cookies.get('trt_notice_closed') ? $('.notice-wrap').hide() : $('.notice-wrap').show();
 
         /**
          * Set cookie when notice banner is closed
         */
-        $(function noticeBanner() {
-            var trt_notice_banner_cookie = 'trt_notice_closed';
+        close_button.on('click', function() {
+            $(this).parent().hide();
+            // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
+            Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
+        });
+    });
 
-            // Check if the user already closed the banner
-            if (window.localStorage.getItem(trt_notice_banner_cookie)) {
-                $('.notice-wrap').hide();
-            } else {
-                $('#close').on('click', function() {
-                    window.localStorage.setItem(trt_notice_banner_cookie, true);
-                    $(this).parent().hide();
-                });
-            }
-		});
+    $(document).ready(function() {
+
+        // initialize AOS
+        // AOS.init({
+        //     once: true,
+        //     easing: 'ease-in-out'
+        // });
 
         /**
          * Set active menu item based on URL path
@@ -32,14 +33,14 @@
             var link_item = $('#toggle-menu');
 
             link_item.on('click', function() {
-                $(this).removeClass('aos-animate');
+                // $(this).removeClass('aos-animate');
                 $('#toggle-menu span').toggleClass('rotate-chevron');
-                // slide menu down
+                $('.site-nav--menu').slideToggle(750);
 
                 // re-add the animation on a delay
                 setTimeout(function() {
                     $(link_item).addClass('aos-animate');
-                }, 400);
+                }, 750);
             });
 
             // Add active class to menu item based on URL path
