@@ -21,12 +21,11 @@
         display: none;
         position: absolute;
         z-index: 10;
-        top: 6.25rem;
+        top: 7rem;
         width: 100vw;
         left: 50%;
         right: 50%;
         margin: 0 -50vw;
-        padding: 2rem;
         background-color: $white;
     }
 
@@ -47,6 +46,36 @@
         .rotate-chevron {
             transform: rotate(180deg);
             transition: $transition;
+        }
+    }
+}
+
+// main nav section
+#nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 87.5rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+
+    @include mq(lg) {
+        padding: 3rem;
+    }
+
+    .h5 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: $light-black;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li a {
+            color: $light-black;
         }
     }
 }

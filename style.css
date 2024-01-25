@@ -1314,12 +1314,11 @@ h6, .h6 {
   display: none;
   position: absolute;
   z-index: 10;
-  top: 6.25rem;
+  top: 7rem;
   width: 100vw;
   left: 50%;
   right: 50%;
   margin: 0 -50vw;
-  padding: 2rem;
   background-color: #FFF;
 }
 .site-nav--cta {
@@ -1337,6 +1336,33 @@ h6, .h6 {
 .site-nav--cta .rotate-chevron {
   transform: rotate(180deg);
   transition: 0.2s ease-out;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+@media (min-width: 1024px) {
+  #nav {
+    padding: 3rem;
+  }
+}
+#nav .h5 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #363A3F;
+}
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#nav ul li a {
+  color: #363A3F;
 }
 
 .notice-wrap {

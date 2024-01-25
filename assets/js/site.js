@@ -8,7 +8,7 @@
          * Set cookie when notice banner is closed
         */
         $('#close').on('click', function() {
-            $(this).parent().hide();
+            $('.notice-wrap').hide();
             // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
             Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
         });
@@ -37,12 +37,12 @@
 
                 // menu animation and toggle
                 $('#toggle-menu span').toggleClass('rotate-chevron');
-                $('.site-nav--menu').slideToggle(750);
+                $('.site-nav--menu').slideToggle(400);
 
                 // re-add the animation on a delay
                 setTimeout(function() {
                     $(link_item).addClass('aos-animate');
-                }, 750);
+                }, 400);
             });
 
             // Add active class to menu item based on URL path
