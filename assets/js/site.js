@@ -1,28 +1,28 @@
 (function($) {
-    // get/set Cookies here - prevents banner flash on page load
+    // get/set Cookies (1st party cookies)
     window.addEventListener('load', function() {
-        var close_button = $('#close');
-
         // Check if the user already closed the banner
         Cookies.get('trt_notice_closed') ? $('.notice-wrap').hide() : $('.notice-wrap').show();
 
         /**
          * Set cookie when notice banner is closed
         */
-        close_button.on('click', function() {
+        $('#close').on('click', function() {
             $(this).parent().hide();
             // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
             Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
         });
     });
 
+    // main
     $(document).ready(function() {
 
         // initialize AOS
-        // AOS.init({
-        //     once: true,
-        //     easing: 'ease-in-out'
-        // });
+        AOS.init({
+            once: true,
+            easing: 'ease-in-out',
+            offset: 100
+        });
 
         /**
          * Set active menu item based on URL path
@@ -33,7 +33,9 @@
             var link_item = $('#toggle-menu');
 
             link_item.on('click', function() {
-                // $(this).removeClass('aos-animate');
+                $(this).removeClass('aos-animate'); // remove animation
+
+                // menu animation and toggle
                 $('#toggle-menu span').toggleClass('rotate-chevron');
                 $('.site-nav--menu').slideToggle(750);
 
@@ -47,7 +49,7 @@
             var path = location.pathname.split('/'); // url path array
 
             if (path[1] !== '') {
-                $('.link[href^="/' + path[1] + '"]').addClass('active');
+                $('.nav-link[href^="/' + path[1] + '"]').addClass('active');
             }
         });
 

@@ -16,10 +16,11 @@
     }
 
     // this neds to be within the flex row
-    // undesirable overlapping if moved outside of .site-nav container
+    // undesirable overlapping if moved outside
     &--menu {
         display: none;
         position: absolute;
+        z-index: 10;
         top: 6.25rem;
         width: 100vw;
         left: 50%;

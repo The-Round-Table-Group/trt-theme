@@ -49,9 +49,10 @@ class TRTSite extends Timber\Site {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'trt-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
 
-        wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
-        wp_enqueue_script( 'cookie-js', get_template_directory_uri() . '/assets/js/packages/cookie.js', [], '1.4.1' );
-        wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'slider-js', 'cookie-js'], $version );
+        wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
+        wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/packages/aos.js', [], '3.0.0' );
+        wp_enqueue_script( 'cookie', get_template_directory_uri() . '/assets/js/packages/cookie.js', [], '1.4.1' );
+        wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'cookie', 'slider'], $version );
 
         // remove inline wp styles from frontend
         if ( ! is_admin() ) {
