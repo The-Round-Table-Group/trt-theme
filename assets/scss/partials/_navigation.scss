@@ -95,12 +95,15 @@
         position: relative;
         top: 0;
         bottom: 0;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
         width: 1px;
         background-color: $light-black;
     }
 
     // set of CTA-style links
     &__right-panel {
+        flex-shrink: 0;
 
         .panel-link {
             display: block;

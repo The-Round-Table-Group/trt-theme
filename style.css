@@ -1386,8 +1386,13 @@ h6, .h6 {
   position: relative;
   top: 0;
   bottom: 0;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   width: 1px;
   background-color: #363A3F;
+}
+.mega-menu__right-panel {
+  flex-shrink: 0;
 }
 .mega-menu__right-panel .panel-link {
   display: block;
