@@ -176,3 +176,28 @@
         }
     }
 }
+
+// hover underline effect
+.underline {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        bottom: 6px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $light-black;
+        transition: $transition;
+    }
+
+    &:hover:after {
+        width: 100%;
+        transition: $transition;
+    }
+}
+
+.external-link.underline:after {
+    bottom: 0;
+}

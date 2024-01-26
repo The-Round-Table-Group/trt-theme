@@ -20,8 +20,8 @@
         // initialize AOS
         AOS.init({
             once: true,
-            easing: 'ease-in-out',
-            offset: 100
+            easing: 'ease-out',
+            duration: 1000
         });
 
         /**
@@ -30,10 +30,12 @@
         $(function navMenuEvents() {
 
             // mega-menu dropdown / slide reveal
-            var link_item = $('#toggle-menu');
+            var menu = $('.mega-menu__wrapper');
+            var panel = $('.mega-menu__right-panel');
 
-            link_item.on('click', function() {
-                $(this).removeClass('aos-animate'); // remove animation
+            $('#toggle-menu').on('click', function() {
+                $(menu).removeClass('aos-animate'); // remove animation
+                $(panel).removeClass('aos-animate'); // remove animation
 
                 // menu animation and toggle
                 $('#toggle-menu span').toggleClass('rotate-chevron');
@@ -41,8 +43,9 @@
 
                 // re-add the animation on a delay
                 setTimeout(function() {
-                    $(link_item).addClass('aos-animate');
-                }, 400);
+                    $(menu).addClass('aos-animate'); // add animation back
+                    $(panel).addClass('aos-animate'); // add animation back
+                }, 200);
             });
 
             // Add active class to menu item based on URL path
