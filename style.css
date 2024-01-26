@@ -191,19 +191,13 @@ img {
 }
 
 .main-post-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.content-block {
   max-width: 87.5rem;
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 0 auto;
 }
 @media (min-width: 1024px) {
-  .content-block {
-    padding: 0 3rem;
+  .main-post-wrapper {
+    padding: 1rem 3rem;
   }
 }
 

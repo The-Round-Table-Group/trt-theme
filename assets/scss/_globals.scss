@@ -26,18 +26,8 @@ img {
 
 // global full width wrapper for main content
 .main-post-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-// standard width content block - page-specific blocks will override this
-.content-block {
     max-width: 87.5rem; // 1400px
-    padding: 0 1rem;
+    padding: 1rem;
     margin: 0 auto;
-
-    @include mq(lg) {
-        padding: 0 3rem;
-    }
+    @include mq(lg) { padding: 1rem 3rem; }
 }
