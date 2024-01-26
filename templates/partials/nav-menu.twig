@@ -1,48 +1,74 @@
-<nav id="nav" class="mega-menu" aria-label="Main site navigation">
-    <div class="">
-        <h4 class="h5">Features</h4>
-        <ul>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-        </ul>
-    </div>
+<nav class="mega-menu" aria-label="Main site navigation">
+    <div class="mega-menu__container">
+        <div class="mega-menu__wrapper">
+            <p class="h5">Services</p>
+            <a class="link-item" href="/">Advertising</a>
+            <a class="link-item" href="/">Marketing</a>
+            <a class="link-item" href="/">Branding</a>
+            <a class="link-item" href="/">Website Development</a>
+            <a class="link-item" href="/">Event Coordination</a>
+            <a class="link-item" href="/">Event Strategy & Planning</a>
+        </div>
 
-    <div class="">
-        <h4 class="h5">News &amp; Events</h4>
-        <ul>
-            <li><a class="" href="/">Event 1</a></li>
-            <li><a class="" href="/">Event 2</a></li>
-            <li><a class="" href="/">News 1</a></li>
-            <li><a class="" href="/">News 2</a></li>
-            <li><a class="" href="/">News 3</a></li>
-        </ul>
-    </div>
+        <div class="mega-menu__wrapper">
+            <p class="h5">News &amp; Events</p>
+            <a class="link-item" href="/">Event 1</a>
+            <a class="link-item" href="/">Event 2</a>
+            <a class="link-item" href="/">News 1</a>
+            <a class="link-item" href="/">News 2</a>
+            <a class="link-item" href="/">News 3</a>
+        </div>
 
-    <div class="">
-        <h4 class="h5">Case Studies</h4>
-        <ul>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-        </ul>
-    </div>
+        <div class="mega-menu__wrapper">
+            <p class="h5">Case Studies</p>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+            <a class="link-item" href="/">Lorem Ipsum Dolor</a>
+        </div> {# /.mega-menu__wrapper #}
+    </div> {# /.mega-menu__container #}
 
-    <div class="">
-        <h4 class="h5">Clients &amp; Partners</h4>
-        <ul>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-            <li><a class="" href="/">Lorem Ipsum</a></li>
-        </ul>
+    <div class="mega-menu--divider"></div>
+
+    <div class="mega-menu__right-panel">
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/about-icon.svg' %}</span>
+            About The Round Table Group
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/marketing-icon.svg' %}</span>
+            Marketing Consultation
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/analytics-icon.svg' %}</span>
+            Custom Analytics Dashboards
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/landing-page-icon.svg' %}</span>
+            Custom Landing Page Development
+        </a>
     </div>
 </nav>
+
+<section class="external-sites-bar">
+    <div class="site-bar-container">
+        <div class="site-bar-wrap">
+            <p>More from The Round Table</p>
+
+            <a class="external-link" href="https://sanskar-savvy.com" target="_blank" rel="noopener">
+                Sanskaar Savvy
+                <span>{% include 'assets/media/external-link-icon.svg' %}</span>
+            </a>
+
+            <a class="external-link" href="https://kashpatelproductions.com" target="_blank" rel="noopener">
+                Kash Patel Productions
+                <span>{% include 'assets/media/external-link-icon.svg' %}</span>
+            </a>
+        </div>
+    </div>
+</section>

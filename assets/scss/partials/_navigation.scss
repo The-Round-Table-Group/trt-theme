@@ -29,6 +29,7 @@
         background-color: $white;
     }
 
+    // menu and contact us button
     &--cta {
         max-width: 15rem;
 
@@ -51,31 +52,124 @@
 }
 
 // main nav section
-#nav {
+.mega-menu {
     display: flex;
     justify-content: space-between;
     max-width: 87.5rem;
     margin: 0 auto;
     padding: 3rem 1rem;
+    @include mq(lg) { padding: 3rem; }
 
-    @include mq(lg) {
-        padding: 3rem;
+    // main menu area
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 50rem;
+        width: 100%;
     }
 
-    .h5 {
-        font-size: 20px;
-        margin-top: 0;
-        margin-bottom: 1rem;
-        color: $light-black;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li a {
+    // main menu and links
+    &__wrapper {
+        .h5 {
+            font-size: 18px;
+            font-weight: $regular;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 0.65rem;
             color: $light-black;
+            border-bottom: 1px solid $light-black;
+        }
+
+        .link-item {
+            display: block;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 8px 2px;
+            color: $light-black;
+        }
+    } // end .mega-menu__container--wrapper
+
+    // spacer between left main menu and right panel cta links
+    &--divider {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $light-black;
+    }
+
+    // set of CTA-style links
+    &__right-panel {
+
+        .panel-link {
+            display: block;
+            margin-top: 1.2rem;
+            margin-bottom: 1.2rem;
+            padding: 1rem 1.25rem;
+            background-color: $primary-text-color;
+            border-radius: $radius-small;
+            color: $light-black;
+
+            &:first-of-type { margin-top: 0; }
+
+            span {
+                position: relative;
+                top: 0.3rem;
+                display: inline-block;
+                margin-right: 1rem;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+
+                    path { transition: $transition; }
+                }
+            }
+
+            &:hover {
+                background-color: $light-blue;
+                color: $white;
+
+                span svg path {
+                    fill: $white;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
+
+// light grey bar with affiliated site links
+.external-sites-bar {
+    width: 100%;
+    background-color: $primary-text-color;
+    border-top: 1px solid $light-black;
+
+    // bar area
+    .site-bar-container {
+        max-width: 87.5rem;
+        margin: 0 auto;
+        padding: 1rem;
+        @include mq(lg) { padding: 1rem 3rem; }
+    }
+
+    // bar menu links
+    .site-bar-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 50rem;
+
+        p, .external-link { color: $light-black; }
+        p { margin: 0; }
+
+        .external-link {
+            span {
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                margin-left: 0.5rem;
+            }
         }
     }
 }

@@ -54,3 +54,12 @@ h3, .h3 { font-size: fluid-text(414px, 28px, 980px, 36px); }
 h4, .h4 { font-size: fluid-text(414px, 22px, 1024px, 30px); }
 h5, .h5 { font-size: 20px; }
 h6, .h6 { font-size: 16px; }
+
+.gradient-header {
+    font-size: fluid-text(414px, 36px, 980px, 48px);
+    font-weight: $xbold;
+    color: transparent;
+    background: $text-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
