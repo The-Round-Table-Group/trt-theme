@@ -4,9 +4,7 @@
         // Check if the user already closed the banner
         Cookies.get('trt_notice_closed') ? $('.notice-wrap').hide() : $('.notice-wrap').show();
 
-        /**
-         * Set cookie when notice banner is closed
-        */
+        // Set cookie when notice banner is closed
         $('#close').on('click', function() {
             $('.notice-wrap').hide();
             // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
@@ -17,18 +15,14 @@
     // main
     $(document).ready(function() {
 
-        // initialize AOS
+        // Initialize AOS
         AOS.init({
             once: true,
             easing: 'ease-out',
             duration: 1000
         });
 
-        /**
-         * Set active menu item based on URL path
-        */
         $(function navMenuEvents() {
-
             // mega-menu dropdown / slide reveal
             var menu = $('.mega-menu__wrapper');
             var panel = $('.mega-menu__right-panel');
@@ -52,13 +46,11 @@
             var path = location.pathname.split('/'); // url path array
 
             if (path[1] !== '') {
-                $('.nav-link[href^="/' + path[1] + '"]').addClass('active');
+                $('.link-item[href^="/' + path[1] + '"]').addClass('active');
             }
         });
 
-        /**
-         * Smooth scroll to anchor links
-        */
+        // Smooth scroll to anchor links
         // $('a[href*="#"]')
 		// .not('[href="#"]')
 		// .not('[href="#0"]')

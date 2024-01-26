@@ -1192,7 +1192,7 @@ h6, .h6 {
     transform: translate3d(0, -100px, 0);
   }
   html:not(.no-js) [data-aos=fade-right] {
-    transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-27px, 0, 0);
   }
   html:not(.no-js) [data-aos=fade-left] {
     transform: translate3d(100px, 0, 0);
@@ -1333,12 +1333,21 @@ h6, .h6 {
 .site-nav--cta #toggle-menu span {
   display: inline-block;
   margin-left: 4px;
-  font-size: 14px;
   transition: 0.2s ease-out;
+}
+.site-nav--cta #toggle-menu span svg {
+  position: relative;
+  top: -2px;
+}
+.site-nav--cta #toggle-menu span svg path {
+  fill: #FFF;
 }
 .site-nav--cta .rotate-chevron {
   transform: rotate(180deg);
   transition: 0.2s ease-out;
+}
+.site-nav--cta .rotate-chevron svg {
+  top: -4px !important;
 }
 
 .mega-menu {

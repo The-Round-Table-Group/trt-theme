@@ -39,14 +39,22 @@
             span {
                 display: inline-block;
                 margin-left: 4px;
-                font-size: 14px;
                 transition: $transition;
+
+                svg {
+                    position: relative;
+                    top: -2px;
+
+                    path { fill: $white; }
+                }
             }
         }
 
         .rotate-chevron {
             transform: rotate(180deg);
             transition: $transition;
+
+            svg { top: -4px !important; }
         }
     }
 }
