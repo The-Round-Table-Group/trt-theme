@@ -1,32 +1,21 @@
 <nav class="mega-menu" aria-label="Main site navigation">
     <div class="mega-menu__container">
-        <div class="mega-menu__wrapper" data-aos="fade-right" data-aos-offset="20">
-            <p class="h5">Services</p>
-            <a class="link-item underline" href="/">Advertising</a>
-            <a class="link-item underline" href="/">Marketing</a>
-            <a class="link-item underline" href="/">Branding</a>
-            <a class="link-item underline" href="/">Website Development</a>
-            <a class="link-item underline" href="/">Event Coordination</a>
-        </div>
+        {% for menu in options.primary_nav_menu %}
+            <div
+                class="mega-menu__wrapper"
+                data-aos="fade-right"
+                data-aos-offset="20"
+                {% if menu.menu_aos_delay %}
+                    data-aos-delay="{{ menu.menu_aos_delay }}"
+                {% endif %}
+            >
+                <p class="menu-header">{{ menu.menu_header }}</p>
 
-        <div class="mega-menu__wrapper" data-aos="fade-right" data-aos-delay="250" data-aos-offset="20">
-            <p class="h5">Resources</p>
-            <a class="link-item underline" href="/">About Us</a>
-            <a class="link-item underline" href="/">News</a>
-            <a class="link-item underline" href="/">Upcoming Events</a>
-            <a class="link-item underline" href="/">Brand Guide</a>
-            <a class="link-item underline" href="/">Clients &amp; Partners</a>
-        </div>
-
-        <div class="mega-menu__wrapper" data-aos="fade-right" data-aos-delay="500" data-aos-offset="20">
-            <p class="h5">Case Studies</p>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-            <a class="link-item underline" href="/">Lorem Ipsum Dolor</a>
-        </div> {# /.mega-menu__wrapper #}
+                {% for link in menu.menu_links %}
+                    <a class="link-item underline" href="{{ link.link_item.url }}">{{ link.link_item.title }}</a>
+                {% endfor %}
+            </div>
+        {% endfor %}
     </div> {# /.mega-menu__container #}
 
     <div class="mega-menu--divider"></div>
@@ -59,12 +48,22 @@
         <div class="site-bar-wrap">
             <p>More from The Round Table</p>
 
-            <a class="external-link underline" href="https://sanskar-savvy.com" target="_blank" rel="noopener">
+            <a
+                class="external-link underline"
+                href="https://sanskar-savvy.com"
+                target="_blank"
+                rel="noopener"
+            >
                 Sanskaar Savvy
                 <span>{% include 'assets/media/external-link-icon.svg' %}</span>
             </a>
 
-            <a class="external-link underline" href="https://kashpatelproductions.com" target="_blank" rel="noopener">
+            <a
+                class="external-link underline"
+                href="https://kashpatelproductions.com"
+                target="_blank"
+                rel="noopener"
+            >
                 Kash Patel Productions
                 <span>{% include 'assets/media/external-link-icon.svg' %}</span>
             </a>

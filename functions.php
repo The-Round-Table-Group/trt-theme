@@ -103,6 +103,13 @@ class TRTSite extends Timber\Site {
 				'menu_title'  => __('Social Media'),
 				'parent_slug' => $parent['menu_slug'],
 			]);
+
+            // Navigation Menus
+			$child = acf_add_options_sub_page([
+				'page_title'  => __('Nav Menus'),
+				'menu_title'  => __('Nav Menus'),
+				'parent_slug' => $parent['menu_slug'],
+			]);
         }
 	}
 

@@ -1,1 +1,5 @@
-<header class="site-header"></header>
+{% if not is_front_page %}
+    <header class="site-header"></header>
+{% else %}
+    <header class="home-header"></header>
+{% endif %}

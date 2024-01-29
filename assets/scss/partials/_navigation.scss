@@ -79,12 +79,13 @@
 
     // main menu and links
     &__wrapper {
-        .h5 {
-            font-size: 18px;
-            font-weight: $regular;
+        .menu-header {
             margin-top: 0;
             margin-bottom: 1rem;
             padding-bottom: 0.65rem;
+            font-size: 18px;
+            font-weight: $regular;
+            line-height: 1.4;
             color: $light-black;
             border-bottom: 1px solid $light-black;
         }
