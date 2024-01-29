@@ -7,7 +7,7 @@ body {
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
 	font-feature-settings: "lnum" 1;
-    background-color: $background;
+    background-color: #1D2125;
 }
 
 ::placeholder {
@@ -26,14 +26,8 @@ img {
 
 // global full width wrapper for main content
 .main-post-wrapper {
-    width: 100%;
+    max-width: 87.5rem; // 1400px
+    padding: 1rem;
     margin: 0 auto;
-    padding: 0;
-}
-
-// standard width content block - page-specific blocks will override this
-.content-block {
-    max-width: 77rem;
-    padding: 0 1rem;
-    margin: 0 auto;
+    @include mq(lg) { padding: 1rem 3rem; }
 }

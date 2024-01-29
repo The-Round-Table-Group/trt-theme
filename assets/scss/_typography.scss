@@ -40,11 +40,11 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-	margin-top: 2.15rem;
-	margin-bottom: 1.2rem;
+	margin-top: 2rem;
+	margin-bottom: 2.5rem;
 	font-family: $lexend;
 	font-weight: $bold;
-	line-height: 1.4;
+	line-height: 1.2;
 	color: $primary-text-color;
 }
 
@@ -54,3 +54,14 @@ h3, .h3 { font-size: fluid-text(414px, 28px, 980px, 36px); }
 h4, .h4 { font-size: fluid-text(414px, 22px, 1024px, 30px); }
 h5, .h5 { font-size: 20px; }
 h6, .h6 { font-size: 16px; }
+
+.gradient-header {
+    font-size: fluid-text(414px, 52px, 980px, 64px);
+    font-weight: $semibold;
+    letter-spacing: -1px;
+    color: transparent;
+    background: $text-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -48,8 +48,11 @@ class TRTSite extends Timber\Site {
 	function enqueue_scripts() {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'trt-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
-        wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/assets/js/packages/slider.js', [], '1.8.1' );
-        wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'slider-js'], $version );
+
+        wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
+        wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/packages/aos.js', [], '3.0.0' );
+        wp_enqueue_script( 'cookie', get_template_directory_uri() . '/assets/js/packages/cookie.js', [], '1.4.1' );
+        wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'cookie', 'slider'], $version );
 
         // remove inline wp styles from frontend
         if ( ! is_admin() ) {
@@ -59,10 +62,10 @@ class TRTSite extends Timber\Site {
 
 	// remove jqmigrate from frontend
 	function remove_jqmigrate( $scripts ) {
-		if( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
+		if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
 			$script = $scripts->registered['jquery'];
 
-			if( $script->deps ) {
+			if ( $script->deps ) {
 				$script->deps = array_diff( $script->deps, ['jquery-migrate'] );
 			}
 		}
@@ -98,6 +101,13 @@ class TRTSite extends Timber\Site {
 			$child = acf_add_options_sub_page([
 				'page_title'  => __('Social Media'),
 				'menu_title'  => __('Social Media'),
+				'parent_slug' => $parent['menu_slug'],
+			]);
+
+            // Navigation Menus
+			$child = acf_add_options_sub_page([
+				'page_title'  => __('Nav Menus'),
+				'menu_title'  => __('Nav Menus'),
 				'parent_slug' => $parent['menu_slug'],
 			]);
         }

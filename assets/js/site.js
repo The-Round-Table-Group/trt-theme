@@ -1,21 +1,56 @@
 (function($) {
+    // get/set Cookies (1st party cookies)
+    window.addEventListener('load', function() {
+        // Check if the user already closed the banner
+        Cookies.get('trt_notice_closed') ? $('.notice-wrap').hide() : $('.notice-wrap').show();
+
+        // Set cookie when notice banner is closed
+        $('#close').on('click', function() {
+            $('.notice-wrap').hide();
+            // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
+            Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
+        });
+    });
+
+    // main
     $(document).ready(function() {
 
-        /**
-         * Set active menu item based on URL path
-        */
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            easing: 'ease-out',
+            duration: 1000
+        });
 
-        // var path = location.pathname.split('/'); // url path array
-        // var url = window.location.pathname; // full url
-        // if (path[1] !== '') {
-        //     $('.nav-menu--link[href^="/' + path[1] + '"]').addClass('active');
-        // } else {
-        //     $('.home').addClass('active');
-        // }
+        $(function navMenuEvents() {
+            // mega-menu dropdown / slide reveal
+            var menu = $('.mega-menu__wrapper');
+            var panel = $('.mega-menu__right-panel');
 
-        /**
-         * Smooth scroll to anchor links
-        */
+            $('#toggle-menu').on('click', function() {
+                $(menu).removeClass('aos-animate'); // remove animation
+                $(panel).removeClass('aos-animate'); // remove animation
+
+                // menu animation and toggle
+                $('#toggle-menu span').toggleClass('rotate-chevron');
+                $('.site-nav--menu').slideToggle(400);
+
+                // re-add the animation on a delay
+                setTimeout(function() {
+                    $(menu).addClass('aos-animate'); // add animation back
+                    $(panel).addClass('aos-animate'); // add animation back
+                }, 200);
+            });
+
+            // Add active class to menu item based on URL path
+            var path = location.pathname.split('/'); // url path array
+
+            if (path[1] !== '') {
+                $('.link-item[href^="/' + path[1] + '"]').addClass('active');
+            }
+        });
+
+        // Smooth scroll to anchor links
         // $('a[href*="#"]')
 		// .not('[href="#"]')
 		// .not('[href="#0"]')

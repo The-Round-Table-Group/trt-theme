@@ -1,0 +1,73 @@
+<nav class="mega-menu" aria-label="Main site navigation">
+    <div class="mega-menu__container">
+        {% for menu in options.primary_nav_menu %}
+            <div
+                class="mega-menu__wrapper"
+                data-aos="fade-right"
+                data-aos-offset="20"
+                {% if menu.menu_aos_delay %}
+                    data-aos-delay="{{ menu.menu_aos_delay }}"
+                {% endif %}
+            >
+                <p class="menu-header">{{ menu.menu_header }}</p>
+
+                {% for link in menu.menu_links %}
+                    <a class="link-item underline" href="{{ link.link_item.url }}">{{ link.link_item.title }}</a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div> {# /.mega-menu__container #}
+
+    <div class="mega-menu--divider"></div>
+
+    <div class="mega-menu__right-panel" data-aos="fade-right" data-aos-delay="750" data-aos-offset="20">
+        {# rework these to be recent news or event highlights - discuss Monday #}
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/about-icon.svg' %}</span>
+            About The Round Table Group
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/marketing-icon.svg' %}</span>
+            Marketing Consultation
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/analytics-icon.svg' %}</span>
+            Analytics Dashboards
+        </a>
+
+        <a class="panel-link" href="/">
+            <span>{% include 'assets/media/landing-page-icon.svg' %}</span>
+            Landing Page Development
+        </a>
+    </div>
+</nav>
+
+<section class="external-sites-bar">
+    <div class="site-bar-container">
+        <div class="site-bar-wrap">
+            <p>More from The Round Table</p>
+
+            <a
+                class="external-link underline"
+                href="https://sanskar-savvy.com"
+                target="_blank"
+                rel="noopener"
+            >
+                Sanskaar Savvy
+                <span>{% include 'assets/media/external-link-icon.svg' %}</span>
+            </a>
+
+            <a
+                class="external-link underline"
+                href="https://kashpatelproductions.com"
+                target="_blank"
+                rel="noopener"
+            >
+                Kash Patel Productions
+                <span>{% include 'assets/media/external-link-icon.svg' %}</span>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,1 +1,21 @@
-<nav class="site-nav" aria-label="Main site navigation"></nav>
+<section class="site-nav">
+
+    {% if not is_front_page %}
+        <a class="site-nav--logo" href="/">
+            <img src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+        </a>
+    {% else %}
+        <img class="site-nav--logo" src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+    {% endif %}
+
+    <div class="site-nav--menu">
+        {% include 'partials/nav-menu.twig' %}
+    </div>
+
+    <div class="site-nav--cta">
+        <button id="toggle-menu">
+            Menu <span>{% include 'assets/media/chevron-down-icon.svg' %}</span>
+        </button>
+        <a class="primary-button--blue" href="/contact">Contact Us</a>
+    </div>
+</section>
