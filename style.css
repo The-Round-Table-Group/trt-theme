@@ -246,11 +246,11 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 2.15rem;
-  margin-bottom: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
   color: #E9E9EC;
 }
 
@@ -279,12 +279,14 @@ h6, .h6 {
 }
 
 .gradient-header {
-  font-size: clamp(36px, 27.222614841px + 0.0212014134 * 100vw, 48px);
-  font-weight: 900;
+  font-size: clamp(52px, 43.222614841px + 0.0212014134 * 100vw, 64px);
+  font-weight: 600;
+  letter-spacing: -1px;
   color: transparent;
-  background: linear-gradient(to bottom, #FFF, #363A3F);
+  background: linear-gradient(190deg, #FFF 0%, #363A3F 140.97%);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .slick-slider {
@@ -1497,6 +1499,40 @@ h6, .h6 {
   bottom: 0;
 }
 
+.home-header,
+.site-header {
+  max-width: 87.5rem;
+  margin: 3rem auto 0;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .home-header,
+  .site-header {
+    padding: 1rem 3rem;
+  }
+}
+
+.home-header {
+  text-align: center;
+}
+.home-header .text-container {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+.home-header .text-container h1, .home-header .text-container p {
+  margin-top: 0;
+}
+.home-header .video-container {
+  margin: 5rem auto 0;
+}
+.home-header .video-container .player {
+  width: 100%;
+  border-radius: 20px;
+}
+.home-header .video-container .player:hover {
+  cursor: pointer;
+}
+
 .notice-wrap {
   display: none;
   position: relative;
@@ -1531,19 +1567,36 @@ h6, .h6 {
   line-height: 1;
 }
 
-.primary-button, .primary-button--cta {
+.primary-button, .primary-button--grey, .primary-button--blue {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #212327;
+  padding: 0.5rem 1.25rem;
   border-radius: 6px;
 }
-.primary-button:hover, .primary-button--cta:hover {
+.primary-button--grey {
+  background-color: #212327;
+  color: #FFF;
+}
+.primary-button--grey:hover {
   background-color: #363A3F;
 }
-.primary-button--cta {
+.primary-button--blue {
   background-color: #0052CC;
   color: #FFF;
 }
-.primary-button--cta:hover {
+.primary-button--blue:hover {
   background-color: #388BFF;
+}
+.primary-button--blue:hover .right-arrow {
+  left: 8px;
+  transition: 0.2s ease-out;
+}
+.primary-button--blue .right-arrow {
+  position: relative;
+  top: 1px;
+  left: 4px;
+  display: inline-block;
+  transition: 0.2s ease-out;
+}
+.primary-button--blue .right-arrow svg path {
+  fill: #FFF;
 }

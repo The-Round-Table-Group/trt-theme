@@ -1,5 +1,38 @@
+// both headers
+.home-header,
+.site-header {
+    max-width: 87.5rem;
+    margin: 3rem auto 0;
+    padding: 1rem;
+    @include mq(lg) { padding: 1rem 3rem; }
+}
+
 // home header
-.home-header {}
+.home-header {
+    text-align: center;
+
+    .text-container {
+        max-width: 54rem;
+        margin: 0 auto;
+
+        h1, p {
+            margin-top: 0;
+        }
+    }
+
+    .video-container {
+        margin: 5rem auto 0;
+
+        .player {
+            width: 100%;
+            border-radius: $radius-large;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
 
 // default header
 .site-header {}
