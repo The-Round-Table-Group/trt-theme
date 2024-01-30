@@ -1,20 +1,21 @@
-{% if not is_front_page %}
-    <header class="site-header"></header>
-{% else %}
-    <header class="home-header">
-        <div class="text-container">
-            <p>Sign up for free today!</p>
-            <h1 class="gradient-header">Deliver an enterprise quality project in minutes.</h1>
-            <a class="primary-button--blue" href="/">
-                Get Started
+<header class="site-header">
+    <div class="text-container">
+        <h1 class="gradient-header">{{ post.header_text }}</h1>
+
+        {% if post.header_button.title %}
+            <a class="primary-button--blue" href="{{ post.header_button.url }}">
+                {{ post.header_button.title }}
                 <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
             </a>
-        </div>
+        {% endif %}
+    </div>
 
+    {% if is_front_page %}
         <div class="video-container">
             <video class="player" controls>
+                {# will be a CDN or wp-content URL #}
                 <source src="{{ post.header_video }}" type="video/mp4">
             </video>
         </div>
-    </header>
-{% endif %}
+    {% endif %}
+</header>

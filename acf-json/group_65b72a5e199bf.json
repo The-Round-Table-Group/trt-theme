@@ -1,7 +1,43 @@
 {
     "key": "group_65b72a5e199bf",
-    "title": "Home Header Video",
+    "title": "Home Header",
     "fields": [
+        {
+            "key": "field_65b84ddb4d718",
+            "label": "Header Text",
+            "name": "header_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65b84dec4d719",
+            "label": "Header Button",
+            "name": "header_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
         {
             "key": "field_65b72a5e1a342",
             "label": "Header Video",
@@ -38,5 +74,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706503687
+    "modified": 1706577442
 }

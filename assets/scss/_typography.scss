@@ -56,8 +56,8 @@ h5, .h5 { font-size: 20px; }
 h6, .h6 { font-size: 16px; }
 
 .gradient-header {
-    font-size: fluid-text(414px, 52px, 980px, 64px);
-    font-weight: $semibold;
+    font-size: fluid-text(414px, 42px, 980px, 64px);
+    font-weight: $regular;
     letter-spacing: -1px;
     color: transparent;
     background: $text-gradient;
