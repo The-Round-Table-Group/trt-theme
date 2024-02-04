@@ -113,6 +113,7 @@
     // set of CTA-style links
     &__right-panel {
         flex-shrink: 0;
+        align-self: center;
 
         .panel-link {
             display: block;
@@ -124,6 +125,7 @@
             color: $light-black;
 
             &:first-of-type { margin-top: 0; }
+            &:last-of-type { margin-bottom: 0; }
 
             span {
                 position: relative;

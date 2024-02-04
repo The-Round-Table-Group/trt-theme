@@ -20,17 +20,31 @@ if( function_exists('acf_register_block_type') ) :
 	];
 	acf_register_block_type( $button_block );
 
-    // $accordion_group = [
-	// 	'name' => 'accordion-group',
-	// 	'title' => __( 'Accordion Group', 'trt' ),
-	// 	'description' => __( 'Creates 1 or more accordions with a dropdown that folds into the title.', 'trt' ),
+    $image_text_block = [
+		'name' => 'image-text-block',
+		'title' => __( 'Image/Text Block', 'trt' ),
+		'description' => __( 'Creates a split block with image left/right and text left/right options.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'align-left',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'split', 'image', 'text' ]
+	];
+	acf_register_block_type( $image_text_block );
+
+    // $ = [
+	// 	'name' => '',
+	// 	'title' => __( '', 'trt' ),
+	// 	'description' => __( '', 'trt' ),
 	// 	'render_callback' => 'custom_block_callback',
 	// 	'category' => 'trt-blocks',
 	// 	'align' => 'wide',
 	// 	'icon' => 'insert',
 	// 	'mode' => 'auto',
 	// 	'supports' => [ 'mode' => true ],
-	// 	'keywords' => [ 'trt', 'block', 'accordion', 'dropdown', 'faq', 'question', 'answer']
+	// 	'keywords' => [ 'trt', 'block' ]
 	// ];
-	// acf_register_block_type( $accordion_group );
+	// acf_register_block_type( $ );
 endif;

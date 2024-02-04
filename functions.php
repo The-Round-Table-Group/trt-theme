@@ -23,7 +23,7 @@ class TRTSite extends Timber\Site {
 		add_action( 'wp_default_scripts', [ $this, 'remove_jqmigrate' ] );
 
 		// Filter Hooks //
-        add_filter( 'block_categories', [ $this, 'sdc_block_category' ], 10, 2 );
+        add_filter( 'block_categories', [ $this, 'trt_block_category' ], 10, 2 );
 		add_filter( 'timber_context', [ $this, 'add_to_context' ] );
 		add_filter( 'manage_pages_columns', [ $this, 'remove_pages_count_columns' ] );
 
@@ -40,6 +40,10 @@ class TRTSite extends Timber\Site {
 			#wp-admin-bar-new-content #comments,
             .column-comments,
 			#adminmenu .update-plugins { display: none !important; }
+
+            .components-editor-notices__dismissible {
+                display: none !important;
+            }
 		</style>
 		<?php
 	}
@@ -49,14 +53,19 @@ class TRTSite extends Timber\Site {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'trt-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
 
-        wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
         wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/packages/aos.js', [], '3.0.0' );
         wp_enqueue_script( 'cookie', get_template_directory_uri() . '/assets/js/packages/cookie.js', [], '1.4.1' );
+        wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
+
         wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'cookie', 'slider'], $version );
 
         // remove inline wp styles from frontend
         if ( ! is_admin() ) {
             wp_dequeue_style( 'global-styles' );
+        }
+
+        if ( is_admin() ) {
+            wp_enqueue_style( 'trt-block-css', get_stylesheet_directory_uri() . '/block-editor-styles.css', [], $version );
         }
 	}
 
@@ -86,7 +95,10 @@ class TRTSite extends Timber\Site {
 	function after_setup_theme() {
 		add_theme_support( 'html5' );
 		add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'align-wide' );
 		add_theme_support( 'disable-custom-colors' );
+        add_theme_support( 'editor-styles' );
+		add_editor_style( 'block-editor-styles.css' );
 
         if (function_exists('acf_add_options_page')) {
             $parent = acf_add_options_page([
@@ -146,12 +158,19 @@ class TRTSite extends Timber\Site {
 	}
 }
 
-// create a new instance of our site class
+// create a new instance
 new TRTSite();
 
-// move our ACF Options Page below the Dashboard tab
+/**
+ * Global Functions
+ *
+ * Functions that return a value need the filter or action hook added with it below
+ * Functions that do not return a value are called directly in a template
+*/
+
+// Move our custom acf options page below the dashboard tab
 function custom_menu_order( $menu_ord ) {
-	if( ! $menu_ord ) {
+	if ( ! $menu_ord ) {
 		return true;
 	}
 

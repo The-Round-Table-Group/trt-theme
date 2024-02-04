@@ -1,0 +1,66 @@
+.image-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+
+    @include mq(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    // text content areas
+    .text-content {
+        max-width: 32.5rem;
+
+        &__pill-tag {
+            display: inline-block;
+            background-color: $light-black;
+            margin-left: auto;
+            padding: 0.5rem 1.65rem;
+            border-radius: $radius-large;
+            text-align: center;
+        }
+
+        &__header {}
+        &__body {}
+        &__footer {}
+    }
+
+    .left-image,
+    .right-image {
+        max-width: 28rem;
+        width: 100%;
+        border-radius: $radius-medium;
+
+        @include mq(lg) {
+            border-radius: $radius-large;
+        }
+    }
+
+    .left-image {
+        margin-right: 0;
+
+        @include mq(md) {
+            margin-right: 4rem;
+        }
+
+        @include mq(lg) {
+            margin-right: 6.5rem;
+        }
+    }
+
+    .right-image {
+        margin-left: 0rem;
+
+        @include mq(md) {
+            margin-left: 4rem;
+        }
+
+        @include mq(lg) {
+            margin-left: 6.5rem;
+        }
+    }
+}

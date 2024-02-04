@@ -1,16 +1,3 @@
-// reveal animation
-@keyframes reveal {
-    0% {
-        transform: translate(0, 130%);
-    }
-
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-$reveal: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
-
 // Media Query Mixin
 @mixin mq($size) {
 	@if $size == xxs {
@@ -25,9 +12,7 @@ $reveal: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 		@media (min-width: 1024px) { @content; }
 	} @else if $size == xl {
 		@media (min-width: 1200px) { @content; }
-	} @else if $size == xxl {
-        @media (min-width: 1400px) { @content; }
-    } @else {
+	} @else {
 		@media (min-width: $size) { @content; }
 	}
 }
@@ -39,3 +24,14 @@ $reveal: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 	$return: clamp(#{$min-font-size}, #{$y-intersect} + #{$slope} * 100vw, #{$max-font-size});
 	@return $return;
 }
+
+// reveal animation
+$reveal: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+@keyframes reveal {
+    0% { transform: translate(0, 130%); }
+    100% { transform: translate(0, 0); }
+}
+
+// bumpup animation
+$bumpup: bumpup 2s linear 1;
+@keyframes bumpup {}

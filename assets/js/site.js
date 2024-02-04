@@ -7,7 +7,6 @@
         // Set cookie when notice banner is closed
         $('#close').on('click', function() {
             $('.notice-wrap').hide();
-            // we need to set the cookie on the server using sameSite: 'strict' instead of 'lax'
             Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
         });
     });
