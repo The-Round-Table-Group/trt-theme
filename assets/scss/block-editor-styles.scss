@@ -1,5 +1,13 @@
+/**
+    * This stylesheet is only loaded in the Block Editor
+    * The component-loader partial loads all blocks in the editor and frontend
+    * Saving a component loaded this way recompiles both frontend and admin styles for consistency
+    * Admin styles may not be 1:1 with the frontend due to Editor constraints
+*/
+
 body {
     background-color: #1D2125;
+
     // dependencies for blocks in the editor
     @import 'packages/normalize';           // Soft reset + browser consistencies
     @import 'variables';                    // Sitewide variables, custom mixins, custom functions
@@ -7,6 +15,16 @@ body {
     @import 'globals';                      // Base html/body setup, wrappers, containers
     @import 'typography';                   // Sitewide typography: sizing, spacing, initial colors
 
-    // blocks
+    // all blocks
     @import 'components/component-loader';
+
+    // editor fixes
+    .acf-input-wrap input,
+    .acf-switch span {
+        color: $light-black !important;
+    }
+
+    .editor-styles-wrapper ::placeholder {
+        color: $light-black !important;
+    }
 }

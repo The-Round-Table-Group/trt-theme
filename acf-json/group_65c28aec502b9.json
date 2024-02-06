@@ -1,0 +1,72 @@
+{
+    "key": "group_65c28aec502b9",
+    "title": "SEO Settings",
+    "fields": [
+        {
+            "key": "field_65c28dddcabbb",
+            "label": "Title",
+            "name": "seo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A curated title for this post or page. If left empty, the page title will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65c28aec01234",
+            "label": "Description",
+            "name": "seo_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "A good description is 155-160 characters and is usually the first 2-3 sentences of an article (excerpt).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1707249875
+}

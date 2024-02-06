@@ -3,7 +3,7 @@ a, p, span, address, table, td, th, tr,
 small, time, ol, ul, li, button, input {
 	font-family: $lexend;
 	font-size: 1rem;
-	font-weight: $regular;
+	font-weight: $light;
 	color: $primary-text-color;
 }
 
@@ -17,8 +17,9 @@ a {
 }
 
 p {
-	margin-top: 1.2rem;
-	margin-bottom: 1.2rem;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+    line-height: 1.6;
 }
 
 // button style reset
@@ -48,15 +49,14 @@ h6, .h6 {
 	color: $primary-text-color;
 }
 
-h1, .h1 { font-size: fluid-text(414px, 42px, 980px, 56px); }
-h2, .h2 { font-size: fluid-text(414px, 36px, 980px, 48px); }
-h3, .h3 { font-size: fluid-text(414px, 28px, 980px, 36px); }
-h4, .h4 { font-size: fluid-text(414px, 22px, 980px, 30px); }
+h1, .h1 { font-size: fluid-text(480px, 42px, 960px, 64px); }
+h2, .h2 { font-size: fluid-text(480px, 42px, 960px, 54px); }
+h3, .h3 { font-size: fluid-text(480px, 36px, 960px, 48px); }
+h4, .h4 { font-size: fluid-text(480px, 28px, 960px, 36px); }
 h5, .h5 { font-size: 20px; }
-h6, .h6 { font-size: 16px; }
+h6, .h6 { font-size: 18px; }
 
 .gradient-header {
-    font-size: fluid-text(414px, 42px, 980px, 64px);
     font-weight: $regular;
     letter-spacing: -1px;
     color: transparent;
