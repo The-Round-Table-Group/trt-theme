@@ -1,14 +1,14 @@
 {
-    "key": "group_65c28aec502b9",
-    "title": "SEO Settings",
+    "key": "group_65c3ff3a60692",
+    "title": "Global Call To Action",
     "fields": [
         {
-            "key": "field_65c28dddcabbb",
+            "key": "field_65c3ff3a182a2",
             "label": "Title",
-            "name": "seo_title",
+            "name": "cta_title",
             "aria-label": "",
             "type": "text",
-            "instructions": "A curated title for this post or page. If left empty, the page title will be used.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -23,12 +23,12 @@
             "append": ""
         },
         {
-            "key": "field_65c28aec01234",
-            "label": "Description",
-            "name": "seo_description",
+            "key": "field_65c3ff53182a3",
+            "label": "Message",
+            "name": "cta_message",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "A good description is 155-160 characters and is usually the first 2-3 sentences of an article (excerpt).",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -43,12 +43,12 @@
             "new_lines": ""
         },
         {
-            "key": "field_65c2b172ef28b",
-            "label": "SEO Image",
-            "name": "seo_image",
+            "key": "field_65c3ff6a182a4",
+            "label": "Link",
+            "name": "cta_link",
             "aria-label": "",
-            "type": "image",
-            "instructions": "Curated image for social media sharing.",
+            "type": "link",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -56,35 +56,19 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "thumbnail"
+            "return_format": "array"
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "news"
+                "value": "site-options"
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 3,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -93,5 +77,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707258255
+    "modified": 1707343787
 }

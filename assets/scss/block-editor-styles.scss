@@ -19,9 +19,10 @@ body {
     @import 'components/component-loader';
 
     // editor fixes
-    .acf-input-wrap input,
-    .acf-switch span {
-        color: $light-black !important;
+    .acf-block-fields [class^="acf-"] {
+        input, span, p, a, li, button, textarea, select {
+            color: $light-black !important;
+        }
     }
 
     .editor-styles-wrapper ::placeholder {

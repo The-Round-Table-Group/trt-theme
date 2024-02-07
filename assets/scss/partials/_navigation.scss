@@ -172,10 +172,15 @@
     .site-bar-wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         max-width: 50rem;
 
         p, .external-link { color: $light-black; }
-        p { margin: 0; }
+
+        p {
+            margin: 0;
+            font-weight: $regular;
+        }
 
         .external-link {
             span {

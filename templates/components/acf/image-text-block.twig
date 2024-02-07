@@ -1,23 +1,51 @@
-{# Block Name: Button Block #}
-{# left_right_img check: left = true #}
+{#
+ # Block Name: Button Block
+ # image_left_or_right is a true/false field
+ # true    = image is on the right
+ # false   = image is on the left
+#}
+
 {% set tc = fields.text_content %}
 
 <section class="image-text-block">
-    {# image is on the right #}
+    {# image is on the left #}
     {% if not fields.image_left_or_right %}
         <div class="left-image">
             <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />
         </div>
     {% endif %}
 
+    {# always shown #}
     <div class="text-content">
-        <p class="text-content__pill-tag">{{ tc.pill_tag }}</p>
-        <h2 class="text-content__header gradient-header">{{ tc.header }}</h2>
+        <span class="text-content__tag">{{ tc.pill_tag }}</span>
+
+        {% if tc.header_level == 'h2' %}
+            <h2 class="text-content__header">{{ tc.header }}</h2>
+        {% else %}
+            <h3 class="text-content__header">{{ tc.header }}</h3>
+        {% endif %}
+
         <p class="text-content__body">{{ tc.body }}</p>
-        <p class="text-content__footer">{{ tc.footer }}</p>
+
+        {% if tc.footer_content_type == 'text' %}
+            <p class="text-content__footer">{{ tc.footer_text }}</p>
+        {% elseif tc.footer_content_type == 'list' %}
+            <ul class="text-content__footer">
+                {% for li in tc.list_items %}
+                    <li>
+                        <span class="checkmark">{% include 'assets/media/checkmark-icon.svg' %}</span>
+                        {{ li.list_item_text }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elseif tc.footer_content_type == 'button' %}
+            <p class="text-content__footer">
+                <a class="primary-button--blue" href="{{ tc.footer_button.url }}">{{ tc.footer_button.title }}</a>
+            </p>
+        {% endif %}
     </div>
 
-    {# image is on the left #}
+    {# image is on the right #}
     {% if fields.image_left_or_right %}
         <div class="right-image">
             <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />

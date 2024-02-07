@@ -1,0 +1,22 @@
+{# Global CTA and Custom CTA Block #}
+<section class="call-to-action">
+    <div class="call-to-action__content">
+        {% if not fields.cta_custom_content %}
+            {# default global cta #}
+            <h2 class="title">{{ options.cta_title }}</h2>
+            <p class="message">{{ options.cta_message }}</p>
+            <a class="primary-button--white" href="{{ options.cta_link.url }}">
+                {{ options.cta_link.title }}
+                <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+            </a>
+        {% else %}
+            {# custom cta option #}
+            <h2 class="title">{{ fields.cta_title }}</h2>
+            <p class="message">{{ fields.cta_message }}</p>
+            <a class="primary-button--white" href="{{ fields.cta_link.url }}">
+                {{ fields.cta_link.title }}
+                <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+            </a>
+        {% endif %}
+    </div>
+</section>
