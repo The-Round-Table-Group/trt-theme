@@ -1,0 +1,32 @@
+.call-to-action {
+    max-width: 65rem;
+    margin: 7rem auto;
+    padding: 2.25rem 1.25rem;
+    background: radial-gradient(70% 15% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $dark-blue;
+    border-radius: $radius-medium;
+
+    @include mq(sm) {
+        padding: 4rem 2rem;
+        background: radial-gradient(35% 30% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $dark-blue;
+    }
+
+    &__content {
+        text-align: center;
+        max-width: 35rem;
+        margin: 0 auto;
+
+        .title {
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            background: unset;
+            -webkit-text-fill-color: unset;
+            color: $white;
+            @include mq(sm) { margin-bottom: 2rem; }
+        }
+
+        .message {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

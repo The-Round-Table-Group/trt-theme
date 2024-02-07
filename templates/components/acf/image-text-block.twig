@@ -32,7 +32,10 @@
         {% elseif tc.footer_content_type == 'list' %}
             <ul class="text-content__footer">
                 {% for li in tc.list_items %}
-                    <li>{{ li.list_item_text }}</li>
+                    <li>
+                        <span class="checkmark">{% include 'assets/media/checkmark-icon.svg' %}</span>
+                        {{ li.list_item_text }}
+                    </li>
                 {% endfor %}
             </ul>
         {% elseif tc.footer_content_type == 'button' %}

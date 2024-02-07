@@ -39,6 +39,11 @@
 
             li {
                 margin-bottom: 0.75rem;
+
+                .checkmark {
+                    margin-right: 0.4rem;
+                    svg path { fill: $white; }
+                }
             }
         }
 
