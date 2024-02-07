@@ -1,17 +1,23 @@
-{# Block Name: Button Block #}
-{# left_right_img check: left = true #}
+{#
+ # Block Name: Button Block
+ # image_left_or_right is a true/false field
+ # true    = image is on the right
+ # false   = image is on the left
+#}
+
 {% set tc = fields.text_content %}
 
 <section class="image-text-block">
-    {# image is on the right #}
+    {# image is on the left #}
     {% if not fields.image_left_or_right %}
         <div class="left-image">
             <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />
         </div>
     {% endif %}
 
+    {# always shown #}
     <div class="text-content">
-        <span class="text-content__pill-tag">{{ tc.pill_tag }}</span>
+        <span class="text-content__tag">{{ tc.pill_tag }}</span>
 
         {% if tc.header_level == 'h2' %}
             <h2 class="text-content__header">{{ tc.header }}</h2>
@@ -36,7 +42,7 @@
         {% endif %}
     </div>
 
-    {# image is on the left #}
+    {# image is on the right #}
     {% if fields.image_left_or_right %}
         <div class="right-image">
             <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />

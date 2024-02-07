@@ -15,12 +15,14 @@
     .text-content {
         max-width: 35rem;
 
-        &__pill-tag, &__header,
-        &__body, &__footer {
+        &__tag,
+        &__header,
+        &__body,
+        &__footer {
             margin-bottom: 0;
         }
 
-        &__pill-tag {
+        &__tag {
             display: inline-block;
             background-color: $light-black;
             margin-top: 0;
