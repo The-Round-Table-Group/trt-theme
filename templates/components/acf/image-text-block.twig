@@ -11,10 +11,29 @@
     {% endif %}
 
     <div class="text-content">
-        <p class="text-content__pill-tag">{{ tc.pill_tag }}</p>
-        <h2 class="text-content__header gradient-header">{{ tc.header }}</h2>
+        <span class="text-content__pill-tag">{{ tc.pill_tag }}</span>
+
+        {% if tc.header_level == 'h2' %}
+            <h2 class="text-content__header">{{ tc.header }}</h2>
+        {% else %}
+            <h3 class="text-content__header">{{ tc.header }}</h3>
+        {% endif %}
+
         <p class="text-content__body">{{ tc.body }}</p>
-        <p class="text-content__footer">{{ tc.footer }}</p>
+
+        {% if tc.footer_content_type == 'text' %}
+            <p class="text-content__footer">{{ tc.footer_text }}</p>
+        {% elseif tc.footer_content_type == 'list' %}
+            <ul class="text-content__footer">
+                {% for li in tc.list_items %}
+                    <li>{{ li.list_item_text }}</li>
+                {% endfor %}
+            </ul>
+        {% elseif tc.footer_content_type == 'button' %}
+            <p class="text-content__footer">
+                <a class="primary-button--blue" href="{{ tc.footer_button.url }}">{{ tc.footer_button.title }}</a>
+            </p>
+        {% endif %}
     </div>
 
     {# image is on the left #}
