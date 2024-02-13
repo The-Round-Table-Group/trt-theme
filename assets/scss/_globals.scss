@@ -7,7 +7,7 @@ body {
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
 	font-feature-settings: "lnum" 1;
-    background-color: #1D2125;
+    background-color: $website-background;
 }
 
 ::placeholder {

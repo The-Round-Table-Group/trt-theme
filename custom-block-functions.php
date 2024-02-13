@@ -13,7 +13,7 @@ if( function_exists('acf_register_block_type') ) :
 		'render_callback' => 'custom_block_callback',
 		'category' => 'trt-blocks',
 		'align' => 'wide',
-		'icon' => 'insert',
+		'icon' => 'editor-removeformatting',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
 		'keywords' => [ 'trt', 'block', 'button', 'a', 'href', 'link', 'url' ]

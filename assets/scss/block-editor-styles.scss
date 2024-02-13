@@ -6,14 +6,14 @@
 */
 
 body {
-    background-color: #1D2125;
+    background-color: #1D2125; // $website-background
 
     // dependencies for blocks in the editor
-    @import 'packages/normalize';           // Soft reset + browser consistencies
-    @import 'variables';                    // Sitewide variables, custom mixins, custom functions
-    @import 'mixins';                       // Sitewide mixins and helpers
-    @import 'globals';                      // Base html/body setup, wrappers, containers
-    @import 'typography';                   // Sitewide typography: sizing, spacing, initial colors
+    @import 'packages/normalize';
+    @import 'variables';
+    @import 'mixins';
+    @import 'globals';
+    @import 'typography';
 
     // all blocks
     @import 'components/component-loader';

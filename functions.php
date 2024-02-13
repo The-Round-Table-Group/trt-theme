@@ -39,11 +39,8 @@ class TRTSite extends Timber\Site {
 			#wp-admin-bar-updates,
 			#wp-admin-bar-new-content #comments,
             .column-comments,
+            .components-editor-notices__dismissible,
 			#adminmenu .update-plugins { display: none !important; }
-
-            .components-editor-notices__dismissible {
-                display: none !important;
-            }
 		</style>
 		<?php
 	}
