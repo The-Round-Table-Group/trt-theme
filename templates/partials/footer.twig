@@ -1,1 +1,22 @@
-<footer class="site-footer"></footer>
+<footer class="site-footer">
+    <div class="site-footer__cta-row">
+        {% if not is_front_page %}
+            <a class="footer-logo" href="/">
+                <img src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+            </a>
+        {% else %}
+            <img class="footer-logo" src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+        {% endif %}
+
+        <div class="subscribe"></div>
+    </div>
+
+    <div class="site-footer__nav-row">
+        <div class="menu"></div>
+    </div>
+
+    <div class="site-footer__legal">
+        <p>&copy; {{ date_year }} The Round Table Group. All rights reserved.</p>
+        <div class=""></div>
+    </div>
+</footer>

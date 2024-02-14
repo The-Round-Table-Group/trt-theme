@@ -1,0 +1,19 @@
+.site-footer {
+    max-width: $global-width;
+
+
+    &__cta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer-logo {
+            max-width: 18rem;
+        }
+
+        .subscribe {}
+    }
+
+    &__nav-row {}
+
+    &__legal {}
+}

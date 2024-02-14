@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 87.5rem;
+    max-width: $global-width;
     margin: 0 auto;
     padding: 1rem;
 
@@ -63,7 +63,7 @@
 .mega-menu {
     display: flex;
     justify-content: space-between;
-    max-width: 87.5rem;
+    max-width: $global-width;
     margin: 0 auto;
     padding: 3rem 1rem;
     @include mq(lg) { padding: 3rem; }
@@ -162,7 +162,7 @@
 
     // bar area
     .site-bar-container {
-        max-width: 87.5rem;
+        max-width: $global-width;
         margin: 0 auto;
         padding: 1rem;
         @include mq(lg) { padding: 1rem 3rem; }
