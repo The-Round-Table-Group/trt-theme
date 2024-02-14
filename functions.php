@@ -166,6 +166,9 @@ new TRTSite();
  * Functions that do not return a value are called directly in a template
 */
 
+// Remove gravity forms styles
+add_filter( 'gform_disable_css', '__return_true' );
+
 // Move our custom acf options page below the dashboard tab
 function custom_menu_order( $menu_ord ) {
 	if ( ! $menu_ord ) {

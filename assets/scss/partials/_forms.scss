@@ -1,0 +1,100 @@
+/**
+    global form styles
+    gravity form styles are disabled in functions
+*/
+
+// target all forms by id (no need for !important)
+[id^="gform_wrapper_"] {
+
+    input, label, textarea,
+    select, option, legend {
+        font-size: 1rem;
+        font-family: $lexend;
+        font-weight: $light;
+        border-radius: $radius-small;
+    }
+
+    input:not([id^="gform_submit_button_"]),
+    textarea, select, option {
+        color: $white;
+        background-color: $light-black;
+        border: 1px solid $grey;
+    }
+
+    input, textarea {
+        padding: 0.5rem 12px;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+    }
+
+    label, legend {
+        color: $white;
+    }
+
+    .gfield_label {
+        display: block;
+        margin-bottom: 0.65rem;
+    }
+
+    // all form buttons
+    [id^="gform_submit_button_"] {
+        padding: 0.6rem 1rem;
+        border-radius: $radius-small;
+        font-weight: $regular;
+        background-color: $blue;
+        color: $white;
+        transition: $transition;
+
+        &:hover {
+            background-color: $light-blue;
+            transition: $transition;
+            cursor: pointer;
+        }
+    }
+
+    ::placeholder {
+        font-family: $lexend;
+        font-weight: $light;
+        font-size: 1rem;
+        color: $white;
+        opacity: 1;
+    }
+
+    // hidden items
+    .gform_heading,
+    .gfield_required {
+        display: none;
+    }
+
+    // we use reCAPTCHA, preemptive in case someone enables this
+    .gfield--type-honeypot {
+        display: none !important;
+    }
+}
+
+/**
+    form-specific styles
+*/
+
+// subscribe form in footer (ID: 1)
+#gform_wrapper_1 {
+    #gform_fields_1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 23rem;
+        width: 100%;
+    }
+
+    .gfield_label {
+        font-size: 18px;
+    }
+
+    #input_1_1 {
+        width: 15rem;
+    }
+}
+
+// (ID: 2)

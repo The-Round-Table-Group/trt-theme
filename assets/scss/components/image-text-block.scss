@@ -24,15 +24,18 @@
 
         &__tag {
             display: inline-block;
-            background-color: $light-black;
+            background-color: $background-accent;
             margin-top: 0;
             padding: 0.5rem 1.65rem;
             border-radius: $radius-large;
             text-align: center;
         }
 
+        &__footer {
+            margin-top: 1.65rem;
+        }
+
         ul.text-content__footer {
-            margin-top: 1.5rem;
             margin-left: 0;
             padding: 0;
             list-style: none;
@@ -45,10 +48,6 @@
                     svg path { fill: $white; }
                 }
             }
-        }
-
-        p.text-content__footer {
-            margin-top: 2.5rem;
         }
     }
 
