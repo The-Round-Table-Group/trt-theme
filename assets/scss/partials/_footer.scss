@@ -41,7 +41,7 @@
                 font-weight: $regular;
                 text-transform: uppercase;
                 line-height: 1.4;
-                border-bottom: 1px solid $white
+                border-bottom: 1px solid $white;
             }
 
             &--link {
@@ -51,6 +51,49 @@
 
             .underline:after {
                 background-color: $white;
+            }
+        }
+
+        .social-link-wrapper {
+            max-width: 15rem;
+            width: 100%;
+
+            p {
+                margin-bottom: 1rem;
+                padding-bottom: 0.65rem;
+                font-size: 15px;
+                font-weight: $regular;
+                text-transform: uppercase;
+                line-height: 1.4;
+                border-bottom: 1px solid $white;
+            }
+
+            .social-link-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 15rem;
+
+                .link {
+                    span svg {
+                        width: 1.85rem;
+                        height: 1.85rem;
+                        padding: 3px;
+
+                        path {
+                            fill: $primary-text-color;
+                            transition: $transition;
+                        }
+
+                        &:hover {
+                            path {
+                                fill: $light-blue;
+                                transition: $transition;
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }

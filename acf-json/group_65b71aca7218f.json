@@ -71,23 +71,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_65b71b136a669",
-            "label": "Twitter Link",
-            "name": "twitter_link",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_65b71b406a66c",
             "label": "Pinterest Link",
             "name": "pinterest_link",
@@ -127,7 +110,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "site-options"
+                "value": "acf-options-social-media"
             }
         ]
     ],
@@ -140,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706499065
+    "modified": 1707967775
 }
