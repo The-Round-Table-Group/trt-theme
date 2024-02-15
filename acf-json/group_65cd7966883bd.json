@@ -1,11 +1,11 @@
 {
-    "key": "group_65b6eb9daa867",
-    "title": "Main Navigation",
+    "key": "group_65cd7966883bd",
+    "title": "Footer Navigation",
     "fields": [
         {
-            "key": "field_65b6eb9e97874",
-            "label": "Primary Navigation Menu",
-            "name": "primary_nav_menu",
+            "key": "field_65cd7966c4690",
+            "label": "Footer Menu",
+            "name": "footer_menu_row",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -25,32 +25,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_65b6ec5597878",
-                    "label": "Menu AOS Delay",
-                    "name": "menu_aos_delay",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65b6eb9e97874"
-                },
-                {
-                    "key": "field_65b6ebea97875",
-                    "label": "Menu Header",
-                    "name": "menu_header",
+                    "key": "field_65cd79f8c4691",
+                    "label": "Menu Title",
+                    "name": "menu_title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -66,12 +43,12 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_65b6eb9e97874"
+                    "parent_repeater": "field_65cd7966c4690"
                 },
                 {
-                    "key": "field_65b6ebf397876",
-                    "label": "Menu Links",
-                    "name": "menu_links",
+                    "key": "field_65cd7a06c4692",
+                    "label": "Footer Links",
+                    "name": "footer_links",
                     "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
@@ -90,9 +67,9 @@
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_65b6ec0197877",
-                            "label": "Link",
-                            "name": "link_item",
+                            "key": "field_65cd7afbad26c",
+                            "label": "Menu Link",
+                            "name": "menu_link",
                             "aria-label": "",
                             "type": "link",
                             "instructions": "",
@@ -104,10 +81,10 @@
                                 "id": ""
                             },
                             "return_format": "array",
-                            "parent_repeater": "field_65b6ebf397876"
+                            "parent_repeater": "field_65cd7a06c4692"
                         }
                     ],
-                    "parent_repeater": "field_65b6eb9e97874"
+                    "parent_repeater": "field_65cd7966c4690"
                 }
             ]
         }
@@ -121,7 +98,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -130,5 +107,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707965821
+    "modified": 1707965832
 }

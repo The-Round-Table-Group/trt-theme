@@ -14,12 +14,25 @@
     </div>
 
     <div class="site-footer__nav-row">
-        <div class="menu"></div>
+        {% for menu in options.footer_menu_row %}
+            <div class="footer-menu">
+                <p class="footer-menu--title">{{ menu.menu_title }}</p>
+                {% for item in menu.footer_links %}
+                    <a class="footer-menu--link underline" href="{{ item.menu_link.url }}">{{ item.menu_link.title }}</a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <div class="social-links">
+            {% for social in options.social_links %}
+                <a class="social-links--link" href=""></a>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="site-footer__legal">
         <p>&copy; {{ date_year }} The Round Table Group. All rights reserved.</p>
-        <div class="legal-link-row">
+        <div class="link-row">
             <a class="underline" href="/privacy-policy">Privacy Policy</a>
             <a class="underline" href="/cookie-policy">Cookie Policy</a>
             <a class="underline" href="/data-policy">Data Policy</a>
