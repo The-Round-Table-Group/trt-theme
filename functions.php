@@ -39,11 +39,8 @@ class TRTSite extends Timber\Site {
 			#wp-admin-bar-updates,
 			#wp-admin-bar-new-content #comments,
             .column-comments,
+            .components-editor-notices__dismissible,
 			#adminmenu .update-plugins { display: none !important; }
-
-            .components-editor-notices__dismissible {
-                display: none !important;
-            }
 		</style>
 		<?php
 	}
@@ -168,6 +165,9 @@ new TRTSite();
  * Functions that return a value need the filter or action hook added with it below
  * Functions that do not return a value are called directly in a template
 */
+
+// Remove gravity forms styles
+add_filter( 'gform_disable_css', '__return_true' );
 
 // Move our custom acf options page below the dashboard tab
 function custom_menu_order( $menu_ord ) {

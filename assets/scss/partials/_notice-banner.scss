@@ -1,7 +1,7 @@
 .notice-wrap {
     display: none; // JS Cookie shows/hides - this prevents load-flash
     position: relative;
-    max-width: 87.5rem;
+    max-width: $global-width;
     margin: 1rem auto;
     padding: 0 1rem;
 

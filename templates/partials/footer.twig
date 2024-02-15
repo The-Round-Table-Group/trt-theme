@@ -1,1 +1,63 @@
-<footer class="site-footer"></footer>
+<footer class="site-footer">
+    <div class="site-footer__cta-row">
+        {% if not is_front_page %}
+            <a class="footer-logo" href="/">
+                <img src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+            </a>
+        {% else %}
+            <img class="footer-logo" src="{{ options.full_logo.url }}" alt="The Round Table Group" />
+        {% endif %}
+
+        <div class="subscribe">
+            {{ fn('do_shortcode', '[gravityform id="1" title="false" description="false"]') }}
+        </div>
+    </div>
+
+    <div class="site-footer__nav-row">
+        {% for menu in options.footer_menu_row %}
+            <div class="footer-menu">
+                <p class="footer-menu--title">{{ menu.menu_title }}</p>
+                {% for item in menu.footer_links %}
+                    <a class="footer-menu--link underline" href="{{ item.menu_link.url }}">{{ item.menu_link.title }}</a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <div class="social-link-wrapper">
+            <p>Connect With Us</p>
+
+            <div class="social-link-row">
+                <a class="link" href="{{ options.facebook_link }}" title="TRT Facebook" target="_blank" rel="noopener">
+                    <span class="">{% include 'assets/media/facebook.svg' %}</span>
+                </a>
+
+                <a class="link" href="{{ options.instagram_link }}" title="TRT Instagram" target="_blank" rel="noopener">
+                    <span class="">{% include 'assets/media/instagram.svg' %}</span>
+                </a>
+
+                <a class="link" href="{{ options.linkedin_link }}" title="TRT LinkedIn" target="_blank" rel="noopener">
+                    <span class="">{% include 'assets/media/linkedin.svg' %}</span>
+                </a>
+
+                <a class="link" href="{{ options.youtube_link }}" title="TRT YouTube" target="_blank" rel="noopener">
+                    <span class="">{% include 'assets/media/youtube.svg' %}</span>
+                </a>
+
+                <a class="link" href="{{ options.tiktok_link }}" title="TRT TikTok" target="_blank" rel="noopener">
+                    <span class="">{% include 'assets/media/tiktok.svg' %}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer__legal">
+        <p>&copy; {{ date_year }} The Round Table Group. All rights reserved.</p>
+        <div class="link-row">
+            <a class="underline" href="/privacy-policy">Privacy Policy</a>
+            <a class="underline" href="/cookie-policy">Cookie Policy</a>
+            <a class="underline" href="/data-policy">Data Policy</a>
+            <a class="underline" href="/terms-of-use">Terms of Use</a>
+            <a class="underline" href="/accessibility-statement">Accessibility Statement</a>
+        </div>
+    </div>
+</footer>

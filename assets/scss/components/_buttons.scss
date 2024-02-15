@@ -5,7 +5,9 @@
 
     &--blue,
     &--grey,
-    &--white {
+    &--white,
+    &--white-outline,
+    &--blue-outline {
         @extend .primary-button;
 
         .right-arrow {
@@ -32,6 +34,20 @@
         &:hover { background-color: $light-blue; }
     }
 
+    &--blue-outline {
+        background-color: transparent;
+        color: $blue;
+        border: 2px solid $blue;
+
+        .right-arrow svg path { fill: $blue; }
+
+        &:hover {
+            color: $white;
+            background-color: $blue;
+            .right-arrow svg path { fill: $white; }
+        }
+    }
+
     &--grey {
         background-color: $dark-grey;
         color: $white;
@@ -48,6 +64,20 @@
             background-color: $dark-grey;
             color: $white;
             .right-arrow svg path { fill: $white; }
+        }
+    }
+
+    &--white-outline {
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+
+        .right-arrow svg path { fill: $white; }
+
+        &:hover {
+            color: $light-black;
+            background-color: $white;
+            .right-arrow svg path { fill: $light-black; }
         }
     }
 }

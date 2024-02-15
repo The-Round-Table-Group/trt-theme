@@ -1,1 +1,16 @@
 {# Block Name: Button Block #}
+<a
+    class="primary-button--{{ fields.button_color }}"
+    href="{{ fields.button_link.url }}"
+
+    {% if fields.new_tab %}
+        target="_blank"
+        rel="noopener noreferrer"
+    {% endif %}
+>
+    {{ fields.button_link.title }}
+
+    {% if fields.has_right_arrow %}
+        <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+    {% endif %}
+</a>

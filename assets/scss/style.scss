@@ -4,7 +4,7 @@
     Author URI: https://trt.group
     Description: Custom theme for TRT.
     Text Domain: trt
-    Version: 1.0.4
+    Version: 1.0.6
 */
 
 // Import dependencies
@@ -22,6 +22,7 @@
 @import 'partials/header';              // site header (home has different header - loaded separately)
 @import 'partials/footer';              // site footer
 @import 'partials/notice-banner';       // site notice banner
+@import 'partials/forms';               // all form styles (inputs, buttons, etc)
 
 // Import components
 @import 'components/component-loader';  // loads all components
