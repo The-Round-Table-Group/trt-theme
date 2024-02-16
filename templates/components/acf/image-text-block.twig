@@ -7,7 +7,11 @@
 
 {% set tc = fields.text_content %}
 
+{% if not fields.image_left_or_right %}
 <section class="image-text-block">
+{% else %}
+<section class="image-text-block wrap-reverse">
+{% endif %}
     {# image is on the left #}
     {% if not fields.image_left_or_right %}
         <div class="left-image">

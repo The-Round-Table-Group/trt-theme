@@ -53,11 +53,22 @@
 
     .left-image,
     .right-image {
-        max-width: 36rem;
-        min-width: 28rem;
-        width: 100%;
+        margin-bottom: 2rem;
 
-        img { border-radius: $radius-medium; }
+        @include mq(980px) {
+            margin-bottom: 0;
+        }
+
+        img {
+            max-width: 36rem;
+            min-width: unset;
+            width: 100%;
+            border-radius: $radius-medium;
+
+            @include mq(md) {
+                min-width: 28rem;
+            }
+        }
     }
 
     .left-image {
@@ -68,5 +79,15 @@
     .right-image {
         margin-left: 0rem;
         @include mq(980px) { margin-left: 4rem; }
+    }
+}
+
+.wrap-reverse {
+    flex-direction: column-reverse;
+
+    @include mq(980px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }

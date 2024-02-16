@@ -71,23 +71,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_65b71b406a66c",
-            "label": "Pinterest Link",
-            "name": "pinterest_link",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_65b71b4b6a66d",
             "label": "TikTok Link",
             "name": "tiktok_link",
@@ -123,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707967775
+    "modified": 1707969576
 }
