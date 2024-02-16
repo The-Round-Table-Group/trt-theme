@@ -41,6 +41,10 @@ class TRTSite extends Timber\Site {
             .column-comments,
             .components-editor-notices__dismissible,
 			#adminmenu .update-plugins { display: none !important; }
+
+            /* fix text caret not showing up */
+            .wp-block { caret-color: #fff !important; }
+            .wp-block .acf-block-fields { caret-color: #000 !important; }
 		</style>
 		<?php
 	}
