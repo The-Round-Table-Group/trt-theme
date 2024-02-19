@@ -34,4 +34,5 @@ img {
 
 .block-margin {
     margin: 7rem auto;
+    &--no-bottom { margin: 7rem auto 0; }
 }
