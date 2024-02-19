@@ -4,7 +4,7 @@
     Author URI: https://trt.group
     Description: Custom theme for TRT.
     Text Domain: trt
-    Version: 1.0.8
+    Version: 1.0.9
 */
 
 // Import dependencies
@@ -14,18 +14,19 @@
 @import 'globals';                      // Base html/body setup, wrappers, containers
 @import 'typography';                   // Sitewide typography: sizing, spacing, initial colors
 
-@import 'packages/slick';               // Slick slider theme, transforms
-@import 'packages/aos';                 // Animation Library
+// Import packages
+@import 'packages/slick';               // Slick Slider Library
+@import 'packages/aos';                 // Animate On Scroll Library
 
 // Import Template Partials
-@import 'partials/navigation';          // site navigation
-@import 'partials/header';              // site header (home has different header - loaded separately)
-@import 'partials/footer';              // site footer
-@import 'partials/notice-banner';       // site notice banner
-@import 'partials/forms';               // all form styles (inputs, buttons, etc)
+@import 'partials/navigation';          // Navigation
+@import 'partials/header';              // Header (home has different header - loaded separately)
+@import 'partials/footer';              // Footer
+@import 'partials/notice-banner';       // Notice Banner
+@import 'partials/forms';               // All form styles (inputs, buttons, etc)
 
 // Import components
-@import 'components/component-loader';  // loads all components
+@import 'components/component-loader';  // Loads all components
 
-// Import templates
-@import 'templates/template-loader';    // loads all template layouts
+// Import templates - most templates are built entirely from components
+@import 'templates/template-loader';    // Loads all templates
