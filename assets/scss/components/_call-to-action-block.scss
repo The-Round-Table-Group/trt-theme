@@ -1,12 +1,12 @@
 .call-to-action {
     max-width: 65rem;
     padding: 2.25rem 1.25rem;
-    background: radial-gradient(70% 15% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $dark-blue;
+    background: radial-gradient(70% 15% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $blue;
     border-radius: $radius-medium;
 
     @include mq(sm) {
         padding: 4rem 2rem;
-        background: radial-gradient(35% 30% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $dark-blue;
+        background: radial-gradient(35% 30% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), $blue;
     }
 
     &__content {
