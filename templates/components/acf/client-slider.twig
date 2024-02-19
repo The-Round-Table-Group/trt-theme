@@ -1,0 +1,17 @@
+<section class="slide-wrapper block-margin">
+    <div class="custom-slider">
+        {% if fields.slider_type == 'custom' %}
+            {% for slide in options.client_logos %}
+                <div class="custom-slider__slide">
+                    <img src="{{ slide.logo.url }}" alt="{{ slide.logo.alt }}" />
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for slide in fields.slides %}
+                <div class="custom-slider__slide">
+                    <img src="{{ slide.image.url }}" alt="{{ slide.image.alt }}" />
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>

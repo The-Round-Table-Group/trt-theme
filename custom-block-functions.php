@@ -13,7 +13,7 @@ if( function_exists('acf_register_block_type') ) :
 		'render_callback' => 'custom_block_callback',
 		'category' => 'trt-blocks',
 		'align' => 'wide',
-		'icon' => 'editor-removeformatting',
+		'icon' => 'button',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
 		'keywords' => [ 'trt', 'block', 'button', 'a', 'href', 'link', 'url' ]
@@ -43,12 +43,42 @@ if( function_exists('acf_register_block_type') ) :
 		'render_callback' => 'custom_block_callback',
 		'category' => 'trt-blocks',
 		'align' => 'wide',
-		'icon' => 'insert',
+		'icon' => 'welcome-view-site',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
 		'keywords' => [ 'trt', 'block', 'cta', 'call', 'action' ]
 	];
 	acf_register_block_type( $cta_block );
+
+    // centered, short header block
+    $short_width_header = [
+		'name' => 'short-width-header',
+		'title' => __( 'Short Width Header', 'trt' ),
+		'description' => __( 'H2 or H3 header, centered, with 35% screen-width.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'fullscreen-exit-alt',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'short', 'width', 'header', 'h2', 'h3' ]
+	];
+	acf_register_block_type( $short_width_header );
+
+    // client logo slider block (not customizable)
+    $client_slider = [
+		'name' => 'client-slider',
+		'title' => __( 'Client Slider', 'trt' ),
+		'description' => __( 'Slider with client logos, infinite loop. Optional custom slider.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'slides',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'client', 'slider', 'logo', 'carousel' ]
+	];
+	acf_register_block_type( $client_slider );
 
 
     // $ = [

@@ -1,5 +1,4 @@
 {#
- # Block Name: Button Block
  # image_left_or_right is a true/false field
  # true    = image is on the right
  # false   = image is on the left
@@ -8,9 +7,9 @@
 {% set tc = fields.text_content %}
 
 {% if not fields.image_left_or_right %}
-<section class="image-text-block">
+<section class="image-text-block block-margin">
 {% else %}
-<section class="image-text-block wrap-reverse">
+<section class="image-text-block block-margin wrap-reverse">
 {% endif %}
     {# image is on the left #}
     {% if not fields.image_left_or_right %}
@@ -44,7 +43,10 @@
             </ul>
         {% elseif tc.footer_content_type == 'button' %}
             <p class="text-content__footer">
-                <a class="primary-button--blue" href="{{ tc.footer_button.url }}">{{ tc.footer_button.title }}</a>
+                <a class="primary-button--blue" href="{{ tc.footer_button.url }}">
+                    {{ tc.footer_button.title }}
+                    <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+                </a>
             </p>
         {% endif %}
     </div>

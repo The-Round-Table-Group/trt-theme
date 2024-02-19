@@ -31,3 +31,7 @@ img {
     margin: 0 auto;
     @include mq(lg) { padding: 1rem 3rem; }
 }
+
+.block-margin {
+    margin: 7rem auto;
+}

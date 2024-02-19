@@ -21,6 +21,20 @@
             duration: 1000
         });
 
+        // Initialize Slick Slider
+        $('.custom-slider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            infinite: true,
+            arrows: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            swipeToSlide: true,
+            waitForAnimate: false // fixes drag/swipe issue
+        });
+
         $(function navMenuEvents() {
             // mega-menu dropdown / slide reveal
             var menu = $('.mega-menu__wrapper');

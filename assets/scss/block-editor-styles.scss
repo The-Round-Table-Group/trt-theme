@@ -20,12 +20,25 @@ body {
 
     // editor fixes
     .acf-block-fields [class^="acf-"] {
-        input, span, p, a, li, button, textarea, select {
+        input, span, p, a, li,
+        button, textarea, select, label {
             color: $light-black !important;
         }
     }
 
     .editor-styles-wrapper ::placeholder {
         color: $light-black !important;
+    }
+
+    // fix slider vertical stacking
+    .custom-slider {
+        display: flex;
+        flex-direction: row; // force row layout
+        max-width: 60rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        img { max-width: 18rem; }
     }
 }
