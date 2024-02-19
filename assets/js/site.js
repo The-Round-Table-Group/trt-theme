@@ -23,7 +23,7 @@
 
         // Initialize Slick Slider
         $('.custom-slider').slick({
-            slidesToShow: 5,
+            slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 3000,
@@ -32,7 +32,18 @@
             pauseOnHover: false,
             pauseOnFocus: false,
             swipeToSlide: true,
-            waitForAnimate: false // fixes drag/swipe issue
+            waitForAnimate: false,
+            responsive: [
+                {
+                    breakpoint: 860,
+                    settings: { slidesToShow: 3 }
+                },
+
+                {
+                    breakpoint: 580,
+                    settings: { slidesToShow: 2 }
+                }
+            ]
         });
 
         $(function navMenuEvents() {

@@ -76,7 +76,7 @@ if( function_exists('acf_register_block_type') ) :
 		'icon' => 'slides',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
-		'keywords' => [ 'trt', 'block', 'client', 'slider', 'logo', 'carousel' ]
+		'keywords' => [ 'trt', 'block', 'client', 'slider', 'logo', 'carousel', 'custom' ]
 	];
 	acf_register_block_type( $client_slider );
 

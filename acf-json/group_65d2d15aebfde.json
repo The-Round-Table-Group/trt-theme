@@ -39,8 +39,8 @@
                 [
                     {
                         "field": "field_65d2df4f521e5",
-                        "operator": "!=",
-                        "value": "1"
+                        "operator": "==",
+                        "value": "custom"
                     }
                 ]
             ],
@@ -59,8 +59,8 @@
             "sub_fields": [
                 {
                     "key": "field_65d2d16a6177b",
-                    "label": "Client Logo",
-                    "name": "client_logo",
+                    "label": "Image",
+                    "name": "image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -104,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708318717
+    "modified": 1708321755
 }

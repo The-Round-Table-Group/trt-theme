@@ -1,17 +1,19 @@
 <section class="slide-wrapper block-margin">
+    <h2>Our Clients &amp; Partners</h2>
     <div class="custom-slider">
         {% if fields.slider_type == 'custom' %}
-            {% for slide in options.client_logos %}
-                <div class="custom-slider__slide">
-                    <img src="{{ slide.logo.url }}" alt="{{ slide.logo.alt }}" />
-                </div>
+            {% for slide in fields.slides %}
+                <div class="custom-slider__slide" style="background-image: url('{{ slide.image.url }}');"></div>
             {% endfor %}
         {% else %}
-            {% for slide in fields.slides %}
-                <div class="custom-slider__slide">
-                    <img src="{{ slide.image.url }}" alt="{{ slide.image.alt }}" />
-                </div>
+            {% for slide in options.client_logos %}
+                <div class="custom-slider__slide" style="background-image: url('{{ slide.logo.url }}');"></div>
             {% endfor %}
         {% endif %}
     </div>
+
+    <a class="primary-button--blue" href="/clients-and-partners">
+        View All Clients
+        <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+    </a>
 </section>
