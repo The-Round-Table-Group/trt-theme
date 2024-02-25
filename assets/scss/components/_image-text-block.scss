@@ -14,20 +14,10 @@
     .text-content {
         max-width: 35rem;
 
-        &__tag,
         &__header,
         &__body,
         &__footer {
             margin-bottom: 0;
-        }
-
-        &__tag {
-            display: inline-block;
-            background-color: $background-accent;
-            margin-top: 0;
-            padding: 0.5rem 1.65rem;
-            border-radius: $radius-large;
-            text-align: center;
         }
 
         &__header {

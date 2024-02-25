@@ -4,8 +4,6 @@
  # false   = image is on the left
 #}
 
-{% set tc = fields.text_content %}
-
 {% if not fields.image_left_or_right %}
 <section class="image-text-block block-margin">
 {% else %}
@@ -19,8 +17,9 @@
     {% endif %}
 
     {# always shown #}
+    {% set tc = fields.text_content %}
     <div class="text-content">
-        <span class="text-content__tag">{{ tc.pill_tag }}</span>
+        <span class="pill-tag">{{ tc.pill_tag }}</span>
 
         {% if tc.header_level == 'h2' %}
             <h2 class="text-content__header">{{ tc.header }}</h2>

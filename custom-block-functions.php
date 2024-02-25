@@ -54,7 +54,7 @@ if( function_exists('acf_register_block_type') ) :
     $short_width_header = [
 		'name' => 'short-width-header',
 		'title' => __( 'Short Width Header', 'trt' ),
-		'description' => __( 'H2 or H3 header, centered, with 35% screen-width.', 'trt' ),
+		'description' => __( 'H2 or H3 header, centered, with ~35% viewport width.', 'trt' ),
 		'render_callback' => 'custom_block_callback',
 		'category' => 'trt-blocks',
 		'align' => 'wide',
@@ -65,7 +65,7 @@ if( function_exists('acf_register_block_type') ) :
 	];
 	acf_register_block_type( $short_width_header );
 
-    // client logo slider block (not customizable)
+    // client logo slider block
     $client_slider = [
 		'name' => 'client-slider',
 		'title' => __( 'Client Slider', 'trt' ),
