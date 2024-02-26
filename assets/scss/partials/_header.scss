@@ -9,16 +9,32 @@
     .text-container {
         max-width: 54rem;
         margin: 0 auto;
+        text-align: center;
 
-        p {
+        .pill-tag {
+            margin-bottom: 1.5rem
+        }
+
+        .pre-title {
             margin-top: 0;
             margin-bottom: 2rem;
             font-weight: $light;
             letter-spacing: 1px;
         }
 
-        h1 {
+        .header-title {
             margin-top: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .header-text {
+            max-width: 28rem;
+            margin: 0 auto;
+            font-weight: $regular;
+        }
+
+        .primary-button--blue {
+            margin-top: 1.75rem;
         }
     }
 
@@ -29,32 +45,24 @@
         .player {
             width: 100%;
             border-radius: $radius-large;
-
-            &:hover {
-                cursor: pointer;
-            }
+            &:hover { cursor: pointer; }
         }
     }
 
     // all other pages
-    .image-container {
+    .image {
         max-width: $global-width;
-        margin: 2rem auto;
-
-        &--small,
-        &--normal {
-            @extend .image-container;
-        }
+        margin: 4rem auto 2rem;
+        border-radius: $radius-large;
 
         &--small {
+            @extend .image;
             background-size: cover;
             background-position: center; // 100% 100%
             background-repeat: no-repeat;
-            padding: 10rem 0;
-
+            padding: 6rem 0;
+            @include mq(sm) { padding: 10rem 0; }
+            @include mq(md) { padding: 15rem 0; }
         }
-
-        &--normal {}
-
     }
 }
