@@ -4,7 +4,7 @@
         // Check if the user already closed the banner
         Cookies.get('trt_notice_closed') ? $('.notice-wrap').hide() : $('.notice-wrap').show();
 
-        // Set cookie when notice banner is closed
+        // Hide banner and set cookie to keep notice closed
         $('#close').on('click', function() {
             $('.notice-wrap').hide();
             Cookies.set('trt_notice_closed', true, { sameSite: 'strict', expires: 14 });
