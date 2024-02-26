@@ -54,10 +54,12 @@ class TRTSite extends Timber\Site {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'trt-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
 
+        // extra packages
         wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/packages/aos.js', [], '3.0.0' );
         wp_enqueue_script( 'cookie', get_template_directory_uri() . '/assets/js/packages/cookie.js', [], '1.4.1' );
         wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/packages/slider.js', ['jquery'], '1.8.1' );
 
+        // main js file
         wp_enqueue_script( 'trt-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'cookie', 'slider'], $version );
 
         // remove inline wp styles from frontend
@@ -65,6 +67,7 @@ class TRTSite extends Timber\Site {
             wp_dequeue_style( 'global-styles' );
         }
 
+        // only load block editor styles in admin
         if ( is_admin() ) {
             wp_enqueue_style( 'trt-block-css', get_stylesheet_directory_uri() . '/block-editor-styles.css', [], $version );
         }

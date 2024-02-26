@@ -1,8 +1,8 @@
 <?php
-// Template Name: News Template
+// Template Name: Events Template
 $context = Timber::get_context();
 $post = Timber::get_post();
 $context['post'] = $post;
 
-$templates = ['pages/news.twig'];
+$templates = ['pages/events.twig'];
 Timber::render( $templates, $context );
