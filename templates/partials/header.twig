@@ -1,6 +1,8 @@
 <header class="site-header">
     <div class="text-container">
-        {% if is_front_page %}
+        {% if not is_front_page %}
+            <span class="pill-tag">{{ post.title }}</span>
+        {% else %}
             <p>The Round Table Group</p>
         {% endif %}
 
@@ -14,7 +16,15 @@
         {% endif %}
     </div>
 
-    {% if is_front_page %}
+    {% if not is_front_page %}
+        {% if post.header_image_size == 'small' %}
+            <div class="image-container--small" style="background-image: url('{{ post.header_image.url }}');"></div>
+        {% else %}
+            <div class="image-container--normal">
+                <img src="{{ post.header_image.url }}" alt="{{ post.header_image.alt }}" />
+            </div>
+        {% endif %}
+    {% else %}
         <div class="video-container">
             <video class="player" controls>
                 <source src="{{ post.header_video }}" type="video/mp4">

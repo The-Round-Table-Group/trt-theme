@@ -22,6 +22,7 @@
         }
     }
 
+    // homepage only
     .video-container {
         margin: 5rem auto 0;
 
@@ -33,5 +34,27 @@
                 cursor: pointer;
             }
         }
+    }
+
+    // all other pages
+    .image-container {
+        max-width: $global-width;
+        margin: 2rem auto;
+
+        &--small,
+        &--normal {
+            @extend .image-container;
+        }
+
+        &--small {
+            background-size: cover;
+            background-position: center; // 100% 100%
+            background-repeat: no-repeat;
+            padding: 10rem 0;
+
+        }
+
+        &--normal {}
+
     }
 }

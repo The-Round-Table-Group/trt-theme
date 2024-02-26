@@ -1,7 +1,27 @@
 {
     "key": "group_65b72a5e199bf",
-    "title": "Home Header",
+    "title": "Header Text Setup",
     "fields": [
+        {
+            "key": "field_65dbd7c274fbd",
+            "label": "Header Title",
+            "name": "header_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
         {
             "key": "field_65b84ddb4d718",
             "label": "Header Text",
@@ -28,7 +48,7 @@
             "name": "header_button",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "Optional.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -37,31 +57,14 @@
                 "id": ""
             },
             "return_format": "array"
-        },
-        {
-            "key": "field_65b72a5e1a342",
-            "label": "Header Video",
-            "name": "header_video",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "front-page.php"
+                "value": "page"
             }
         ]
     ],
@@ -74,5 +77,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706577442
+    "modified": 1708906815
 }
