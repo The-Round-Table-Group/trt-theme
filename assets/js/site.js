@@ -66,13 +66,14 @@
                 }, 200);
             });
 
-            // Add active class to menu item based on URL path
-            var path = location.pathname.split('/'); // url path array
+            // // Add active class to menu item based on URL path
+            // var path = location.pathname.split('/'); // url path array
 
-            if (path[1] !== '') {
-                $('.link-item[href^="/' + path[1] + '"]').addClass('active');
-            }
+            // if (path[1] !== '') {
+            //     $('.link-item[href^="/' + path[1] + '"]').addClass('active');
+            // }
         });
+
 
         // Smooth scroll to anchor links
         // $('a[href*="#"]')

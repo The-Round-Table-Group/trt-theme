@@ -91,6 +91,7 @@ class TRTSite extends Timber\Site {
 		$context['date_year']      	= date('Y');
 		$context['is_front_page']	= is_front_page();
         $context['options']         = get_fields('option');
+        $context['is_single']       = is_single();
 
 		return $context;
 	}

@@ -15,13 +15,6 @@
             margin-bottom: 1.5rem
         }
 
-        .pre-title {
-            margin-top: 0;
-            margin-bottom: 2rem;
-            font-weight: $light;
-            letter-spacing: 1px;
-        }
-
         .header-title {
             margin-top: 0;
             margin-bottom: 1.25rem;
@@ -51,9 +44,9 @@
 
     // all other pages
     .image {
-        max-width: $global-width;
-        margin: 4rem auto 2rem;
+        margin: 2rem auto;
         border-radius: $radius-large;
+        @include mq(sm) { margin: 4rem auto 2rem; }
 
         &--small {
             @extend .image;
@@ -64,5 +57,14 @@
             @include mq(sm) { padding: 10rem 0; }
             @include mq(md) { padding: 15rem 0; }
         }
+    }
+
+    // news / events post types
+    .post-image {
+        max-width: 65rem;
+        width: 100%;
+        margin: 2rem auto;
+        border-radius: $radius-large;
+        @include mq(sm) { margin: 4rem auto 2rem; }
     }
 }

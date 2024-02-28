@@ -55,9 +55,15 @@ h6, .h6 {
     -webkit-text-fill-color: transparent;
 }
 
-h1, .h1 { font-size: fluid-text(480px, 42px, 960px, 64px); }
+h1, .h1 { font-size: fluid-text(480px, 36px, 960px, 64px); }
 h2, .h2 { font-size: fluid-text(480px, 42px, 960px, 54px); }
 h3, .h3 { font-size: fluid-text(480px, 36px, 960px, 48px); }
 h4, .h4 { font-size: fluid-text(480px, 28px, 960px, 36px); }
 h5, .h5 { font-size: 20px; }
 h6, .h6 { font-size: 18px; }
+
+.hero-title {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-size: fluid-text(480px, 42px, 960px, 64px);
+}

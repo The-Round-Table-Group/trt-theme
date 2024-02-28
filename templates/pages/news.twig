@@ -1,5 +1,58 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+    <div class="post-grid">
+        {% for article in news %}
+            <a class="" href="{{ article.link }}">{{ article.title }}</a>
+        {% endfor %}
+    </div>
+
     {{ post.content }}
 {% endblock %}
+
+
+{#
+
+
+A Day of Giving and Golf
+
+At The Round Table Group (TRT), we’re all about seizing opportunities to make a difference. We were thrilled to sponsor and participate in “Bo’s 10th Annual Ball Buster” Challenge. It was an incredible day filled with golf, food, and great company, all supporting Dolphins Challenge Cancer (DCC).
+
+
+Watch the Highlights
+--- VIDEO ---
+
+
+
+A Memorable Day
+
+Florida’s unpredictable weather couldn’t dampen our spirits, as the day started with a slight drizzle. Afterward, the weather was perfect for an event that combined fun with an important cause.
+
+
+
+Food, Fun, and Golf
+
+Before hitting the greens, we enjoyed a curated feast by Bokamper’s Sports Bar & Grill at the 19th Hole, overlooking the picturesque driving range and course. The delicious food and refreshing drinks set the stage for a day filled with excitement and golfing challenges.
+
+
+
+Sponsorship and Comradery
+
+TRT was proud to be a sponsor alongside great companies like Teramana Tequila, Tito’s Handmade Vodka, Gold Coast, Fort Lauderdale Police Department, Smithfield, Cheney, Heineken, Valpak, Southern Wine and Spirits, etc. These partnerships showcase the power of businesses coming together for a common cause.
+
+
+
+Celebrity Moments
+
+Meeting Miami Dolphins players and Dolphin Alumni players added a touch of star power to the event. They were there to support DCC and interact with the participants. The event began with Legendary Former Dolphin Pro Bowl Linebacker Kim ‘Bo’ Bokamper leading the shotgun for the scramble, creating an electrifying start to the day.
+
+
+
+Joining the Fight Against Cancer
+
+TRT was honored to be part of this event, contributing to the fight against cancer alongside excellent partners. It’s through collective efforts like these that we can have a lasting impact.
+
+Our experience at “Bo’s 10th Annual Ball Buster” Challenge was amazing. We invite you to watch the highlights and look forward to more opportunities to come together for noble causes. Together, we can make a difference.
+
+
+#}
