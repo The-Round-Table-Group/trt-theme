@@ -1,12 +1,32 @@
 // archives and single posts
+// quickfind: single post styles
 
 /**
     Archive styles
 */
 .post-grid {
     max-width: 65rem;
+    display: grid;
+    max-width: 100%;
+    margin: 3rem auto;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    row-gap: 1.5rem;
+    column-gap: 1.25rem;
+
+    &__grid-item {
+        padding: 2rem 1.5rem;
+        border: 1px solid $grey;
+        border-radius: $radius-medium;
+
+        &:hover {
+            border-color: $blue;
+        }
+    }
 }
 
+// related articles / events
+.related-layout {}
 
 
 /**
@@ -14,7 +34,5 @@
 */
 .post-layout {
 
-}
 
-// rleated articles / events
-.related-layout {}
+}
