@@ -22,7 +22,7 @@
     }
 
     input, textarea {
-        padding: 0.5rem 12px;
+        padding: 1rem 0.85rem;
     }
 
     input:focus, textarea:focus {
@@ -40,7 +40,7 @@
 
     // all form buttons
     [id^="gform_submit_button_"] {
-        padding: 0.6rem 1rem;
+        padding: 1.05rem 1.65rem;
         border-radius: $radius-small;
         font-weight: $regular;
         background-color: $blue;
@@ -84,7 +84,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        max-width: 23rem;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -93,7 +93,15 @@
     }
 
     #input_1_1 {
-        width: 15rem;
+        width: 12.5rem;
+
+        @include mq(xxs) {
+            width: 15rem;
+        }
+
+        @include mq(xs) {
+            width: 18rem;
+        }
     }
 }
 

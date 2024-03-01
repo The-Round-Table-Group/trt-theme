@@ -13,7 +13,7 @@
         border-top: 1px solid $grey;
         padding: 2rem 0 0;
 
-        @include mq(sm) {
+        @include mq(md) {
             flex-direction: row;
             justify-content: space-between;
             padding: 3.5rem 0 0;
@@ -27,7 +27,7 @@
                 max-width: 22rem;
             }
 
-            @include mq(sm) {
+            @include mq(md) {
                 margin-right: 2rem;
                 margin-bottom: 0;
             }
@@ -36,7 +36,7 @@
         .subscribe {
             position: relative;
             top: -0.5rem;
-            max-width: 23rem;
+            max-width: 27.25rem;
             width: 100%;
         }
     }
