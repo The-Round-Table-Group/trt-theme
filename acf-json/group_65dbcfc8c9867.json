@@ -60,6 +60,20 @@
                 "operator": "!=",
                 "value": "front-page.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "news"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "event"
+            }
         ]
     ],
     "menu_order": 1,
@@ -71,5 +85,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709097328
+    "modified": 1709273830
 }

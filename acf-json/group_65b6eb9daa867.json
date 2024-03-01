@@ -25,29 +25,6 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_65b6ec5597878",
-                    "label": "Menu AOS Delay",
-                    "name": "menu_aos_delay",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65b6eb9e97874"
-                },
-                {
                     "key": "field_65b6ebea97875",
                     "label": "Menu Header",
                     "name": "menu_header",
@@ -130,5 +107,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707965821
+    "modified": 1709274293
 }

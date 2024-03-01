@@ -10,6 +10,11 @@ small, time, ol, ul, li, button, input {
 
 small { font-size: 0.875rem; }
 
+time {
+    display: block;
+    color: $grey;
+}
+
 a {
 	text-decoration: none;
 	transition: $transition;
@@ -66,4 +71,11 @@ h6, .h6 { font-size: 18px; }
     margin-top: 0;
     margin-bottom: 1.25rem;
     font-size: fluid-text(480px, 42px, 960px, 64px);
+}
+
+.no-clip-header {
+    padding-top: 5rem;
+    background: none;
+    color: $primary-text-color;
+    -webkit-text-fill-color: unset;
 }
