@@ -1,0 +1,45 @@
+{
+    "key": "group_65e183627221b",
+    "title": "Site Options - Subscribe Notice",
+    "fields": [
+        {
+            "key": "field_65e18362d643c",
+            "label": "Subscribe Notice",
+            "name": "subscribe_notice",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Displays below the subscribe section the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-options"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709278176
+}
