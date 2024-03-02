@@ -66,12 +66,18 @@
                 }, 200);
             });
 
-            // // Add active class to menu item based on URL path
-            // var path = location.pathname.split('/'); // url path array
+            // Add active class to menu item based on URL path
+            var path = location.pathname.split('/'); // url path array
 
-            // if (path[1] !== '') {
-            //     $('.link-item[href^="/' + path[1] + '"]').addClass('active');
-            // }
+            if (path[1] !== '') {
+                // dev
+                $('.link-item[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
+                $('.footer-menu--link[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
+
+                // prod
+                // $('.link-item[href^="https://trt.group/' + path[1] + '"]').addClass('active');
+                // $('.footer-menu--link[href^="https://trt.group/' + path[1] + '"]').addClass('active');
+            }
         });
 
 
