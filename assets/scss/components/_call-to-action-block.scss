@@ -11,7 +11,7 @@
 
     &__content {
         text-align: center;
-        max-width: 35rem;
+        max-width: 38rem;
         margin: 0 auto;
 
         .title {
@@ -20,12 +20,13 @@
             background: unset;
             -webkit-text-fill-color: unset;
             color: $white;
+            font-size: fluid-text(480px, 35px, 960px, 45px);
             @include mq(sm) { margin-bottom: 2rem; }
         }
 
         .message {
-            margin-top: 0;
-            margin-bottom: 2rem;
+            max-width: 35rem;
+            margin: 0 auto 2rem;
         }
     }
 }

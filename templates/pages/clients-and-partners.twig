@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="logo-grid">
+        {% for logo in options.client_logos|slice(0, 40) %}
+            <div class="logo-grid__grid-item">
+                <div class="logo-image" style="background-image: url('{{ logo.logo.url }}');"></div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {{ post.content }}
+{% endblock %}

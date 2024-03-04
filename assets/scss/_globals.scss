@@ -35,7 +35,7 @@ img {
     @include mq(lg) { padding: 1rem 3rem; }
 }
 
-// on all blocks to create spacing consistency
+// on all blocks to create even spacing
 .block-margin {
     margin: 7rem auto;
     &--no-bottom { margin: 10rem auto 0; }

@@ -66,13 +66,16 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "news"
-            }
-        ],
-        [
+            },
             {
                 "param": "post_type",
                 "operator": "!=",
                 "value": "event"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "client"
             }
         ]
     ],
@@ -85,5 +88,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709273830
+    "modified": 1709574497
 }
