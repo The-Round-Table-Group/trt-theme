@@ -1,10 +1,10 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-    <div class="logo-grid">
-        {% for logo in options.client_logos|slice(0, 40) %}
+    <div class="logo-grid facetwp-template">
+        {% for logo in clients_and_partners %}
             <div class="logo-grid__grid-item">
-                <div class="logo-image" style="background-image: url('{{ logo.logo.url }}');"></div>
+                <div class="logo-image" style="background-image: url('{{ logo.thumbnail.src }}');"></div>
             </div>
         {% endfor %}
     </div>

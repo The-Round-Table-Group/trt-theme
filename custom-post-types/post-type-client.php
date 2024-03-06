@@ -24,7 +24,7 @@ $args = [
 	'show_ui'             => true,
 	'show_in_menu'        => true,
 	'show_in_admin_bar'   => true,
-	'show_in_rest'		  => false,
+	'show_in_rest'		  => true,
 	'menu_icon'           => 'dashicons-groups',
 	'show_in_nav_menus'   => false,
 	'publicly_queryable'  => true,
@@ -59,6 +59,6 @@ $tax_args = [
 	'has_archive'		=> false,
 	'query_var'	    	=> true,
 	'show_in_rest'		=> true,
-	'rewrite'			=> true,
+	'rewrite'			=> false,
 ];
 register_taxonomy( 'client-tax', 'client', $tax_args );
