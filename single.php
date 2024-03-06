@@ -14,6 +14,14 @@ if( is_singular() ) :
 	}
 endif;
 
+$context['news'] = Timber::get_posts([
+    'post_type'      => 'news',
+    'post_status'    => 'publish',
+    'posts_per_page' => 3,
+    'orderby'        => 'date',
+    'order'          => 'DESC'
+]);
+
 // attempt to render a corresponding view (.twig) file that matches any of the below patterns
 Timber::render([
 	'single-' . $post->ID . '.twig',

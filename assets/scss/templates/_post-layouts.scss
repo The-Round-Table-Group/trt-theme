@@ -4,7 +4,7 @@
 /**
     Archive styles
 */
-.post-grid {
+.post-grid, .related-layout {
     display: grid;
     max-width: 100%;
     margin: 3rem auto;
@@ -54,7 +54,7 @@
         max-width: 100%;
         margin: 1rem auto 3rem;
         padding-bottom: 2.25rem;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $light-black;
 
         h5 {
             margin-top: 0;
@@ -94,7 +94,40 @@
             }
         }
     }
+
+    .next-previous-posts {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+
+        .post-nav {
+            width: 48%;
+            border: 1px solid $light-black;
+            border-radius: $radius-small;
+            padding: 1.5rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $dark-blue;
+            }
+        }
+
+        h5 {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        p {
+            margin-top: 0;
+            &:last-of-type { margin-bottom: 0; }
+        }
+    }
 }
 
 // related articles / events
-.related-layout {}
+.related-layout .post-grid {
+    max-width: $global-width;
+    margin: 0 auto;
+}
