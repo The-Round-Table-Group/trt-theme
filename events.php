@@ -4,7 +4,7 @@ $context = Timber::get_context();
 $post = Timber::get_post();
 $context['post'] = $post;
 
-$context['news'] = Timber::get_posts([
+$context['events'] = Timber::get_posts([
     'post_type'      => 'event',
     'post_status'    => 'publish',
     'posts_per_page' => -1,
