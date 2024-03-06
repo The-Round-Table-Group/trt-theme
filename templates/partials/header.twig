@@ -26,11 +26,7 @@
 
     {% if not is_front_page %}
         {% if is_single and post.thumbnail.src %}
-            {% if post.header_image_size == 'normal' %}
-                <img class="image" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" />
-            {% else %}
-                <div class="image--small" style="background-image: url('{{ post.thumbnail.src }}');"></div>
-            {% endif %}
+            <img class="post-image" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" />
         {% elseif not is_single and post.header_image.url %}
             {% if post.header_image_size == 'normal' %}
                 <img class="image" src="{{ post.header_image.url }}" alt="{{ post.header_image.alt }}" />

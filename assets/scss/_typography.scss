@@ -53,11 +53,22 @@ h6, .h6 {
 	font-weight: $regular;
 	line-height: 1.2;
 	letter-spacing: -1px;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
     color: transparent;
     background: $text-gradient;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+h5, .h5,
+h6, .h6 {
+    color: $primary-text-color;
 }
 
 h1, .h1 { font-size: fluid-text(480px, 36px, 960px, 64px); }

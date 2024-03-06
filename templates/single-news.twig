@@ -1,11 +1,25 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-<article class="post-layout">
-    {# Author + "Share this post on" flex row with underline (this follows the header image) #}
-</article>
+    <article class="post-layout">
+        <div class="post-layout__author">
+            <div class="author-info">
+                <img src="{{ author.avatar.src }}" alt="{{ author.avatar.alt }}" />
 
-<section class="related-layout">
-    {# 3 most recent posts from the same category as this post #}
-</section>
+                <div>
+                    <h5>{{ post.author.name }}</h5>
+                    <time>{{ post.date }}</time>
+                </div>
+            </div>
+
+            <div class="social-share-links">
+                <h5>Share this post on:</h5>
+                {{ fn('do_action', 'trt_post_intro') }}
+            </div>
+        </div>
+
+        {{ post.content }}
+    </article>
+
+    <section class="related-layout"></section>
 {% endblock %}

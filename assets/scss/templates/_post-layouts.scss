@@ -42,7 +42,46 @@
 /**
     Single post styles
 */
-.post-layout {}
+.post-layout {
+    max-width: 61.25rem;
+    margin: 0 auto;
+
+    &__author {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 1rem auto 3rem;
+        padding-bottom: 2.25rem;
+        border-bottom: 1px solid $white;
+
+        h5 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-weight: $light;
+            letter-spacing: 0;
+        }
+
+        .author-info {
+            img {
+                border-radius: $circle;
+            }
+
+            time { color: $primary-text-color; }
+        }
+
+        .social-share-links {
+            .shared-counts-wrap {
+                margin: 0;
+
+                .shared-counts-button {
+                    border: 1px solid $light-black;
+                    border-radius: $radius-small;
+                }
+            }
+        }
+    }
+}
 
 // related articles / events
 .related-layout {}
