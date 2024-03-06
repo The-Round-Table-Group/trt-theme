@@ -1,0 +1,43 @@
+// FacetWP filter styles
+
+/**
+    Global
+*/
+.facetwp-facet { margin-bottom: 0 !important; }
+
+.facetwp-type-dropdown {
+    select, option {
+        color: $white;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    select {
+        appearance: none;
+        padding: 0.65rem 1.25rem;
+        border: 1px solid $white;
+        border-radius: $radius-small;
+        background: transparent;
+        background-image: url('assets/media/chevron-down-icon-white.svg');
+        background-repeat: no-repeat;
+        background-position: 96% 54%;
+        &:hover { cursor: pointer; }
+    }
+
+    option {
+        background-color: $website-background;
+        border-radius: unset;
+    }
+}
+
+/**
+    Template-specific
+*/
+.client-filter {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+
+    select { width: 17rem; }
+}

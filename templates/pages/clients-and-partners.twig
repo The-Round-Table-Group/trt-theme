@@ -1,6 +1,10 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+    <div class="client-filter">
+        {{ fn('do_shortcode', '[facetwp facet="client_partner_sort"]') }}
+    </div>
+
     <div class="logo-grid facetwp-template">
         {% for logo in clients_and_partners %}
             <div class="logo-grid__grid-item">
