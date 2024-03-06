@@ -6,6 +6,7 @@ $context['post'] = $post;
 
 $context['news'] = Timber::get_posts([
     'post_type'      => 'event',
+    'post_status'    => 'publish',
     'posts_per_page' => -1,
     'orderby'        => 'date',
     'order'          => 'DESC'

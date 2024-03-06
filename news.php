@@ -13,8 +13,8 @@ $context['news_tax'] = Timber::get_terms([
 
 $context['news'] = Timber::get_posts([
     'post_type'      => 'news',
-    'posts_per_page' => -1,
     'post_status'    => 'publish',
+    'posts_per_page' => -1,
     'orderby'        => 'date',
     'order'          => 'DESC'
 ]);
