@@ -22,12 +22,10 @@
         .footer-logo {
             margin-right: 0;
             margin-bottom: 2.75rem;
-
-            @include mq(xxs) {
-                max-width: 22rem;
-            }
+            max-width: 28rem;
 
             @include mq(md) {
+                max-width: 22rem;
                 margin-right: 2rem;
                 margin-bottom: 0;
             }

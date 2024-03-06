@@ -4,11 +4,11 @@
     <article class="post-layout">
         <div class="post-layout__author">
             <div class="author-info">
-                <img src="{{ author.avatar.src }}" alt="{{ author.avatar.alt }}" />
+                <img src="{{ post.author.avatar }}" alt="{{ post.author.name }}" />
 
                 <div>
                     <h5>{{ post.author.name }}</h5>
-                    <time>{{ post.date }}</time>
+                    <time>{{ post.date|date('F j, Y') }}</time>
                 </div>
             </div>
 
