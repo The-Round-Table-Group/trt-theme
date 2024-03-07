@@ -47,7 +47,7 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "medium",
+                    "preview_size": "thumbnail",
                     "parent_repeater": "field_65d2e01ac1cb0"
                 }
             ]
@@ -71,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708321714
+    "modified": 1709818897
 }

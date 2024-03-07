@@ -1,14 +1,14 @@
 {
-    "key": "group_65e183627221b",
-    "title": "Site Options - Subscribe Notice",
+    "key": "group_65e9c0aef0b8f",
+    "title": "Site Options - MailerLite Token",
     "fields": [
         {
-            "key": "field_65e18362d643c",
-            "label": "Subscribe Notice",
-            "name": "subscribe_notice",
+            "key": "field_65e9c0af798a5",
+            "label": "MailerLite API Token",
+            "name": "ml_token",
             "aria-label": "",
             "type": "text",
-            "instructions": "Displays below the subscribe section in the footer.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -32,7 +32,7 @@
             }
         ]
     ],
-    "menu_order": 4,
+    "menu_order": 6,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709818759
+    "modified": 1709818709
 }

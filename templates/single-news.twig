@@ -23,21 +23,21 @@
         <div class="next-previous-posts">
             {% if post.prev %}
                 <a class="post-nav" href="{{ post.prev.link }}">
-                    <p>Previous</p>
+                    <p><span class="prev-arrow">{% include 'assets/media/right-arrow-white.svg' %}</span> Previous</p>
                     <h5>{{ post.prev.title }}</h5>
                 </a>
             {% endif %}
 
             {% if post.next %}
                 <a class="post-nav" href="{{ post.next.link }}">
-                    <p>Next</p>
+                    <p>Next <span class="next-arrow">{% include 'assets/media/right-arrow-white.svg' %}</span></p>
                     <h5>{{ post.next.title }}</h5>
                 </a>
             {% endif %}
         </div>
     </article>
 
-    <h3 class="short-width-header">Check out some of our other news articles</h3>
+    <h3 class="short-width-header">More From The Round Table</h3>
     <section class="post-grid">
         {% for article in news %}
             <a class="post-grid__grid-item" href="{{ article.link }}">
