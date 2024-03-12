@@ -5,13 +5,18 @@
 		<meta http-equiv="content-language" content="en-us" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="{{ post.seo_description }}" />
+
+        {% if post.seo_description %}
+            <meta name="description" content="{{ post.seo_description }}" />
+        {% else %}
+            <meta name="description" content="{{ options.seo_description }}" />
+        {% endif %}
 
 		<title>{{ site.name }} | {{ post.title }}</title>
 
 		{{ fn('wp_head') }}
 
-        {# Open Graph Data (Social + SERPS) #}
+        {# Open Graph Data #}
         {% if post.seo_title %}
             <meta property="og:title" content="{{ post.seo_title }}">
         {% else %}
@@ -50,7 +55,7 @@
 	<body data-template="base.twig" class="{{ body_class }}">
         {% if options.enable_banner %}
             <section class="notice-wrap ">
-                <div class="notice-banner" role="dialogue" aria-label="Notice">
+                <div class="notice-banner" role="dialog" aria-label="Notice">
                     <p>{{ options.banner_text }}</p>
                     <button id="close" class="close-notice" aria-label="Close">&times;</button>
                 </div>
