@@ -1,5 +1,24 @@
-.job-card {
-    max-width: 28rem;
-    background-color: $background-accent-alt;
-    border: 1px solid $light-black;
+.career-listing {
+    margin: 2rem auto;
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 50rem;
+        margin: 0 auto 1.5rem;
+        padding: 1.25rem 1.65rem;
+        background-color: $background-accent-alt;
+        border: 1px solid $light-black;
+        border-radius: $radius-medium;
+
+        h4 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0 1rem 0 0;
+        }
+    }
 }

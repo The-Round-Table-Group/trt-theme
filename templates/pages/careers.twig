@@ -1,5 +1,23 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+    <section class="career-listing">
+        {% for career in careers %}
+            <div class="career-listing__card">
+                <div>
+                    <h4>{{ career.title }}</h4>
+                    {% for type in careers_tax %}
+                        <p>{{ type.name }}</p>
+                    {% endfor %}
+                </div>
+
+                <a class="primary-button--blue" href="{{ career.link }}">
+                    Apply
+                    <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+
     {{ post.content }}
 {% endblock %}

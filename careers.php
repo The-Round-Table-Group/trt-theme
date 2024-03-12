@@ -4,6 +4,13 @@ $context = Timber::get_context();
 $post = Timber::get_post();
 $context['post'] = $post;
 
+$context['careers_tax'] = Timber::get_terms([
+    'taxonomy'   => 'career-tax',
+    'orderby'    => 'name',
+    'order'      => 'ASC',
+    'hide_empty' => false
+]);
+
 $context['careers'] = Timber::get_posts([
     'post_type'      => 'career',
     'post_status'    => 'publish',
