@@ -1,0 +1,32 @@
+.about-slider-wrapper {
+    margin-bottom: 3rem;
+
+    .about-slider {
+        margin: 0 auto 1.75rem;
+
+        img {
+            border-radius: $radius-large;
+        }
+    }
+
+    .slider-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 7.5rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 3rem;
+        height: 3rem;
+        border-radius: $circle;
+        background-color: $blue;
+        color: $primary-text-color;
+        &:hover { background-color: $light-blue; }
+    }
+
+    .slick-prev { transform: rotate(180deg); }
+}

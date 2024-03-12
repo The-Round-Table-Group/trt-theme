@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="about-slider-wrapper">
+        <div class="about-slider">
+            {% for image in post.meta('about_slider') %}
+                <img src="{{ image.slide_image.url }}" alt="{{ image.slide_image.alt }}">
+            {% endfor %}
+        </div>
+
+        <div class="slider-nav">
+            <button class="slick-prev" aria-label="Move slider right">
+                <span>{% include 'assets/media/right-arrow-white.svg' %}</span>
+            </button>
+
+            <button class="slick-next" aria-label="Move slider left">
+                <span>{% include 'assets/media/right-arrow-white.svg' %}</span>
+            </button>
+        </div>
+    </div>
+
+    {{ post.content }}
+{% endblock %}
