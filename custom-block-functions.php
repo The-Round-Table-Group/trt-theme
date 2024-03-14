@@ -80,6 +80,21 @@ if( function_exists('acf_register_block_type') ) :
 	];
 	acf_register_block_type( $client_slider );
 
+    // text box (multi-paragraph)
+    $text_box_block = [
+		'name' => 'text-box-block',
+		'title' => __( 'Text Box', 'trt' ),
+		'description' => __( 'Bordered text box with multiple paragraphs.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'editor-paste-text',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'text', 'box', 'paragraph', 'bordered' ]
+	];
+	acf_register_block_type( $text_box_block );
+
 
     // $ = [
 	// 	'name' => '',

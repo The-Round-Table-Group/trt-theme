@@ -1,0 +1,7 @@
+{# Bordered text box with multiple paragraphs available #}
+<div class="text-box block-margin--no-top">
+    <img src="{{ options.logo_icon.url }}" alt="TRT Favicon Logo" />
+    {% for p in fields.text_box_content %}
+        <p>{{ p.paragraph }}</p>
+    {% endfor %}
+</div>

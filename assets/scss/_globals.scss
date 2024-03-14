@@ -38,5 +38,6 @@ img {
 // on all blocks to create even spacing
 .block-margin {
     margin: 7rem auto;
+    &--no-top { margin: 0 auto 7rem; }
     &--no-bottom { margin: 10rem auto 0; }
 }

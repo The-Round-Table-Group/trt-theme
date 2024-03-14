@@ -6,17 +6,13 @@
 
 {% if not fields.image_left_or_right %}
 <section class="image-text-block block-margin">
+    <div class="left-image">
+        <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />
+    </div>
 {% else %}
 <section class="image-text-block block-margin wrap-reverse">
 {% endif %}
-    {# image is on the left #}
-    {% if not fields.image_left_or_right %}
-        <div class="left-image">
-            <img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}" />
-        </div>
-    {% endif %}
 
-    {# always shown #}
     {% set tc = fields.text_content %}
     <div class="text-content">
         <span class="pill-tag">{{ tc.pill_tag }}</span>

@@ -65,6 +65,8 @@ class TRTSite extends Timber\Site {
         // remove inline wp styles from frontend
         if ( ! is_admin() ) {
             wp_dequeue_style( 'global-styles' );
+            wp_dequeue_style( 'wp-block-library' );
+            wp_dequeue_style( 'wp-block-library-theme' );
         }
 
         // only load block editor styles in admin
@@ -149,7 +151,7 @@ class TRTSite extends Timber\Site {
 	function register_post_types() {
         include_once( 'custom-post-types/post-type-career.php' );
         include_once( 'custom-post-types/post-type-client.php' );
-        // include_once( 'custom-post-types/post-type-event.php' );
+        include_once( 'custom-post-types/post-type-case-study.php' );
 		include_once( 'custom-post-types/post-type-news.php' );
 	}
 

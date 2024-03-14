@@ -1,16 +1,16 @@
 <?php
-// Template Name: Events Template
+// Template Name: Case Studies Template
 $context = Timber::get_context();
 $post = Timber::get_post();
 $context['post'] = $post;
 
-$context['events'] = Timber::get_posts([
-    'post_type'      => 'event',
+$context['case_studies'] = Timber::get_posts([
+    'post_type'      => 'case-study',
     'post_status'    => 'publish',
     'posts_per_page' => -1,
     'orderby'        => 'date',
-    'order'          => 'DESC'
+    'order'          => 'ASC'
 ]);
 
-$templates = ['pages/events.twig'];
+$templates = ['pages/case-studies.twig'];
 Timber::render( $templates, $context );

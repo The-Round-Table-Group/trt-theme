@@ -1,12 +1,9 @@
 .about-slider-wrapper {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     .about-slider {
         margin: 0 auto 1.75rem;
-
-        img {
-            border-radius: $radius-large;
-        }
+        img { border-radius: $radius-large; }
     }
 
     .slider-nav {

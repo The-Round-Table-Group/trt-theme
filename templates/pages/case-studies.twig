@@ -1,0 +1,9 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    {% for cs in case_studies %}
+        <h3>{{ cs.title }}</h3>
+    {% endfor %}
+
+    {{ post.content }}
+{% endblock %}
