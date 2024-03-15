@@ -120,39 +120,31 @@
         align-self: center;
 
         .panel-link {
-            display: block;
-            margin-top: 1.2rem;
-            margin-bottom: 1.2rem;
-            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 28rem;
+            padding: 0.7rem;
             background-color: $primary-text-color;
             border-radius: $radius-small;
-            color: $light-black;
 
-            &:first-of-type { margin-top: 0; }
-            &:last-of-type { margin-bottom: 0; }
-
-            span {
-                position: relative;
-                top: 0.3rem;
-                display: inline-block;
-                margin-right: 1rem;
-
-                svg {
-                    width: 20px;
-                    height: 20px;
-
-                    path { transition: $transition; }
-                }
-            }
+            &:first-of-type { margin-bottom: 2rem; }
 
             &:hover {
-                background-color: $light-blue;
-                color: $white;
+                background-color: $blue;
+                p { color: $primary-text-color; }
+            }
 
-                span svg path {
-                    fill: $white;
-                    transition: $transition;
-                }
+            img {
+                max-width: 10rem;
+                border-radius: $radius-small;
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 1.5rem;
+                color: $light-black;
             }
         }
     }

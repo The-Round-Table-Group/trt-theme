@@ -1,3 +1,6 @@
+/**
+    All Careers Listing
+*/
 .career-listing {
     margin: 2rem auto 0;
     max-width: 50rem;
@@ -27,8 +30,40 @@
 .eeo-statement {
     margin-top: 3.25rem;
     border-top: 1px solid $grey;
+    p:last-of-type { margin-bottom: 0; }
+}
 
-    p:last-of-type {
-        margin-bottom: 0;
+/**
+    Single Career Pages
+*/
+.split-view-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mq(sm) {
+        flex-direction: row;
+        justify-content: space-between;
     }
+
+    .career-reqs,
+    .career-summary {
+        width: 100%;
+        padding: 2rem 3rem;
+        border: 1px solid $light-black;
+    }
+}
+
+.career-reqs {
+    max-width: 55rem;
+}
+
+// right hand menu follows scroll
+.career-summary {
+    position: sticky;
+    align-self: flex-start;
+    top: 2rem;
+    max-width: 20rem;
+    background-color: $background-accent-alt;
 }

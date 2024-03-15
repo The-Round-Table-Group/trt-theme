@@ -5,15 +5,6 @@ $post = Timber::get_post();
 $context['post'] = $post;
 the_post();
 
-// only setup for single posts
-if( is_singular() ) :
-	if( $post->post_parent != 0 ) {
-		$context['is_child'] = true;
-	} else {
-		$context['is_parent'] = true;
-	}
-endif;
-
 $context['news'] = Timber::get_posts([
     'post_type'      => 'news',
     'post_status'    => 'publish',

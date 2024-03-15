@@ -95,6 +95,18 @@ class TRTSite extends Timber\Site {
         $context['options']         = get_fields('option');
         $context['is_single']       = is_single();
 
+        // shown in the nav menu
+        $context['featured_news']   = Timber::get_posts([
+            'post_type'      => 'news',
+            'posts_per_page' => '2',
+            'tax_query'      => [[
+                'operator' => 'IN',
+                'taxonomy' => 'news-tax',
+                'field'    => 'slug',
+                'terms'    => [ 'featured' ],
+            ]]
+        ]);
+
 		return $context;
 	}
 
