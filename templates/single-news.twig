@@ -23,14 +23,14 @@
         <div class="next-previous-posts">
             {% if post.prev %}
                 <a class="post-nav" href="{{ post.prev.link }}">
-                    <p><span class="prev-arrow">{% include 'assets/media/right-arrow-white.svg' %}</span> Previous</p>
+                    <p><span class="prev-arrow">{% include 'assets/media/white/right-arrow-white.svg' %}</span> Previous</p>
                     <h5>{{ post.prev.title }}</h5>
                 </a>
             {% endif %}
 
             {% if post.next %}
                 <a class="post-nav" href="{{ post.next.link }}">
-                    <p>Next <span class="next-arrow">{% include 'assets/media/right-arrow-white.svg' %}</span></p>
+                    <p>Next <span class="next-arrow">{% include 'assets/media/white/right-arrow-white.svg' %}</span></p>
                     <h5>{{ post.next.title }}</h5>
                 </a>
             {% endif %}
