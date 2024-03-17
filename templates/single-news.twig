@@ -39,7 +39,7 @@
 
     <h3 class="short-width-header">More From The Round Table</h3>
     <section class="post-grid">
-        {% for article in news %}
+        {% for article in related_news %}
             <a class="post-grid__grid-item" href="{{ article.link }}">
                 <div class="image" style="background-image: url('{{ article.thumbnail.src }}');"></div>
                 <time>{{ article.date|date('F j, Y') }}</time>
