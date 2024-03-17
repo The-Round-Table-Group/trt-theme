@@ -2,7 +2,63 @@
 
 {% block content %}
     <section class="split-view-wrapper">
-        <div class="career-reqs"></div>
-        <aside class="career-summary"></aside>
+        <div class="career-reqs">
+            {{ post.content }}
+        </div>
+
+        <aside class="career-summary">
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/calendar-icon-white.svg' %}</span>
+                    <span class="icon-title">Date Posted:</span> {{ post.date }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/location-icon-white.svg' %}</span>
+                    <span class="icon-title">Location:</span> {{ post.location }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/time-icon-white.svg' %}</span>
+                    <span class="icon-title">Hours:</span> {{ post.hours }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/experience-icon-white.svg' %}</span>
+                    <span class="icon-title">Experience:</span> {{ post.experience }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/sword-icon-white.svg' %}</span>
+                    <span class="icon-title">Job Type:</span> {{ post.job_type|capitalize }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/sword-icon-white.svg' %}</span>
+                    <span class="icon-title">Open Positions:</span> {{ post.open_positions }}
+                </p>
+            </div>
+
+            <div class="career-summary__item">
+                <p>
+                    <span class="icon">{% include 'assets/media/white/pay-icon-white.svg' %}</span>
+                    {% if not post.experience_based_pay %}
+                        <span class="icon-title">Pay:</span> {{ post.pay }}
+                    {% else %}
+                        <span class="icon-title">Pay:</span> Dependent on experience
+                    {% endif %}
+                </p>
+            </div>
+        </aside>
     </section>
 {% endblock %}

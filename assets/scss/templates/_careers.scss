@@ -41,6 +41,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 75rem;
+    margin: 0 auto;
 
     @include mq(sm) {
         flex-direction: row;
@@ -50,13 +52,19 @@
     .career-reqs,
     .career-summary {
         width: 100%;
-        padding: 2rem 3rem;
-        border: 1px solid $light-black;
     }
 }
 
 .career-reqs {
     max-width: 55rem;
+
+    ul {
+        max-width: 45rem;
+
+        li {
+            margin-bottom: 0.65rem;
+        }
+    }
 }
 
 // right hand menu follows scroll
@@ -65,5 +73,31 @@
     align-self: flex-start;
     top: 2rem;
     max-width: 20rem;
+    margin-left: 0;
+    padding: 2rem 1.25rem;
     background-color: $background-accent-alt;
+    border-radius: $radius-small;
+
+    @include mq(sm) {
+        margin-left: 2rem;
+    }
+
+    &__item {
+        &:last-child p { margin-bottom: 0; }
+        p { margin-top: 0; }
+
+        .icon {
+            display: inline-block;
+            width: 1.5rem;
+            position: relative;
+            top: 4px;
+            margin-right: 5px;
+
+            svg { width: 1.25rem; height: 1.25rem; }
+        }
+
+        .icon-title {
+            text-decoration: underline;
+        }
+    }
 }

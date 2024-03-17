@@ -70,12 +70,17 @@
             {
                 "param": "post_type",
                 "operator": "!=",
-                "value": "event"
+                "value": "post"
             },
             {
                 "param": "post_type",
                 "operator": "!=",
                 "value": "client"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "career"
             }
         ]
     ],
@@ -88,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709574497
+    "modified": 1710539737
 }

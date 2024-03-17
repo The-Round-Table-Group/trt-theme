@@ -35,11 +35,7 @@
 
             li {
                 margin-bottom: 0.75rem;
-
-                .checkmark {
-                    margin-right: 0.4rem;
-                    svg path { fill: $white; }
-                }
+                .checkmark { margin-right: 0.4rem; }
             }
         }
     }
@@ -47,20 +43,14 @@
     .left-image,
     .right-image {
         margin-bottom: 2rem;
-
-        @include mq(980px) {
-            margin-bottom: 0;
-        }
+        @include mq(980px) { margin-bottom: 0; }
 
         img {
             max-width: 36rem;
             min-width: unset;
             width: 100%;
             border-radius: $radius-medium;
-
-            @include mq(md) {
-                min-width: 28rem;
-            }
+            @include mq(md) { min-width: 28rem; }
         }
     }
 
