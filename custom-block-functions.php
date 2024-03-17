@@ -95,6 +95,21 @@ if( function_exists('acf_register_block_type') ) :
 	];
 	acf_register_block_type( $text_box_block );
 
+    // countup stats block
+    $countup_stats = [
+		'name' => 'countup-stats',
+		'title' => __( 'CountUp Stats', 'trt' ),
+		'description' => __( 'Stat with a start/end value that counts up when scrolled into view.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'chart-line',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'count', 'up', 'stat', 'counter' ]
+	];
+	acf_register_block_type( $countup_stats );
+
 
     // $ = [
 	// 	'name' => '',

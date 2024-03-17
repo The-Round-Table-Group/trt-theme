@@ -56,31 +56,14 @@
     "location": [
         [
             {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
                 "param": "page_template",
                 "operator": "!=",
                 "value": "front-page.php"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "news"
-            },
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "post"
-            },
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "client"
-            },
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "career"
             }
         ]
     ],
@@ -93,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710539737
+    "modified": 1710686003
 }

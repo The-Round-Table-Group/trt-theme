@@ -9,7 +9,7 @@ $context['case_studies'] = Timber::get_posts([
     'post_status'    => 'publish',
     'posts_per_page' => -1,
     'orderby'        => 'date',
-    'order'          => 'ASC'
+    'order'          => 'DESC'
 ]);
 
 $templates = ['pages/case-studies.twig'];

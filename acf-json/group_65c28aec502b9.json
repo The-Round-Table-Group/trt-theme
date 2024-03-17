@@ -87,7 +87,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "event"
+                "value": "case-study"
             }
         ]
     ],
@@ -100,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708906579
+    "modified": 1710685909
 }
