@@ -1,6 +1,6 @@
 /**
     * This stylesheet is only loaded in the Block Editor
-    * The component-loader partial loads all blocks in the editor and frontend
+    * The [components/_component-loader.scss] partial loads all blocks in the editor and frontend
     * Saving a component loaded this way recompiles both frontend and admin styles for consistency
     * Admin styles may not be 1:1 with the frontend due to Editor constraints
 */

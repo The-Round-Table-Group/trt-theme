@@ -1,5 +1,29 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-	{{ post.content }}
+    <div class="stat-counter">
+        {% for stat in post.stats %}
+            <div class="stat-counter__stat">
+                {# custom buildable stat counter shortcode. Uses CountUp.js #}
+                {{ fn(
+                    'do_shortcode',
+                    '[countup
+                        start="' ~ stat.start_value ~ '"
+                        end="' ~ stat.end_value ~ '"
+                        suffix="' ~ stat.suffix ~ '"
+                        duration="3"
+                        decimals="' ~ stat.decimals ~ '"
+                        easing="true"
+                        scroll="true"
+                    ]'
+                ) }}
+
+                <p class="stat-subtext">{{ stat.stat_text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <article class="post-layout">
+        {{ post.content }}
+    </article>
 {% endblock %}
