@@ -1,0 +1,112 @@
+{
+    "key": "group_65f8703d69e97",
+    "title": "Block - Services Grid",
+    "fields": [
+        {
+            "key": "field_65f8703d1881b",
+            "label": "Services",
+            "name": "services",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 6,
+            "collapsed": "field_65f870541881d",
+            "button_label": "Add Service",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65f870541881d",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f8703d1881b"
+                },
+                {
+                    "key": "field_65f8704e1881c",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Font Awesome Icon. Use this URL<br\/>\r\nhttps:\/\/fontawesome.com\/search?o=r&m=free&s=solid<br\/>\r\nMake sure you are searching in \"Free\" and \"Solid\" Icons (URL above has these pre-set).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f8703d1881b"
+                },
+                {
+                    "key": "field_65f8705c1881e",
+                    "label": "Blurb",
+                    "name": "blurb",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "1-2 short sentences describing this service.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f8703d1881b"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/services-grid-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710782023
+}

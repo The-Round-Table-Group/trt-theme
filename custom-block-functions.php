@@ -106,9 +106,24 @@ if( function_exists('acf_register_block_type') ) :
 		'icon' => 'text-page',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
-		'keywords' => [ 'trt', 'block' ]
+		'keywords' => [ 'trt', 'block', 'news', 'object', 'post', 'posts' ]
 	];
 	acf_register_block_type( $news_post_object );
+
+    // services grid block
+    $services_grid_block = [
+		'name' => 'services-grid-block',
+		'title' => __( 'Services Grid', 'trt' ),
+		'description' => __( 'Displays 6 custom service items.', 'trt' ),
+		'render_callback' => 'custom_block_callback',
+		'category' => 'trt-blocks',
+		'align' => 'wide',
+		'icon' => 'grid-view',
+		'mode' => 'auto',
+		'supports' => [ 'mode' => true ],
+		'keywords' => [ 'trt', 'block', 'services', 'grid' ]
+	];
+	acf_register_block_type( $services_grid_block );
 
     // $ = [
 	// 	'name' => '',
