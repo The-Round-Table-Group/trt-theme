@@ -46,20 +46,20 @@
         });
 
         // Initialize slick slider (for about page)
-        $('.about-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            pauseOnHover: true,
-            fade: true,
-            infinite: true,
-            arrows: true,
-            dots: false,
-            appendArrows: $('.slider-nav'),
-            prevArrow: $('.slick-prev'),
-            nextArrow: $('.slick-next')
-        });
+        // $('.about-slider').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+        //     pauseOnHover: true,
+        //     fade: true,
+        //     infinite: true,
+        //     arrows: true,
+        //     dots: false,
+        //     appendArrows: $('.slider-nav'),
+        //     prevArrow: $('.slick-prev'),
+        //     nextArrow: $('.slick-next')
+        // });
 
         $(function navMenuEvents() {
             // mega-menu dropdown / slide reveal

@@ -1,7 +1,7 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-    <div class="about-slider-wrapper">
+    {# <div class="about-slider-wrapper">
         <div class="about-slider">
             {% for image in post.meta('about_slider') %}
                 <img src="{{ image.slide_image.url }}" alt="{{ image.slide_image.alt }}">
@@ -17,7 +17,7 @@
                 <span>{% include 'assets/media/white/right-arrow-white.svg' %}</span>
             </button>
         </div>
-    </div>
+    </div> #}
 
     {{ post.content }}
 {% endblock %}
