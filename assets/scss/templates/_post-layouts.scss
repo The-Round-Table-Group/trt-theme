@@ -75,6 +75,23 @@
     max-width: 61.25rem;
     margin: 0 auto;
 
+    // paragraph adjustments
+    p {
+        strong {
+            font-weight: $semibold;
+            font-size: 17px;
+            color: $white;
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            white-space: nowrap;
+            font-weight: $semibold;
+            &:hover { color: $light-blue; }
+        }
+    }
+
     &__author {
         display: flex;
         flex-direction: row;
