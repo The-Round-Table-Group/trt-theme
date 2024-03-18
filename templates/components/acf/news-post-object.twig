@@ -1,5 +1,5 @@
 {# Homepage news post object #}
-<div class="post-grid">
+<div class="post-grid block-margin--no-top">
     {% for post in fields.news_posts %}
         <a class="post-grid__grid-item" href="{{ fn('get_the_permalink', post.ID) }}">
             <div class="image" style='background-image: url({{ fn("get_the_post_thumbnail_url", post.ID) }});'></div>

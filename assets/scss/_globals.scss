@@ -37,18 +37,18 @@ img {
 
 // on all blocks to create even spacing
 .block-margin {
-    margin: 3.75rem auto;
-    @include mq(xs) { margin: 5rem auto; }
-    @include mq(sm) { margin: 7rem auto; }
+    margin: 3.75rem auto !important;
+    @include mq(xs) { margin: 5rem auto !important; }
+    @include mq(sm) { margin: 7rem auto !important; }
 
     &--no-top {
-        margin: 0 auto 4rem;
-        @include mq(sm) { margin: 0 auto 7rem; }
+        margin: 0 auto 4rem !important;
+        @include mq(sm) { margin: 0 auto 7rem !important; }
     }
 
     &--no-bottom {
-        margin: 6.5rem auto 0;
-        @include mq(sm) { margin: 10rem auto 0;}
+        margin: 6.5rem auto 0 !important;
+        @include mq(sm) { margin: 10rem auto 0 !important;}
     }
 }
 
@@ -56,4 +56,11 @@ img {
 .policies-wrapper {
     max-width: 60rem;
     margin: 0 auto;
+}
+
+.wp-block-video {
+    max-width: 75rem;
+    width: 100%;
+    margin: 5rem auto 0;
+    video { width: 100%; }
 }

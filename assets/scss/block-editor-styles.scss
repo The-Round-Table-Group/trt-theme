@@ -17,6 +17,7 @@ body {
 
     // all blocks
     @import 'components/component-loader';
+    @import 'templates/post-layouts';
 
     // editor fixes
     .acf-block-fields [class^="acf-"] {
