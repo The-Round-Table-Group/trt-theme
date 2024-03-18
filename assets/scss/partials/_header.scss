@@ -27,7 +27,8 @@
         }
 
         .primary-button--blue {
-            margin-top: 1.75rem;
+            margin-top: 0;
+            @include mq(xs) { margin-top: 1.75rem; }
         }
     }
 

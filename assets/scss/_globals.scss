@@ -37,7 +37,16 @@ img {
 
 // on all blocks to create even spacing
 .block-margin {
-    margin: 7rem auto;
+    margin: 3.75rem auto;
+    @include mq(xs) { margin: 5rem auto; }
+    @include mq(sm) { margin: 7rem auto; }
+
     &--no-top { margin: 0 auto 7rem; }
     &--no-bottom { margin: 10rem auto 0; }
+}
+
+// all termly policies
+.policies-wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
 }
