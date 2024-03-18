@@ -1,6 +1,6 @@
 <div class="post-grid block-margin--no-top">
     {% for service in fields.services %}
-        <a class="post-grid__grid-item" href="javascript: void(0)">
+        <a class="post-grid__grid-item" href="javascript: void(0)" id="{{ service.scroll_to_id }}">
             <span class="fa-solid {{ service.icon }}"></span>
             <h4>{{ service.name }}</h4>
             <p class="service-blurb">{{ service.blurb }}</p>

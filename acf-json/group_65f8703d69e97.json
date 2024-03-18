@@ -86,6 +86,27 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_65f8703d1881b"
+                },
+                {
+                    "key": "field_65f88f66abdef",
+                    "label": "ScrollTo ID",
+                    "name": "scroll_to_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f8703d1881b"
                 }
             ]
         }
@@ -108,5 +129,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710782023
+    "modified": 1710788477
 }

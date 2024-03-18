@@ -12,7 +12,8 @@
     }
 
     &--logo {
-        max-width: 18rem;
+        max-width: 15rem;
+        @include mq(600px) { max-width: 18rem; }
     }
 
     // this neds to be within the flex row
@@ -34,7 +35,8 @@
         max-width: 15rem;
 
         #toggle-menu {
-            margin-right: 2rem;
+            margin-right: 0;
+            @include mq(600px) { margin-right: 2rem; }
 
             span {
                 display: inline-block;
@@ -55,6 +57,11 @@
             transition: $transition;
 
             svg { top: -4px !important; }
+        }
+
+        .primary-button--blue {
+            display: none;
+            @include mq(600px) { display: inline-block; }
         }
     }
 }
@@ -79,8 +86,7 @@
 
     // main menu and links
     &__wrapper {
-        max-width: 11.5rem;
-        width: 100%;
+        max-width: 23rem;
 
         .menu-header {
             margin-top: 0;
@@ -105,6 +111,7 @@
 
     // spacer between left main menu and right panel cta links
     &--divider {
+        display: none;
         position: relative;
         top: 0;
         bottom: 0;
@@ -112,6 +119,7 @@
         margin-right: 2.5rem;
         width: 1px;
         background-color: $light-black;
+        @include mq(md) { display: block; }
     }
 
     // set of CTA-style links
