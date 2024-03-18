@@ -1,0 +1,10 @@
+{# Homepage news post object #}
+<div class="post-grid">
+    {% for post in fields.news_posts %}
+        <a class="post-grid__grid-item" href="{{ fn('get_the_permalink', post.ID) }}">
+            <div class="image" style='background-image: url({{ fn("get_the_post_thumbnail_url", post.ID) }});'></div>
+            <time>{{ fn('get_the_date', 'F j Y', post.ID) }}</time>
+            <h4>{{ fn('get_the_title', post.ID) }}</h4>
+        </a>
+    {% endfor %}
+</div>

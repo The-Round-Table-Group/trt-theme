@@ -6,6 +6,7 @@
     </div>
 
     <div class="logo-grid facetwp-template">
+        {# only grab the top 40 #}
         {% for logo in clients_and_partners|slice(0, 40) %}
             <div class="logo-grid__grid-item">
                 <div class="logo-image" style="background-image: url('{{ logo.thumbnail.src }}');"></div>

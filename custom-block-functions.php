@@ -95,21 +95,20 @@ if( function_exists('acf_register_block_type') ) :
 	];
 	acf_register_block_type( $text_box_block );
 
-    // countup stats block
-    $countup_stats = [
-		'name' => 'countup-stats',
-		'title' => __( 'CountUp Stats', 'trt' ),
-		'description' => __( 'Stat with a start/end value that counts up when scrolled into view.', 'trt' ),
+    // news post object block
+    $news_post_object = [
+		'name' => 'news-post-object',
+		'title' => __( 'News Posts', 'trt' ),
+		'description' => __( 'Selectable news posts (max 3).', 'trt' ),
 		'render_callback' => 'custom_block_callback',
 		'category' => 'trt-blocks',
 		'align' => 'wide',
-		'icon' => 'chart-line',
+		'icon' => 'text-page',
 		'mode' => 'auto',
 		'supports' => [ 'mode' => true ],
-		'keywords' => [ 'trt', 'block', 'count', 'up', 'stat', 'counter' ]
+		'keywords' => [ 'trt', 'block' ]
 	];
-	acf_register_block_type( $countup_stats );
-
+	acf_register_block_type( $news_post_object );
 
     // $ = [
 	// 	'name' => '',

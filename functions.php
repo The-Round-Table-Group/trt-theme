@@ -219,33 +219,3 @@ function trt_shared_counts_location( $locations ) {
 	return $locations;
 }
 add_filter( 'shared_counts_theme_locations', 'trt_shared_counts_location' );
-
-// // Send Gravity Form entries to MailerLite
-// function gform_to_mailerlite( $form, $entry ) {
-
-//     // MailerLite endpoint
-//     // Create/Update Subscriber: POST https://connect.mailerlite.com/api/subscribers
-//     $url = 'https://connect.mailerlite.com/api/subscribers';
-//     $token = get_field( 'ml_token', 'option' );
-
-//     $headers = [
-//         'Content-Type' => 'application/json',
-//         'Authorization' => 'Bearer ' . $token,
-//     ];
-
-//     $body = [
-//         'first_name' => rgar( $entry, 'gfield_id' ),
-//         'last_name'  => rgar( $entry, 'gfield_id' ),
-//         'email'      => rgar( $entry, 'gfield_id' )
-//     ];
-
-//     GFCommon::log_debug( 'gform_after_submission: body => ' . print_r( $body, true ) );
-
-//     $response = wp_remote_post( $url, [
-//         'headers' => $headers,
-//         'body' => $body
-//     ]);
-
-//     GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response, true ) );
-// }
-// add_action( 'gform_after_submission_1', 'gform_to_mailerlite', 10, 2 ); // only for form_id_1
