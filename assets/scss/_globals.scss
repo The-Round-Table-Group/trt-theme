@@ -58,6 +58,14 @@ img {
     margin: 0 auto;
 }
 
+/**
+    Default block adjustments
+*/
+.wp-block-image {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .wp-block-video {
     max-width: 75rem;
     width: 100%;
