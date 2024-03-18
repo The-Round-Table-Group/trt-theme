@@ -61,6 +61,10 @@ img {
 .wp-block-video {
     max-width: 75rem;
     width: 100%;
-    margin: 5rem auto 0;
+    margin: 0 auto 2.5rem;
     video { width: 100%; }
+}
+
+.eb-parent-wrapper {
+    margin-bottom: 3rem;
 }
