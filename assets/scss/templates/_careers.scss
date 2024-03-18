@@ -7,13 +7,21 @@
 
     &__card {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin: 0 auto 1.5rem;
         padding: 1.25rem 1.65rem;
         background-color: $background-accent-alt;
         border: 1px solid $light-black;
         border-radius: $radius-medium;
+        text-align: center;
+
+        @include mq(xxs) {
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         h4 {
             margin-top: 0;
@@ -22,7 +30,9 @@
 
         p {
             display: inline-block;
-            margin: 0 1rem 0 0;
+            margin: 0 1rem 1.5rem 0;
+            &:last-of-type { margin-right: 0; }
+            @include mq(xxs) { margin: 0 1rem 0 0; }
         }
     }
 }
@@ -44,7 +54,7 @@
     max-width: 75rem;
     margin: 0 auto;
 
-    @include mq(sm) {
+    @include mq(md) {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -77,10 +87,7 @@
     padding: 2rem 1.25rem;
     background-color: $background-accent-alt;
     border-radius: $radius-small;
-
-    @include mq(sm) {
-        margin-left: 2rem;
-    }
+    @include mq(md) { margin-left: 2rem; }
 
     &__item {
         &:last-child p { margin-bottom: 0; }

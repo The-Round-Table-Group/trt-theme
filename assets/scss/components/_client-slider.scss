@@ -4,8 +4,13 @@
     h2 { margin-top: 0; }
 
     .custom-slider {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+
+        @include mq(sm) {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
 
         &__slide {
             background-color: #EEE;
