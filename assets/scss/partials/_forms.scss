@@ -28,17 +28,12 @@
         border: 1px solid $grey;
     }
 
-    input, textarea {
-        padding: 1rem 0.85rem;
-    }
+    input, textarea { padding: 1rem 0.85rem; }
 
-    input:focus, textarea:focus {
-        outline: none;
-    }
+    input:focus,
+    textarea:focus { outline: none; }
 
-    label, legend {
-        color: $white;
-    }
+    label, legend { color: $white; }
 
     .gfield_label {
         display: block;
@@ -75,7 +70,7 @@
         display: none;
     }
 
-    // we use reCAPTCHA, preemptive in case someone enables this
+    // we use CloudFlare Turnstile
     .gfield--type-honeypot {
         display: none !important;
     }
@@ -100,20 +95,12 @@
         width: 100%;
     }
 
-    .gfield_label {
-        font-size: 18px;
-    }
+    .gfield_label { font-size: 18px; }
 
     #input_1_1 {
         width: 12.5rem;
-
-        @include mq(xxs) {
-            width: 15rem;
-        }
-
-        @include mq(xs) {
-            width: 18rem;
-        }
+        @include mq(xxs) { width: 15rem; }
+        @include mq(xs) { width: 18rem; }
     }
 }
 
@@ -122,27 +109,88 @@
 
     // first/last name
     #field_2_1 {
+        margin-bottom: 2rem;
 
+        input {
+            max-width: 20rem;
+            width: 100%;
+        }
+    }
+
+    // keep first/last name span wrappers from overflowing
+    #input_2_1_3_container,
+    #input_2_1_6_container {
+        display: inline-block;
+        max-width: 20rem;
+        width: 100%;
+
+        &:first-of-type {
+            margin-right: 1.65rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // email/phone setup
+    #field_2_3,
+    #field_2_4 {
+        display: inline-block;
+        max-width: 20rem;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input {
+            max-width: 20rem;
+            width: 100%;
+        }
     }
 
     // email
-    #field_2_3 {}
-
-    // phone
-    #field_2_4 {}
+    #field_2_3 {
+        margin-right: 1.85rem;
+    }
 
     // business name
-    #field_2_9 {}
+    #field_2_9 {
+        display: inline-block;
+        max-width: 20rem;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input {
+            max-width: 20rem;
+            width: 100%;
+        }
+    }
 
     // industry type
-    #field_2_5 {}
+    #field_2_5 {
+        margin-bottom: 2rem;
+
+        .gchoice {
+            margin-bottom: 10px;
+            input { margin-right: 3px; }
+        }
+    }
 
     // service interest inquiry
-    #field_2_7 {}
+    #field_2_7 {
+        margin-bottom: 2rem;
+    }
 
     // service interest picker
-    #field_2_8 {}
+    #field_2_8 {
+        margin-bottom: 2rem;
+
+        .gchoice {
+            margin-bottom: 10px;
+            input { margin-right: 3px; }
+        }
+    }
 
     // message box
-    #field_2_6 {}
+    #field_2_6 textarea {
+        max-width: 43rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }

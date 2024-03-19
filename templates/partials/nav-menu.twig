@@ -16,21 +16,19 @@
                 {% endfor %}
             </div>
         {% endfor %}
+
+        <div class="mega-menu__right-panel" data-aos="fade-right" data-aos-offset="20">
+            {% for featured in nav_case_studies %}
+                <a class="panel-link" href="/">
+                    <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
+                    <div>
+                        <p class="h6">{{ featured.title }}</p>
+                        <p class="panel-text">{{ featured.preview|slice(0, 50) ~ ' ...' }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div> {# /.mega-menu__container #}
-
-    <div class="mega-menu--divider"></div>
-
-    <div class="mega-menu__right-panel" data-aos="fade-right" data-aos-offset="20">
-        {% for featured in nav_case_studies %}
-            <a class="panel-link" href="/">
-                <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
-                <div>
-                    <p class="h6">{{ featured.title }}</p>
-                    <p class="panel-text">{{ featured.preview|slice(0, 50) ~ ' ...' }}</p>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
 </nav>
 
 <section class="external-sites-bar">
