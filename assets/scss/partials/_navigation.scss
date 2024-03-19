@@ -82,13 +82,23 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-        max-width: 100%;
+        max-width: 45rem;
         width: 100%;
+
+        @include mq(1060px) {
+            max-width: 100%;
+        }
+
     }
 
     // main menu and links
     &__wrapper {
         max-width: 23rem;
+        margin-bottom: 3rem;
+
+        @include mq(1060px) {
+            margin-bottom: 0;
+        }
 
         .menu-header {
             margin-top: 0;
