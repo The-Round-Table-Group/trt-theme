@@ -14,6 +14,14 @@
         border-radius: $radius-small;
     }
 
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .gform-field-label--type-sub { display: none; }
+
     input:not([id^="gform_submit_button_"]),
     textarea, select, option {
         color: $white;
@@ -83,7 +91,7 @@
     form-specific styles
 */
 
-// subscribe form in footer (ID: 1)
+// subscribe form (ID: 1)
 #gform_wrapper_1 {
     #gform_fields_1 {
         display: flex;
@@ -108,4 +116,34 @@
             width: 18rem;
         }
     }
+}
+
+// contact form (ID: 2)
+#gform_wrapper_2 {
+
+    // first/last name
+    #field_2_1 {
+
+    }
+
+    // email
+    #field_2_3 {}
+
+    // phone
+    #field_2_4 {}
+
+    // business name
+    #field_2_9 {}
+
+    // industry type
+    #field_2_5 {}
+
+    // service interest inquiry
+    #field_2_7 {}
+
+    // service interest picker
+    #field_2_8 {}
+
+    // message box
+    #field_2_6 {}
 }

@@ -1,28 +1,33 @@
 {% extends 'base.twig' %}
 
+{% set gmap = 'https://www.google.com/maps/place/1010+S+Federal+Hwy+Suite+1400,+Hallandale+Beach,+FL+33009/@25.9964404,-80.1423969,18z/data=!3m1!4b1!4m6!3m5!1s0x88d9ab78876c91c9:0x502fc5a704bb6921!8m2!3d25.9964404!4d-80.1423969!16s%2Fg%2F11kpkc6sb5?entry=ttu' %}
+
 {% block content %}
-    <div class="form-social-wrapper">
-        {# form #}
-        {# email, address, socials #}
-    </div>
-
-    <section class="career-listing">
-        {% for career in careers %}
-            <div class="career-listing__card">
-                <div>
-                    <h4>{{ career.title }}</h4>
-                    {% for type in careers_tax %}
-                        <p>{{ type.name }}</p>
-                    {% endfor %}
-                </div>
-
-                <a class="primary-button--blue" href="{{ career.link }}">
-                    Apply
-                    <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
-                </a>
-            </div>
-        {% endfor %}
+    <section class="contact-form-wrapper">
+        <div class="contact-form-wrapper__form">
+            {{ fn('do_shortcode', '[gravityform id="2" title="false" description="false", ajax="true"]') }}
+        </div>
     </section>
+
+    <div class="contact-social-wrapper">
+        <a class="social-card" href="{{ gmap }}" target="_blank" rel="noopener">
+            <p>Address</p>
+            <span class="social-icon location">{% include 'assets/media/white/location-icon-white.svg' %}</span>
+            <address>1010 S Federal Hwy<br/> Suite 1400<br/> Hallandale Beach, FL<br/> 33009</address>
+        </a>
+
+        <a class="social-card" href="mailto:hello@trt.group" title="TRT Email" target="_blank" rel="noopener">
+            <p>Message Us</p>
+            <span class="social-icon">{% include 'assets/media/white/mail-icon-white.svg' %}</span>
+            <p>Message us directly for inquiries or marketing kits and materials.</p>
+        </a>
+
+        <a class="social-card" href="{{ options.linkedin_link }}" title="TRT LinkedIn" target="_blank" rel="noopener">
+            <p>Connect With Us</p>
+            <span class="social-icon">{% include 'assets/media/white/heart-icon-white.svg' %}</span>
+            <p>Connect with us on LinkedIn, Facebook, and Instagram to stay updated.</p>
+        </a>
+    </div>
 
     {{ post.content }}
 {% endblock %}
