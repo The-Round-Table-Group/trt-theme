@@ -95,6 +95,13 @@ class TRTSite extends Timber\Site {
         $context['options']         = get_fields('option');
         $context['is_single']       = is_single();
 
+        $context['nav_case_studies'] = Timber::get_posts([
+            'post_type' => 'case-study',
+            'posts_per_page' => 2,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        ]);
+
 		return $context;
 	}
 

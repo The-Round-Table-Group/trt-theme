@@ -5,7 +5,6 @@
 
 // target all forms by id (no need for !important)
 [id^="gform_wrapper_"] {
-
     input, label, textarea,
     select, option, legend {
         font-size: 1rem;

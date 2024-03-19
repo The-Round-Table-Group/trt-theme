@@ -21,12 +21,15 @@
     <div class="mega-menu--divider"></div>
 
     <div class="mega-menu__right-panel" data-aos="fade-right" data-aos-offset="20">
-        {# {% for featured in featured_news %}
+        {% for featured in nav_case_studies %}
             <a class="panel-link" href="/">
                 <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
-                <p class="h6">{{ featured.title }}</p>
+                <div>
+                    <p class="h6">{{ featured.title }}</p>
+                    <p class="panel-text">{{ featured.preview|slice(0, 50) ~ ' ...' }}</p>
+                </div>
             </a>
-        {% endfor %} #}
+        {% endfor %}
     </div>
 </nav>
 
