@@ -84,11 +84,7 @@
         flex-wrap: wrap;
         max-width: 45rem;
         width: 100%;
-
-        @include mq(1060px) {
-            max-width: 100%;
-        }
-
+        @include mq(1060px) { max-width: 100%; }
     }
 
     // main menu and links
