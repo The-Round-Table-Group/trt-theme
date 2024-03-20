@@ -19,7 +19,7 @@
 
         <div class="mega-menu__right-panel" data-aos="fade-right" data-aos-offset="20">
             {% for featured in nav_case_studies %}
-                <a class="panel-link" href="/">
+                <a class="panel-link" href="{{ featured.link }}">
                     <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
                     <div>
                         <p class="h6">{{ featured.title }}</p>
