@@ -7,7 +7,7 @@
 
     <div class="logo-grid facetwp-template">
         {% for logo in clients_and_partners|slice(0, 40) %}
-            <div class="logo-grid__grid-item">
+            <div class="logo-grid__grid-item" data-aos="fade-up" data-aos-offset="20">
                 <div class="logo-image" style="background-image: url('{{ logo.thumbnail.src }}');"></div>
             </div>
         {% endfor %}
