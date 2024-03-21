@@ -22,7 +22,8 @@
                 <a class="panel-link" href="{{ featured.link }}">
                     <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
                     <div>
-                        <p class="h6">{{ featured.title }}</p>
+                        {# Immersive Pop-Up for hidden garden - add acf field #}
+                        <p class="h6">{{ featured.menu_title }}</p>
                         <p class="panel-text">{{ featured.preview|slice(0, 50) ~ ' ...' }}</p>
                     </div>
                 </a>

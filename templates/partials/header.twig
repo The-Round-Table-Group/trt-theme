@@ -1,13 +1,5 @@
 <header class="site-header">
     <div class="text-container">
-        {% if not is_front_page and not is_single %}
-            <span class="pill-tag">{{ post.title }}</span>
-        {% endif %}
-
-        {% if 'career' == fn('get_post_type') %}
-            <span class="pill-tag">Open Position</span>
-        {% endif %}
-
         {% if not is_single %}
             <h1 class="hero-title">{{ post.header_title }}</h1>
         {% else %}

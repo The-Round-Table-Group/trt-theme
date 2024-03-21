@@ -39,26 +39,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_65beed2017a0e",
-                    "label": "Pill Tag",
-                    "name": "pill_tag",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_65beed2e17a0f",
                     "label": "Header",
                     "name": "header",
@@ -295,5 +275,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1707295275
+    "modified": 1711027716
 }

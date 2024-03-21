@@ -3,6 +3,26 @@
     "title": "Case Studies",
     "fields": [
         {
+            "key": "field_65fc44e5c7cfb",
+            "label": "Menu Title",
+            "name": "menu_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown in the navigation menus.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65f77d8ef1056",
             "label": "Card Title",
             "name": "card_title",
@@ -210,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710786793
+    "modified": 1711031551
 }

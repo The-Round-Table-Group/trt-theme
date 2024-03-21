@@ -1,6 +1,7 @@
 {% extends 'base.twig' %}
 
-{% set gmap = 'https://www.google.com/maps/place/1010+S+Federal+Hwy+Suite+1400,+Hallandale+Beach,+FL+33009/@25.9964404,-80.1423969,18z/data=!3m1!4b1!4m6!3m5!1s0x88d9ab78876c91c9:0x502fc5a704bb6921!8m2!3d25.9964404!4d-80.1423969!16s%2Fg%2F11kpkc6sb5?entry=ttu' %}
+{% set fl_gmap = 'https://www.google.com/maps/place/1010+S+Federal+Hwy+Suite+1400,+Hallandale+Beach,+FL+33009/@25.9964404,-80.1423969,18z/data=!3m1!4b1!4m6!3m5!1s0x88d9ab78876c91c9:0x502fc5a704bb6921!8m2!3d25.9964404!4d-80.1423969!16s%2Fg%2F11kpkc6sb5?entry=ttu' %}
+{% set dv_gmap = 'https://www.google.com/maps/place/1801+California+St+%232400,+Denver,+CO+80202/@39.7476612,-104.9907145,17.64z/data=!4m6!3m5!1s0x876c78d763a13d3d:0x14d2d374873890d8!8m2!3d39.7477395!4d-104.9894663!16s%2Fg%2F11mx6t6b7l?entry=ttu' %}
 
 {% block content %}
     <section class="contact-form-wrapper">
@@ -10,22 +11,22 @@
     </section>
 
     <div class="contact-social-wrapper">
-        <a class="social-card" href="{{ gmap }}" target="_blank" rel="noopener">
-            <p>Address</p>
+        <a class="social-card" href="{{ fl_gmap }}" target="_blank" rel="noopener">
+            <p>Florida Address</p>
             <span class="social-icon location">{% include 'assets/media/white/location-icon-white.svg' %}</span>
             <address>1010 S Federal Hwy<br/> Suite 1400<br/> Hallandale Beach, FL<br/> 33009</address>
         </a>
 
-        <a class="social-card" href="mailto:hello@trt.group" title="TRT Email" target="_blank" rel="noopener">
-            <p>Message Us</p>
-            <span class="social-icon">{% include 'assets/media/white/mail-icon-white.svg' %}</span>
-            <p>Message us directly for inquiries or marketing kits and materials.</p>
+        <a class="social-card" href="{{ dv_gmap }}" title="TRT Email" target="_blank" rel="noopener">
+            <p>Denver Address</p>
+            <span class="social-icon">{% include 'assets/media/white/location-icon-white.svg' %}</span>
+            <address>1801 California St<br/> Suite 2400<br/> Denver, CO<br/> 80202</address>
         </a>
 
         <a class="social-card" href="#" title="TRT LinkedIn" target="_blank" rel="noopener">
             <p>Connect With Us</p>
             <span class="social-icon">{% include 'assets/media/white/heart-icon-white.svg' %}</span>
-            <p>Connect with us on LinkedIn, Facebook, and Instagram to stay updated.</p>
+            <p>Connect with us on LinkedIn, Facebook, and Instagram to stay up to date.</p>
         </a>
     </div>
 

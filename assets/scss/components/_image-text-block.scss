@@ -20,13 +20,8 @@
             margin-bottom: 0;
         }
 
-        &__header {
-            margin-top: 1.5rem;
-        }
-
-        &__footer {
-            margin-top: 1.65rem;
-        }
+        &__header { margin-top: 0; }
+        &__footer { margin-top: 1.65rem; }
 
         ul.text-content__footer {
             margin-left: 0;
