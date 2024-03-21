@@ -30,7 +30,7 @@
         {% endif %}
     {% else %}
         <div class="video-container">
-            <video class="player" poster="{{ theme.link }}/assets/media/video-poster.jpg" controls preload="none">
+            <video class="player" controls preload="metadata">
                 <source src="{{ post.header_video }}" type="video/mp4">
             </video>
         </div>
