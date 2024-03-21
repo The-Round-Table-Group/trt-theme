@@ -5,9 +5,6 @@
                 class="mega-menu__wrapper"
                 data-aos="fade-right"
                 data-aos-offset="20"
-                {% if menu.menu_aos_delay %}
-                    data-aos-delay="{{ menu.menu_aos_delay }}"
-                {% endif %}
             >
                 <p class="menu-header">{{ menu.menu_header }}</p>
 
@@ -22,7 +19,6 @@
                 <a class="panel-link" href="{{ featured.link }}">
                     <img src="{{ featured.thumbnail.src }}" alt="{{ featured.thumbnail.alt }}" />
                     <div>
-                        {# Immersive Pop-Up for hidden garden - add acf field #}
                         <p class="h6">{{ featured.menu_title }}</p>
                         <p class="panel-text">{{ featured.preview|slice(0, 50) ~ ' ...' }}</p>
                     </div>
