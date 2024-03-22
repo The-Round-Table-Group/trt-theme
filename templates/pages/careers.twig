@@ -2,12 +2,11 @@
 
 {% block content %}
     <section class="career-listing">
-        <h3 class="short-width-header">Currently no openings.</h3>
         {% for career in careers %}
             <div class="career-listing__card">
                 <div>
                     <h4>{{ career.title }}</h4>
-                    {% for type in careers_tax %}
+                    {% for type in career.terms('career-tax') %}
                         <p>{{ type.name }}</p>
                     {% endfor %}
                 </div>
