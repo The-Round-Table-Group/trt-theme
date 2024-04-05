@@ -23,9 +23,10 @@
             margin-right: 0;
             margin-bottom: 2.75rem;
             max-width: 28rem;
+            width: 100%;
 
             @include mq(md) {
-                max-width: 22rem;
+                max-width: 26rem;
                 margin-right: 2rem;
                 margin-bottom: 0;
             }
@@ -45,11 +46,24 @@
 
     &__nav-row {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 3.5rem 0;
 
+        @include mq(md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3.5rem 0;
+        }
+
         .footer-menu {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 2rem;
+            @include mq(md) { width: auto; }
+
             &--title {
                 margin-bottom: 0.5rem;
                 padding-bottom: 0.65rem;
@@ -74,6 +88,8 @@
         .social-link-wrapper {
             max-width: 15rem;
             width: 100%;
+            margin-top: 2rem;
+            @include mq(md) { margin-top: 0; }
 
             p {
                 margin-bottom: 1rem;

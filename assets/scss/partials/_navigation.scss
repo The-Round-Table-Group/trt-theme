@@ -161,43 +161,43 @@
 }
 
 // light grey bar with affiliated site links
-.external-sites-bar {
-    width: 100%;
-    background-color: $primary-text-color;
-    border-top: 1px solid $light-black;
+// .external-sites-bar {
+//     width: 100%;
+//     background-color: $primary-text-color;
+//     border-top: 1px solid $light-black;
 
-    // bar area
-    .site-bar-container {
-        max-width: $global-width;
-        margin: 0 auto;
-        padding: 1rem;
-        @include mq(lg) { padding: 1rem 3rem; }
-    }
+//     // bar area
+//     .site-bar-container {
+//         max-width: $global-width;
+//         margin: 0 auto;
+//         padding: 1rem;
+//         @include mq(lg) { padding: 1rem 3rem; }
+//     }
 
-    // bar menu links
-    .site-bar-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 50rem;
+//     // bar menu links
+//     .site-bar-wrap {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         max-width: 50rem;
 
-        p, .external-link { color: $light-black; }
+//         p, .external-link { color: $light-black; }
 
-        p {
-            margin: 0;
-            font-weight: $regular;
-        }
+//         p {
+//             margin: 0;
+//             font-weight: $regular;
+//         }
 
-        .external-link {
-            span {
-                position: relative;
-                top: 2px;
-                display: inline-block;
-                margin-left: 0.5rem;
-            }
-        }
-    }
-}
+//         .external-link {
+//             span {
+//                 position: relative;
+//                 top: 2px;
+//                 display: inline-block;
+//                 margin-left: 0.5rem;
+//             }
+//         }
+//     }
+// }
 
 // hover underline effect
 .underline {
@@ -221,9 +221,9 @@
 }
 
 // bottom menu links
-.external-link.underline:after {
-    bottom: 0;
-}
+// .external-link.underline:after {
+//     bottom: 0;
+// }
 
 // active nav link
 .link-item.active {
