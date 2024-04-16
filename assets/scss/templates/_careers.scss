@@ -84,12 +84,14 @@
     position: sticky;
     top: 2rem;
     max-width: 20rem;
+    margin-top: 3rem;
     margin-left: 0;
     padding: 2rem 1.25rem;
     background-color: $background-accent-alt;
     border-radius: $radius-small;
 
     @include mq(md) {
+        margin-top: 0;
         margin-left: 2rem;
         align-self: flex-start;
     }

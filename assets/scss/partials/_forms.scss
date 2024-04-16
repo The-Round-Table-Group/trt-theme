@@ -196,4 +196,112 @@
 }
 
 // Hiring Form
-#gform_wrapper_3 {}
+#gform_wrapper_3 {
+    max-width: 42rem;
+    width: 100%;
+    text-align: center;
+    @include mq(md) { text-align: left; }
+
+    .gfield_label { text-align: left !important; }
+
+    // first/last name
+    #field_3_1 {
+        max-width: 20rem;
+        margin: 0 auto 2rem;
+        @include mq(700px) { max-width: 100%; }
+
+        input {
+            max-width: 20rem;
+            width: 100%;
+        }
+    }
+
+    // keep first/last name span wrappers from overflowing
+    #input_3_1_3_container,
+    #input_3_1_6_container {
+        display: inline-block;
+        max-width: 20rem;
+        width: 100%;
+
+        &:first-of-type {
+            margin-right: 1.65rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // email/phone setup
+    #field_3_3,
+    #field_3_4,
+    #field_3_12,
+    #field_3_9 {
+        display: inline-block;
+        max-width: 20rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        vertical-align: top;
+
+        input {
+            max-width: 20rem;
+            width: 100%;
+        }
+    }
+
+    // email, dob
+    #field_3_3,
+    #field_3_12 {
+        margin-right: 0;
+        @include mq(700px) { margin-right: 1.85rem; }
+    }
+
+    // resume upload
+    #field_3_9 input {
+        border-style: dashed !important;
+        border-width: 2px;
+        padding: 0.85rem;
+    }
+
+    // resume upload rules
+    #gfield_upload_rules_3_9 {
+        display: block;
+        margin-top: 0.65rem;
+    }
+
+    // textareas
+    #field_3_6,
+    #field_3_7,
+    #field_3_8 {
+        margin-bottom: 2.5rem;
+
+        textarea {
+            max-width: 42rem;
+            width: 100%;
+        }
+    }
+
+    // if selected
+    #field_3_10 {
+        margin-bottom: 2.5rem;
+        label { margin-left: 0.25rem; }
+    }
+
+    // how did you hear about us (select)
+    #field_3_11 {
+        margin-bottom: 2.5rem;
+        text-align: left;
+    }
+
+    select {
+        max-width: 10rem;
+        width: 100%;
+        padding: 0.65rem 0.85rem;
+    }
+
+    // if selected - checkbox text align
+    .ginput_container_consent { text-align: left; }
+
+    // apply button wrapper area
+    .gform_footer.before { text-align: left !important; }
+
+    // apply button
+    #gform_submit_button_3 { padding: 0.85rem 1.75rem; }
+}
