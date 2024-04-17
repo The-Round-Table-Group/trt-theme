@@ -45,22 +45,6 @@
             ]
         });
 
-        // Initialize slick slider (for about page)
-        // $('.about-slider').slick({
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     autoplay: true,
-        //     autoplaySpeed: 5000,
-        //     pauseOnHover: true,
-        //     fade: true,
-        //     infinite: true,
-        //     arrows: true,
-        //     dots: false,
-        //     appendArrows: $('.slider-nav'),
-        //     prevArrow: $('.slick-prev'),
-        //     nextArrow: $('.slick-next')
-        // });
-
         $(function navMenuEvents() {
             // mega-menu dropdown / slide reveal
             var menu = $('.mega-menu__wrapper');
@@ -86,12 +70,12 @@
 
             if (path[1] !== '') {
                 // dev
-                $('.link-item[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
-                $('.footer-menu--link[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
+                // $('.link-item[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
+                // $('.footer-menu--link[href^="http://trt-group.local/' + path[1] + '"]').addClass('active');
 
                 // prod
-                // $('.link-item[href^="https://trt.group/' + path[1] + '"]').addClass('active');
-                // $('.footer-menu--link[href^="https://trt.group/' + path[1] + '"]').addClass('active');
+                $('.link-item[href^="https://trt.group/' + path[1] + '"]').addClass('active');
+                $('.footer-menu--link[href^="https://trt.group/' + path[1] + '"]').addClass('active');
             }
         });
 
