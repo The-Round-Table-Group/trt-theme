@@ -1,0 +1,26 @@
+<header class="site-header">
+    <div class="text-container">
+        <div class="home-title-wrapper">
+            <h1 class="hero-title">We Create</h1>
+
+            <div class="rotating-words">
+                <span class="rotating-words--word hero-title">Disruptive Branding</span>
+                <span class="rotating-words--word hero-title">Compelling Aesthetics</span>
+                <span class="rotating-words--word hero-title">Passionate Communities</span>
+                <span class="rotating-words--word hero-title">Unforgettable Experiences</span>
+                <span class="rotating-words--word hero-title">Remarkable Narratives</span>
+            </div>
+
+            <a class="primary-button--blue" href="/contact">
+                Get Started
+                <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video class="player" controls preload="metadata">
+            <source src="{{ post.header_video }}" type="video/mp4">
+        </video>
+    </div>
+</header>

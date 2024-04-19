@@ -63,7 +63,12 @@
 		{% endif %}
 
         {% include 'partials/navigation.twig' %}
-        {% include 'partials/header.twig' %}
+
+        {% if not is_front_page %}
+            {% include 'partials/header.twig' %}
+        {% else %}
+            {% include 'partials/home-header.twig' %}
+        {% endif %}
 
         <section class="main-post-wrapper" role="main" aria-label="Main page content">
             {% block content %}{% endblock %}

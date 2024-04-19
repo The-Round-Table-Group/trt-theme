@@ -65,3 +65,31 @@
         @include mq(sm) { margin: 4rem auto 2rem; }
     }
 }
+
+.home-title-wrapper {
+    .rotating-words {
+        height: 125px;
+        overflow: hidden;
+
+        &--word {
+            display: block;
+            height: 100%;
+            font-weight: $regular;
+            margin: 0;
+            animation: 10s word_switch 2s 3;
+            color: $grey;
+            font-weight: $semibold;
+        }
+    }
+
+    .primary-button--blue { margin-top: 1rem !important; }
+}
+
+@keyframes word_switch {
+    0% { transform: translateY(0%); }
+    20% { transform: translateY(-100%); }
+    40% { transform: translateY(-200%); }
+    60% { transform: translateY(-300%); }
+    80% { transform: translateY(-400%); }
+    100% { transform: translateY(-400%); }
+}
