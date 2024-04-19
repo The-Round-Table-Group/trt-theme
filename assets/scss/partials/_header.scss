@@ -87,9 +87,18 @@
 }
 
 @keyframes word_switch {
+    15% { transform: translateY(-105%); }
     20% { transform: translateY(-100%); }
+
+    35% { transform: translateY(-205%); }
     40% { transform: translateY(-200%); }
+
+    55% { transform: translateY(-305%); }
     60% { transform: translateY(-300%); }
+
+    75% { transform: translateY(-405%); }
     80% { transform: translateY(-400%); }
+
+    95% { transform: translateY(-505%); }
     100% { transform: translateY(-500%); }
 }
