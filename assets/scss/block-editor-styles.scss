@@ -14,6 +14,7 @@ body {
     @import 'mixins';
     @import 'globals';
     @import 'typography';
+    @import 'partials/forms';
 
     // all blocks
     @import 'components/component-loader';
