@@ -11,6 +11,7 @@
         });
     });
 
+    // close the mega-menu when clicking outside of the menu
     window.addEventListener('click', function(e) {
         if( !document.getElementById('toggle-menu').contains(e.target) && !document.getElementById('site-nav').contains(e.target) ) {
             $('.site-nav--menu').slideUp(400);

@@ -6,17 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {% if post.seo_description %}
-            <meta name="description" content="{{ post.seo_description }}" />
-        {% else %}
-            <meta name="description" content="{{ options.seo_description }}" />
-        {% endif %}
-
 		<title>{{ site.name }} | {{ post.title }}</title>
-
 		{{ fn('wp_head') }}
 
-        {# Open Graph Data #}
+        {# Open Graph Data - Optional custom title, image, and description #}
         {% if post.seo_title %}
             <meta property="og:title" content="{{ post.seo_title }}">
         {% else %}
@@ -29,7 +22,14 @@
             <meta property="og:image" content="{{ post.thumbnail.src }}">
         {% endif %}
 
-        <meta property="og:description" content="{{ options.seo_description }}">
+        {% if post.seo_description %}
+            <meta name="description" content="{{ post.seo_description }}" />
+            <meta property="og:description" content="{{ post.seo_description }}">
+        {% else %}
+            <meta name="description" content="{{ options.global_seo_description }}" />
+            <meta property="og:description" content="{{ options.global_seo_description }}">
+        {% endif %}
+
         <meta property="og:locale" content="en_US.utf-8">
         <meta property="og:url" content="{{ post.link }}">
         <meta property="og:type" content="website">
@@ -48,11 +48,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700;900&display=swap" />
 	</head>
 
-    {#
-        https://support.google.com/news/publisher-center/answer/9606800?sjid=13891664182919420624-NC
-    #}
-
-	<body data-template="base.twig" class="{{ body_class }}">
+	<body data-template="base.twig" class="{{ body_class }}" data-nosnippet="">
         {% if options.enable_banner %}
             <section class="notice-wrap ">
                 <div class="notice-banner" role="dialog" aria-label="Notice">

@@ -5,7 +5,7 @@
         {
             "key": "field_65efda35c90bd",
             "label": "SEO Description",
-            "name": "seo_description",
+            "name": "global_seo_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "Used on all pages \/ posts that do not have a custom SEO description.",
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710217976
+    "modified": 1713795489
 }
