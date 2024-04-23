@@ -92,6 +92,12 @@
         }
     }
 
+    // list adjustments
+    ul {
+        margin-top: 0.65rem;
+        li { margin-bottom: 0.65rem; }
+    }
+
     &__author {
         display: flex;
         flex-direction: row;

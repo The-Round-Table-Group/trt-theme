@@ -43,4 +43,28 @@ body {
 
         img { max-width: 18rem; }
     }
+
+    h1 { font-size: 3.5rem; }
+
+    p {
+        strong {
+            font-weight: $semibold;
+            font-size: 17px;
+            color: $white;
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            white-space: nowrap;
+            font-weight: $semibold;
+            &:hover { color: $light-blue; }
+        }
+    }
+
+    // list adjustments
+    ul {
+        margin-top: 0.65rem;
+        li { margin-bottom: 0.65rem; }
+    }
 }
