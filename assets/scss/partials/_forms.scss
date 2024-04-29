@@ -254,16 +254,29 @@
     }
 
     // resume upload
-    #field_3_9 input {
-        border-style: dashed !important;
-        border-width: 2px;
-        padding: 0.85rem;
+    #gform_multifile_upload_3_9 {
+        border: 2px dashed $white !important;
+        border-radius: $radius-small;
+        padding: 2rem 1rem;
     }
 
-    // resume upload rules
+    // "Select files" button
+    #gform_browse_button_3_9 {
+        font-weight: 600;
+        color: $light-blue;
+        filter: brightness(1.5);
+    }
+
+    // resume upload description
+    #gfield_description_3_9 {
+        color: $white;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    // resume upload rules (custom description used instead)
     #gfield_upload_rules_3_9 {
-        display: block;
-        margin-top: 0.65rem;
+        display: none;
     }
 
     // textareas
