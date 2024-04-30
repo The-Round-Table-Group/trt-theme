@@ -104,11 +104,13 @@
     }
 }
 
-// contact form (ID: 2)
-#gform_wrapper_2 {
+// contact form and Kaskade Giveaway Form (ID: 2)
+#gform_wrapper_2,
+#gform_wrapper_4 {
 
     // first/last name
-    #field_2_1 {
+    #field_2_1,
+    #field_4_1 {
         margin-bottom: 2rem;
 
         input {
@@ -119,7 +121,11 @@
 
     // keep first/last name span wrappers from overflowing
     #input_2_1_3_container,
-    #input_2_1_6_container {
+    #input_2_1_6_container,
+    #input_4_1_3_container,
+    #input_4_1_6_container,
+    #input_4_4_3_container,
+    #input_4_4_4_container {
         display: inline-block;
         max-width: 20rem;
         width: 100%;
@@ -132,7 +138,9 @@
 
     // email/phone setup
     #field_2_3,
-    #field_2_4 {
+    #field_2_4,
+    #field_4_2,
+    #field_4_3 {
         display: inline-block;
         max-width: 20rem;
         width: 100%;
@@ -145,7 +153,8 @@
     }
 
     // email
-    #field_2_3 {
+    #field_2_3,
+    #field_4_2 {
         margin-right: 1.85rem;
     }
 
