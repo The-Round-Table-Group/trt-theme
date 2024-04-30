@@ -3,19 +3,22 @@
 {% block content %}
     <section class="career-listing">
         {% for career in careers %}
-            <div class="career-listing__card">
+            <a class="career-listing__card" href="{{ career.link }}">
                 <div>
                     <h4>{{ career.title }}</h4>
-                    {% for type in career.terms('career-tax') %}
-                        <p>{{ type.name }}</p>
-                    {% endfor %}
+
+                    <div class="career-terms-container">
+                        {% for type in career.terms('career-tax') %}
+                            <p class="term-name">{{ type.name }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
 
-                <a class="primary-button--blue" href="{{ career.link }}">
+                <p class="primary-button--blue">
                     Apply
                     <span class="right-arrow">{% include 'assets/media/right-arrow-icon.svg' %}</span>
-                </a>
-            </div>
+                </p>
+            </a>
         {% endfor %}
 
         <div class="eeo-statement">

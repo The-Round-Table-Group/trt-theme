@@ -17,10 +17,23 @@
         border-radius: $radius-medium;
         text-align: center;
 
+        &:hover {
+            border-color: $blue;
+
+            .primary-button--blue {
+                background-color: $light-blue;
+
+                .right-arrow {
+                    left: 8px;
+                    transition: $transition;
+                }
+            }
+        }
+
         @include mq(xxs) {
-            text-align: left;
             flex-direction: row;
             justify-content: space-between;
+            text-align: left;
         }
 
         h4 {
@@ -28,11 +41,32 @@
             margin-bottom: 1rem;
         }
 
-        p {
-            display: inline-block;
-            margin: 0 1rem 1.5rem 0;
-            &:last-of-type { margin-right: 0; }
-            @include mq(xxs) { margin: 0 1rem 0 0; }
+        .primary-button--blue {
+            flex-shrink: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .career-terms-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            @include mq(xs) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .term-name {
+                margin: 0 0 0.4rem 0;
+                &:last-of-type { margin-bottom: 2rem; }
+
+                @include mq(xs) {
+                    margin: 0 1rem 0 0;
+                    &:last-of-type { margin-bottom: 0; }
+                }
+            }
         }
     }
 }
