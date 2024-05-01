@@ -3,12 +3,12 @@
     "title": "Block - Short Width Header",
     "fields": [
         {
-            "key": "field_65d2cc8c54df2",
-            "label": "Header Size",
-            "name": "header_size",
+            "key": "field_65d2cc264638e",
+            "label": "Header Text",
+            "name": "header_text",
             "aria-label": "",
             "type": "text",
-            "instructions": "Enter h2 or h3.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -23,12 +23,12 @@
             "append": ""
         },
         {
-            "key": "field_65d2cc264638e",
-            "label": "Header Text",
-            "name": "header_text",
+            "key": "field_6632942efcbc6",
+            "label": "Page Link",
+            "name": "page_link",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Optional. Leave empty for no link.<br\/>\r\nEnter a url in the format of \"\/link-name\".<br\/>\r\nOmit \"https:\/\/trt.group\".",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -61,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708314191
+    "modified": 1714591305
 }

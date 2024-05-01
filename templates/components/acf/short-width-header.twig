@@ -1,5 +1,7 @@
-{% if fields.header_size == 'h2' %}
-    <h2 class="short-width-header">{{ fields.header_text }}</h2>
+{% if fields.page_link %}
+    <a class="gradient-hover" href="{{ fields.page_link }}">
+        <h2 class="short-width-header">{{ fields.header_text }}</h2>
+    </a>
 {% else %}
-    <h3 class="short-width-header">{{ fields.header_text }}</h3>
+    <h2 class="short-width-header">{{ fields.header_text }}</h2>
 {% endif %}
