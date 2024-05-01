@@ -35,9 +35,6 @@ img {
     @include mq(lg) { padding: 1rem 3rem; }
 }
 
-// wrapper for  all title hovers
-.gradient-hover {}
-
 // on all blocks to create even spacing
 .block-margin {
     margin: 3.75rem auto !important;

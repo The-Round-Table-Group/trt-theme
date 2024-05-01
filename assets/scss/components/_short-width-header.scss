@@ -1,6 +1,16 @@
 // centered, short header for h2 or h3
 .short-width-header {
-    max-width: 37rem;
+    max-width: 40rem;
     margin: 2rem auto 2.5rem;
     text-align: center;
+}
+
+// wrapper for title hovers
+.gradient-hover h2 {
+    transition: $transition;
+
+    &:hover {
+        transition: $transition;
+        font-weight: 600;
+    }
 }
