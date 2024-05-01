@@ -82,10 +82,8 @@
                 display: block;
                 padding: 8px 2px;
                 max-width: 24rem;
-            }
 
-            .underline:after {
-                background-color: $white;
+                &:hover { color: $light-blue; }
             }
         }
 
