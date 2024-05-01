@@ -81,8 +81,7 @@
             &--link {
                 display: block;
                 padding: 8px 2px;
-                max-width: 24rem;
-
+                max-width: 26rem;
                 &:hover { color: $light-blue; }
             }
         }
@@ -127,7 +126,7 @@
                             }
                         }
                     }
-                }
+                } // end link
             }
         }
     } // end footer nav row
@@ -149,12 +148,8 @@
         a {
             margin: 0.3rem 0.65rem;
             padding: 4px 0;
+            &:hover { color: $light-blue; }
             @include mq(sm) { margin: 0 0.65rem 0.65rem; }
-        }
-
-        .underline:after {
-            bottom: 0;
-            background-color: $white;
         }
 
         .link-row {
